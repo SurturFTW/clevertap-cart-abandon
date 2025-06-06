@@ -1,0 +1,1234 @@
+{"level":"info","message":"Environment validation passed","service":"clevertap-processor","timestamp":"2025-06-04T10:14:46.928Z"}
+{"level":"info","message":"CleverTap Data Processor started successfully","service":"clevertap-processor","timestamp":"2025-06-04T10:14:46.930Z"}
+{"level":"info","message":"Cron Job 1 scheduled for 4:00 PM daily","service":"clevertap-processor","timestamp":"2025-06-04T10:14:46.930Z"}
+{"level":"info","message":"Cron Job 2 scheduled for 4:15 PM daily","service":"clevertap-processor","timestamp":"2025-06-04T10:14:46.930Z"}
+{"level":"info","message":"Received SIGINT. Graceful shutdown...","service":"clevertap-processor","timestamp":"2025-06-04T10:20:38.294Z"}
+{"level":"info","message":"Environment validation passed","service":"clevertap-processor","timestamp":"2025-06-04T10:23:33.424Z"}
+{"level":"info","message":"CleverTap Data Processor started successfully","service":"clevertap-processor","timestamp":"2025-06-04T10:23:33.425Z"}
+{"level":"info","message":"Cron Job 1 scheduled for 4:00 PM daily","service":"clevertap-processor","timestamp":"2025-06-04T10:23:33.425Z"}
+{"level":"info","message":"Cron Job 2 scheduled for 4:15 PM daily","service":"clevertap-processor","timestamp":"2025-06-04T10:23:33.426Z"}
+{"level":"info","message":"Received SIGINT. Graceful shutdown...","service":"clevertap-processor","timestamp":"2025-06-04T10:26:31.428Z"}
+{"level":"info","message":"Environment validation passed","service":"clevertap-processor","timestamp":"2025-06-04T10:26:34.199Z"}
+{"level":"info","message":"CleverTap Data Processor started successfully","service":"clevertap-processor","timestamp":"2025-06-04T10:26:34.200Z"}
+{"level":"info","message":"Cron Job 1 scheduled for 4:00 PM daily","service":"clevertap-processor","timestamp":"2025-06-04T10:26:34.200Z"}
+{"level":"info","message":"Cron Job 2 scheduled for 4:15 PM daily","service":"clevertap-processor","timestamp":"2025-06-04T10:26:34.200Z"}
+{"level":"info","message":"Executing scheduled Cron Job 1 at 4:00 PM","service":"clevertap-processor","timestamp":"2025-06-04T10:30:00.426Z"}
+{"level":"info","message":"Starting Cron Job 1 - Data Processing","service":"clevertap-processor","timestamp":"2025-06-04T10:30:00.428Z"}
+{"$metadata":{"attempts":1,"totalRetryDelay":0},"level":"error","message":"Error fetching CSV data from cart-abandon: Resolved credential object is not valid","service":"clevertap-processor","stack":"Error: Resolved credential object is not valid\n    at SignatureV4S3Express.validateResolvedCredentials (/Users/dev.bathani/Desktop/Work/s3-delta-clevertap-app/node_modules/@smithy/signature-v4/dist-cjs/index.js:456:13)\n    at SignatureV4S3Express.signRequest (/Users/dev.bathani/Desktop/Work/s3-delta-clevertap-app/node_modules/@smithy/signature-v4/dist-cjs/index.js:596:10)\n    at processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at runNextTicks (node:internal/process/task_queues:69:3)\n    at listOnTimeout (node:internal/timers:569:9)\n    at process.processTimers (node:internal/timers:543:7)\n    at async AwsSdkSigV4Signer.sign (/Users/dev.bathani/Desktop/Work/s3-delta-clevertap-app/node_modules/@aws-sdk/core/dist-cjs/submodules/httpAuthSchemes/index.js:108:27)\n    at async /Users/dev.bathani/Desktop/Work/s3-delta-clevertap-app/node_modules/@aws-sdk/middleware-sdk-s3/dist-cjs/index.js:482:15\n    at async /Users/dev.bathani/Desktop/Work/s3-delta-clevertap-app/node_modules/@smithy/middleware-retry/dist-cjs/index.js:320:38\n    at async /Users/dev.bathani/Desktop/Work/s3-delta-clevertap-app/node_modules/@aws-sdk/middleware-sdk-s3/dist-cjs/index.js:110:22","timestamp":"2025-06-04T10:30:00.447Z"}
+{"$metadata":{"attempts":1,"totalRetryDelay":0},"level":"error","message":"Cron Job 1 failed: Resolved credential object is not valid","service":"clevertap-processor","stack":"Error: Resolved credential object is not valid\n    at SignatureV4S3Express.validateResolvedCredentials (/Users/dev.bathani/Desktop/Work/s3-delta-clevertap-app/node_modules/@smithy/signature-v4/dist-cjs/index.js:456:13)\n    at SignatureV4S3Express.signRequest (/Users/dev.bathani/Desktop/Work/s3-delta-clevertap-app/node_modules/@smithy/signature-v4/dist-cjs/index.js:596:10)\n    at processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at runNextTicks (node:internal/process/task_queues:69:3)\n    at listOnTimeout (node:internal/timers:569:9)\n    at process.processTimers (node:internal/timers:543:7)\n    at async AwsSdkSigV4Signer.sign (/Users/dev.bathani/Desktop/Work/s3-delta-clevertap-app/node_modules/@aws-sdk/core/dist-cjs/submodules/httpAuthSchemes/index.js:108:27)\n    at async /Users/dev.bathani/Desktop/Work/s3-delta-clevertap-app/node_modules/@aws-sdk/middleware-sdk-s3/dist-cjs/index.js:482:15\n    at async /Users/dev.bathani/Desktop/Work/s3-delta-clevertap-app/node_modules/@smithy/middleware-retry/dist-cjs/index.js:320:38\n    at async /Users/dev.bathani/Desktop/Work/s3-delta-clevertap-app/node_modules/@aws-sdk/middleware-sdk-s3/dist-cjs/index.js:110:22","timestamp":"2025-06-04T10:30:00.447Z"}
+{"$metadata":{"attempts":1,"totalRetryDelay":0},"level":"error","message":"Scheduled Cron Job 1 failed: Resolved credential object is not valid","service":"clevertap-processor","stack":"Error: Resolved credential object is not valid\n    at SignatureV4S3Express.validateResolvedCredentials (/Users/dev.bathani/Desktop/Work/s3-delta-clevertap-app/node_modules/@smithy/signature-v4/dist-cjs/index.js:456:13)\n    at SignatureV4S3Express.signRequest (/Users/dev.bathani/Desktop/Work/s3-delta-clevertap-app/node_modules/@smithy/signature-v4/dist-cjs/index.js:596:10)\n    at processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at runNextTicks (node:internal/process/task_queues:69:3)\n    at listOnTimeout (node:internal/timers:569:9)\n    at process.processTimers (node:internal/timers:543:7)\n    at async AwsSdkSigV4Signer.sign (/Users/dev.bathani/Desktop/Work/s3-delta-clevertap-app/node_modules/@aws-sdk/core/dist-cjs/submodules/httpAuthSchemes/index.js:108:27)\n    at async /Users/dev.bathani/Desktop/Work/s3-delta-clevertap-app/node_modules/@aws-sdk/middleware-sdk-s3/dist-cjs/index.js:482:15\n    at async /Users/dev.bathani/Desktop/Work/s3-delta-clevertap-app/node_modules/@smithy/middleware-retry/dist-cjs/index.js:320:38\n    at async /Users/dev.bathani/Desktop/Work/s3-delta-clevertap-app/node_modules/@aws-sdk/middleware-sdk-s3/dist-cjs/index.js:110:22","timestamp":"2025-06-04T10:30:00.447Z"}
+{"level":"info","message":"Received SIGINT. Graceful shutdown...","service":"clevertap-processor","timestamp":"2025-06-04T10:32:54.865Z"}
+{"level":"info","message":"AWS credentials validation passed","service":"clevertap-processor","timestamp":"2025-06-04T10:40:48.003Z"}
+{"level":"info","message":"Environment validation passed","service":"clevertap-processor","timestamp":"2025-06-04T10:40:48.086Z"}
+{"level":"info","message":"CleverTap Data Processor started successfully","service":"clevertap-processor","timestamp":"2025-06-04T10:40:48.086Z"}
+{"level":"info","message":"Cron Job 1 scheduled for 4:00 PM daily","service":"clevertap-processor","timestamp":"2025-06-04T10:40:48.086Z"}
+{"level":"info","message":"Cron Job 2 scheduled for 4:15 PM daily","service":"clevertap-processor","timestamp":"2025-06-04T10:40:48.086Z"}
+{"level":"info","message":"Received SIGINT. Graceful shutdown...","service":"clevertap-processor","timestamp":"2025-06-04T10:43:23.145Z"}
+{"level":"info","message":"AWS credentials validation passed","service":"clevertap-processor","timestamp":"2025-06-04T10:44:21.068Z"}
+{"level":"info","message":"Environment validation passed","service":"clevertap-processor","timestamp":"2025-06-04T10:44:21.140Z"}
+{"level":"info","message":"CleverTap Data Processor started successfully","service":"clevertap-processor","timestamp":"2025-06-04T10:44:21.140Z"}
+{"level":"info","message":"Cron Job 1 scheduled for 4:15 PM daily","service":"clevertap-processor","timestamp":"2025-06-04T10:44:21.140Z"}
+{"level":"info","message":"Cron Job 2 scheduled for 4:18 PM daily","service":"clevertap-processor","timestamp":"2025-06-04T10:44:21.140Z"}
+{"level":"info","message":"Executing scheduled Cron Job 1 at 4:15 PM","service":"clevertap-processor","timestamp":"2025-06-04T10:45:00.195Z"}
+{"level":"info","message":"Starting Cron Job 1 - Data Processing","service":"clevertap-processor","timestamp":"2025-06-04T10:45:00.196Z"}
+{"level":"info","message":"Successfully listed objects in bucket: cart-abandon","service":"clevertap-processor","timestamp":"2025-06-04T10:45:00.776Z"}
+{"level":"info","message":"Processing file: 1749031435-1749031435-AddToCart-20250604-0-21.csv.gz from bucket: cart-abandon","service":"clevertap-processor","timestamp":"2025-06-04T10:45:00.776Z"}
+{"$fault":"client","$metadata":{"attempts":1,"extendedRequestId":"fC126toWJB4wK+3gQ2ks7Q3MZ0Cd75613MPb3hBaZoKk2HVgKlyh+PghD+Br94lADR5roV1Mtew=","httpStatusCode":403,"requestId":"HSG1VF3WH506PX5V","totalRetryDelay":0},"Code":"AccessDenied","HostId":"fC126toWJB4wK+3gQ2ks7Q3MZ0Cd75613MPb3hBaZoKk2HVgKlyh+PghD+Br94lADR5roV1Mtew=","RequestId":"HSG1VF3WH506PX5V","level":"error","message":"Error fetching CSV data from cart-abandon: User: arn:aws:iam::666908824322:user/Dev-Clevertap is not authorized to perform: s3:GetObject on resource: \"arn:aws:s3:::cart-abandon/1749031435-1749031435-AddToCart-20250604-0-21.csv.gz\" because no identity-based policy allows the s3:GetObject action","name":"AccessDenied","service":"clevertap-processor","stack":"AccessDenied: User: arn:aws:iam::666908824322:user/Dev-Clevertap is not authorized to perform: s3:GetObject on resource: \"arn:aws:s3:::cart-abandon/1749031435-1749031435-AddToCart-20250604-0-21.csv.gz\" because no identity-based policy allows the s3:GetObject action\n    at throwDefaultError (/Users/dev.bathani/Desktop/Work/s3-delta-clevertap-app/node_modules/@smithy/smithy-client/dist-cjs/index.js:388:20)\n    at /Users/dev.bathani/Desktop/Work/s3-delta-clevertap-app/node_modules/@smithy/smithy-client/dist-cjs/index.js:397:5\n    at de_CommandError (/Users/dev.bathani/Desktop/Work/s3-delta-clevertap-app/node_modules/@aws-sdk/client-s3/dist-cjs/index.js:4953:14)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async /Users/dev.bathani/Desktop/Work/s3-delta-clevertap-app/node_modules/@smithy/middleware-serde/dist-cjs/index.js:36:20\n    at async /Users/dev.bathani/Desktop/Work/s3-delta-clevertap-app/node_modules/@aws-sdk/middleware-sdk-s3/dist-cjs/index.js:484:18\n    at async /Users/dev.bathani/Desktop/Work/s3-delta-clevertap-app/node_modules/@smithy/middleware-retry/dist-cjs/index.js:320:38\n    at async /Users/dev.bathani/Desktop/Work/s3-delta-clevertap-app/node_modules/@aws-sdk/middleware-sdk-s3/dist-cjs/index.js:110:22\n    at async /Users/dev.bathani/Desktop/Work/s3-delta-clevertap-app/node_modules/@aws-sdk/middleware-sdk-s3/dist-cjs/index.js:137:14\n    at async /Users/dev.bathani/Desktop/Work/s3-delta-clevertap-app/node_modules/@aws-sdk/middleware-logger/dist-cjs/index.js:33:22","timestamp":"2025-06-04T10:45:00.939Z"}
+{"$fault":"client","$metadata":{"attempts":1,"extendedRequestId":"fC126toWJB4wK+3gQ2ks7Q3MZ0Cd75613MPb3hBaZoKk2HVgKlyh+PghD+Br94lADR5roV1Mtew=","httpStatusCode":403,"requestId":"HSG1VF3WH506PX5V","totalRetryDelay":0},"Code":"AccessDenied","HostId":"fC126toWJB4wK+3gQ2ks7Q3MZ0Cd75613MPb3hBaZoKk2HVgKlyh+PghD+Br94lADR5roV1Mtew=","RequestId":"HSG1VF3WH506PX5V","level":"error","message":"Cron Job 1 failed: User: arn:aws:iam::666908824322:user/Dev-Clevertap is not authorized to perform: s3:GetObject on resource: \"arn:aws:s3:::cart-abandon/1749031435-1749031435-AddToCart-20250604-0-21.csv.gz\" because no identity-based policy allows the s3:GetObject action","name":"AccessDenied","service":"clevertap-processor","stack":"AccessDenied: User: arn:aws:iam::666908824322:user/Dev-Clevertap is not authorized to perform: s3:GetObject on resource: \"arn:aws:s3:::cart-abandon/1749031435-1749031435-AddToCart-20250604-0-21.csv.gz\" because no identity-based policy allows the s3:GetObject action\n    at throwDefaultError (/Users/dev.bathani/Desktop/Work/s3-delta-clevertap-app/node_modules/@smithy/smithy-client/dist-cjs/index.js:388:20)\n    at /Users/dev.bathani/Desktop/Work/s3-delta-clevertap-app/node_modules/@smithy/smithy-client/dist-cjs/index.js:397:5\n    at de_CommandError (/Users/dev.bathani/Desktop/Work/s3-delta-clevertap-app/node_modules/@aws-sdk/client-s3/dist-cjs/index.js:4953:14)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async /Users/dev.bathani/Desktop/Work/s3-delta-clevertap-app/node_modules/@smithy/middleware-serde/dist-cjs/index.js:36:20\n    at async /Users/dev.bathani/Desktop/Work/s3-delta-clevertap-app/node_modules/@aws-sdk/middleware-sdk-s3/dist-cjs/index.js:484:18\n    at async /Users/dev.bathani/Desktop/Work/s3-delta-clevertap-app/node_modules/@smithy/middleware-retry/dist-cjs/index.js:320:38\n    at async /Users/dev.bathani/Desktop/Work/s3-delta-clevertap-app/node_modules/@aws-sdk/middleware-sdk-s3/dist-cjs/index.js:110:22\n    at async /Users/dev.bathani/Desktop/Work/s3-delta-clevertap-app/node_modules/@aws-sdk/middleware-sdk-s3/dist-cjs/index.js:137:14\n    at async /Users/dev.bathani/Desktop/Work/s3-delta-clevertap-app/node_modules/@aws-sdk/middleware-logger/dist-cjs/index.js:33:22","timestamp":"2025-06-04T10:45:00.940Z"}
+{"$fault":"client","$metadata":{"attempts":1,"extendedRequestId":"fC126toWJB4wK+3gQ2ks7Q3MZ0Cd75613MPb3hBaZoKk2HVgKlyh+PghD+Br94lADR5roV1Mtew=","httpStatusCode":403,"requestId":"HSG1VF3WH506PX5V","totalRetryDelay":0},"Code":"AccessDenied","HostId":"fC126toWJB4wK+3gQ2ks7Q3MZ0Cd75613MPb3hBaZoKk2HVgKlyh+PghD+Br94lADR5roV1Mtew=","RequestId":"HSG1VF3WH506PX5V","level":"error","message":"Scheduled Cron Job 1 failed: User: arn:aws:iam::666908824322:user/Dev-Clevertap is not authorized to perform: s3:GetObject on resource: \"arn:aws:s3:::cart-abandon/1749031435-1749031435-AddToCart-20250604-0-21.csv.gz\" because no identity-based policy allows the s3:GetObject action","name":"AccessDenied","service":"clevertap-processor","stack":"AccessDenied: User: arn:aws:iam::666908824322:user/Dev-Clevertap is not authorized to perform: s3:GetObject on resource: \"arn:aws:s3:::cart-abandon/1749031435-1749031435-AddToCart-20250604-0-21.csv.gz\" because no identity-based policy allows the s3:GetObject action\n    at throwDefaultError (/Users/dev.bathani/Desktop/Work/s3-delta-clevertap-app/node_modules/@smithy/smithy-client/dist-cjs/index.js:388:20)\n    at /Users/dev.bathani/Desktop/Work/s3-delta-clevertap-app/node_modules/@smithy/smithy-client/dist-cjs/index.js:397:5\n    at de_CommandError (/Users/dev.bathani/Desktop/Work/s3-delta-clevertap-app/node_modules/@aws-sdk/client-s3/dist-cjs/index.js:4953:14)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async /Users/dev.bathani/Desktop/Work/s3-delta-clevertap-app/node_modules/@smithy/middleware-serde/dist-cjs/index.js:36:20\n    at async /Users/dev.bathani/Desktop/Work/s3-delta-clevertap-app/node_modules/@aws-sdk/middleware-sdk-s3/dist-cjs/index.js:484:18\n    at async /Users/dev.bathani/Desktop/Work/s3-delta-clevertap-app/node_modules/@smithy/middleware-retry/dist-cjs/index.js:320:38\n    at async /Users/dev.bathani/Desktop/Work/s3-delta-clevertap-app/node_modules/@aws-sdk/middleware-sdk-s3/dist-cjs/index.js:110:22\n    at async /Users/dev.bathani/Desktop/Work/s3-delta-clevertap-app/node_modules/@aws-sdk/middleware-sdk-s3/dist-cjs/index.js:137:14\n    at async /Users/dev.bathani/Desktop/Work/s3-delta-clevertap-app/node_modules/@aws-sdk/middleware-logger/dist-cjs/index.js:33:22","timestamp":"2025-06-04T10:45:00.941Z"}
+{"level":"info","message":"Executing scheduled Cron Job 2 at 4:18 PM","service":"clevertap-processor","timestamp":"2025-06-04T10:48:00.426Z"}
+{"level":"info","message":"Starting Cron Job 2 - CleverTap Upload","service":"clevertap-processor","timestamp":"2025-06-04T10:48:00.427Z"}
+{"level":"info","message":"Successfully listed objects in bucket: delta-events","service":"clevertap-processor","timestamp":"2025-06-04T10:48:00.988Z"}
+{"level":"warn","message":"No CSV files found in delta events bucket","service":"clevertap-processor","timestamp":"2025-06-04T10:48:00.988Z"}
+{"level":"info","message":"No delta data found for CleverTap upload","service":"clevertap-processor","timestamp":"2025-06-04T10:48:00.988Z"}
+{"level":"info","message":"Received SIGINT. Graceful shutdown...","service":"clevertap-processor","timestamp":"2025-06-04T10:51:00.418Z"}
+{"level":"info","message":"AWS credentials validation passed","service":"clevertap-processor","timestamp":"2025-06-04T10:51:02.807Z"}
+{"level":"info","message":"Environment validation passed","service":"clevertap-processor","timestamp":"2025-06-04T10:51:02.857Z"}
+{"level":"info","message":"CleverTap Data Processor started successfully","service":"clevertap-processor","timestamp":"2025-06-04T10:51:02.857Z"}
+{"level":"info","message":"Cron Job 1 scheduled for 4:15 PM daily","service":"clevertap-processor","timestamp":"2025-06-04T10:51:02.857Z"}
+{"level":"info","message":"Cron Job 2 scheduled for 4:18 PM daily","service":"clevertap-processor","timestamp":"2025-06-04T10:51:02.857Z"}
+{"level":"info","message":"Executing scheduled Cron Job 1 at 4:15 PM","service":"clevertap-processor","timestamp":"2025-06-04T10:52:00.925Z"}
+{"level":"info","message":"Starting Cron Job 1 - Data Processing","service":"clevertap-processor","timestamp":"2025-06-04T10:52:00.926Z"}
+{"level":"info","message":"Successfully listed objects in bucket: cart-abandon","service":"clevertap-processor","timestamp":"2025-06-04T10:52:01.529Z"}
+{"level":"info","message":"Processing file: 1749031435-1749031435-AddToCart-20250604-0-21.csv.gz from bucket: cart-abandon","service":"clevertap-processor","timestamp":"2025-06-04T10:52:01.529Z"}
+{"level":"info","message":"Successfully listed objects in bucket: charged-events","service":"clevertap-processor","timestamp":"2025-06-04T10:52:02.244Z"}
+{"level":"info","message":"Processing file: 1749031653-1749031653-Charged-20250604-0-21.csv.gz from bucket: charged-events","service":"clevertap-processor","timestamp":"2025-06-04T10:52:02.244Z"}
+{"level":"info","message":"Cart abandon records: 2","service":"clevertap-processor","timestamp":"2025-06-04T10:52:02.412Z"}
+{"level":"info","message":"Charged events records: 2","service":"clevertap-processor","timestamp":"2025-06-04T10:52:02.412Z"}
+{"level":"info","message":"Delta records (after filtering): 0","service":"clevertap-processor","timestamp":"2025-06-04T10:52:02.412Z"}
+{"level":"info","message":"No delta data to process. Cron Job 1 completed.","service":"clevertap-processor","timestamp":"2025-06-04T10:52:02.413Z"}
+{"level":"info","message":"Executing scheduled Cron Job 2 at 4:18 PM","service":"clevertap-processor","timestamp":"2025-06-04T10:55:00.136Z"}
+{"level":"info","message":"Starting Cron Job 2 - CleverTap Upload","service":"clevertap-processor","timestamp":"2025-06-04T10:55:00.136Z"}
+{"level":"info","message":"Successfully listed objects in bucket: delta-events","service":"clevertap-processor","timestamp":"2025-06-04T10:55:00.681Z"}
+{"level":"warn","message":"No CSV files found in delta events bucket","service":"clevertap-processor","timestamp":"2025-06-04T10:55:00.681Z"}
+{"level":"info","message":"No delta data found for CleverTap upload","service":"clevertap-processor","timestamp":"2025-06-04T10:55:00.681Z"}
+{"level":"info","message":"Received SIGINT. Graceful shutdown...","service":"clevertap-processor","timestamp":"2025-06-04T10:55:50.522Z"}
+{"level":"info","message":"AWS credentials validation passed","service":"clevertap-processor","timestamp":"2025-06-04T10:58:07.662Z"}
+{"level":"info","message":"Environment validation passed","service":"clevertap-processor","timestamp":"2025-06-04T10:58:07.748Z"}
+{"level":"info","message":"CleverTap Data Processor started successfully","service":"clevertap-processor","timestamp":"2025-06-04T10:58:07.748Z"}
+{"level":"info","message":"Cron Job 1 scheduled for 4:15 PM daily","service":"clevertap-processor","timestamp":"2025-06-04T10:58:07.749Z"}
+{"level":"info","message":"Cron Job 2 scheduled for 4:18 PM daily","service":"clevertap-processor","timestamp":"2025-06-04T10:58:07.749Z"}
+{"level":"info","message":"Received SIGINT. Graceful shutdown...","service":"clevertap-processor","timestamp":"2025-06-04T10:58:14.379Z"}
+{"level":"info","message":"AWS credentials validation passed","service":"clevertap-processor","timestamp":"2025-06-04T10:58:28.335Z"}
+{"level":"info","message":"Environment validation passed","service":"clevertap-processor","timestamp":"2025-06-04T10:58:28.402Z"}
+{"level":"info","message":"CleverTap Data Processor started successfully","service":"clevertap-processor","timestamp":"2025-06-04T10:58:28.403Z"}
+{"level":"info","message":"Cron Job 1 scheduled for 4:15 PM daily","service":"clevertap-processor","timestamp":"2025-06-04T10:58:28.403Z"}
+{"level":"info","message":"Cron Job 2 scheduled for 4:18 PM daily","service":"clevertap-processor","timestamp":"2025-06-04T10:58:28.403Z"}
+{"level":"info","message":"Executing scheduled Cron Job 1 at 4:15 PM","service":"clevertap-processor","timestamp":"2025-06-04T10:59:00.437Z"}
+{"level":"info","message":"Starting Cron Job 1 - Data Processing","service":"clevertap-processor","timestamp":"2025-06-04T10:59:00.439Z"}
+{"level":"info","message":"Successfully listed objects in bucket: cart-abandon","service":"clevertap-processor","timestamp":"2025-06-04T10:59:01.110Z"}
+{"level":"info","message":"Processing file: 1749031435-1749031435-AddToCart-20250604-0-21.csv.gz from bucket: cart-abandon","service":"clevertap-processor","timestamp":"2025-06-04T10:59:01.111Z"}
+{"level":"info","message":"Successfully listed objects in bucket: charged-events","service":"clevertap-processor","timestamp":"2025-06-04T10:59:01.890Z"}
+{"level":"info","message":"Processing file: 1749031653-1749031653-Charged-20250604-0-21.csv.gz from bucket: charged-events","service":"clevertap-processor","timestamp":"2025-06-04T10:59:01.891Z"}
+{"level":"info","message":"=== Cart Abandon Data Details ===","service":"clevertap-processor","timestamp":"2025-06-04T10:59:02.085Z"}
+{"level":"info","message":"Total records received: 2","service":"clevertap-processor","timestamp":"2025-06-04T10:59:02.085Z"}
+{"level":"info","message":"Sample record:","service":"clevertap-processor","timestamp":"2025-06-04T10:59:02.087Z"}
+{"level":"info","message":"Available fields:","service":"clevertap-processor","timestamp":"2025-06-04T10:59:02.087Z"}
+{"level":"info","message":"\n=== Charged Events Data Details ===","service":"clevertap-processor","timestamp":"2025-06-04T10:59:02.087Z"}
+{"level":"info","message":"Total records received: 2","service":"clevertap-processor","timestamp":"2025-06-04T10:59:02.087Z"}
+{"level":"info","message":"Sample record:","service":"clevertap-processor","timestamp":"2025-06-04T10:59:02.087Z"}
+{"level":"info","message":"Available fields:","service":"clevertap-processor","timestamp":"2025-06-04T10:59:02.087Z"}
+{"level":"info","message":"\nUnique charged identities found: 1","service":"clevertap-processor","timestamp":"2025-06-04T10:59:02.088Z"}
+{"level":"info","message":"\n=== Processing Summary ===","service":"clevertap-processor","timestamp":"2025-06-04T10:59:02.088Z"}
+{"level":"info","message":"Cart abandon records: 2","service":"clevertap-processor","timestamp":"2025-06-04T10:59:02.088Z"}
+{"level":"info","message":"Charged events records: 2","service":"clevertap-processor","timestamp":"2025-06-04T10:59:02.088Z"}
+{"level":"info","message":"Delta records (before deduplication): 0","service":"clevertap-processor","timestamp":"2025-06-04T10:59:02.088Z"}
+{"level":"info","message":"Delta records (after deduplication): 0","service":"clevertap-processor","timestamp":"2025-06-04T10:59:02.088Z"}
+{"level":"info","message":"No delta data to process. Cron Job 1 completed.","service":"clevertap-processor","timestamp":"2025-06-04T10:59:02.088Z"}
+{"level":"info","message":"Executing scheduled Cron Job 2 at 4:18 PM","service":"clevertap-processor","timestamp":"2025-06-04T11:00:00.548Z"}
+{"level":"info","message":"Starting Cron Job 2 - CleverTap Upload","service":"clevertap-processor","timestamp":"2025-06-04T11:00:00.551Z"}
+{"level":"info","message":"Successfully listed objects in bucket: delta-events","service":"clevertap-processor","timestamp":"2025-06-04T11:00:01.154Z"}
+{"level":"warn","message":"No CSV files found in delta events bucket","service":"clevertap-processor","timestamp":"2025-06-04T11:00:01.154Z"}
+{"level":"info","message":"No delta data found for CleverTap upload","service":"clevertap-processor","timestamp":"2025-06-04T11:00:01.155Z"}
+{"level":"info","message":"Received SIGINT. Graceful shutdown...","service":"clevertap-processor","timestamp":"2025-06-04T11:09:38.024Z"}
+{"level":"info","message":"AWS credentials validation passed","service":"clevertap-processor","timestamp":"2025-06-04T11:51:35.050Z"}
+{"level":"info","message":"Environment validation passed","service":"clevertap-processor","timestamp":"2025-06-04T11:51:35.129Z"}
+{"level":"info","message":"CleverTap Data Processor started successfully","service":"clevertap-processor","timestamp":"2025-06-04T11:51:35.129Z"}
+{"level":"info","message":"Cron Job 1 scheduled for 4:15 PM daily","service":"clevertap-processor","timestamp":"2025-06-04T11:51:35.129Z"}
+{"level":"info","message":"Cron Job 2 scheduled for 4:18 PM daily","service":"clevertap-processor","timestamp":"2025-06-04T11:51:35.129Z"}
+{"level":"info","message":"Executing scheduled Cron Job 1 at 4:15 PM","service":"clevertap-processor","timestamp":"2025-06-04T11:53:00.228Z"}
+{"level":"info","message":"Starting Cron Job 1 - Data Processing","service":"clevertap-processor","timestamp":"2025-06-04T11:53:00.230Z"}
+{"level":"info","message":"Successfully listed objects in bucket: cart-abandon","service":"clevertap-processor","timestamp":"2025-06-04T11:53:00.869Z"}
+{"level":"info","message":"Processing file: 1749031435-1749031435-AddToCart-20250604-0-21.csv.gz from bucket: cart-abandon","service":"clevertap-processor","timestamp":"2025-06-04T11:53:00.870Z"}
+{"level":"info","message":"Successfully listed objects in bucket: charged-events","service":"clevertap-processor","timestamp":"2025-06-04T11:53:02.020Z"}
+{"level":"info","message":"Processing file: 1749031653-1749031653-Charged-20250604-0-21.csv.gz from bucket: charged-events","service":"clevertap-processor","timestamp":"2025-06-04T11:53:02.020Z"}
+{"level":"info","message":"\n=== Cart Abandon Data Details ===","service":"clevertap-processor","timestamp":"2025-06-04T11:53:02.188Z"}
+{"level":"info","message":"Total records received: 2","service":"clevertap-processor","timestamp":"2025-06-04T11:53:02.188Z"}
+{"level":"info","message":"\nCart Abandon - Available fields:","service":"clevertap-processor","timestamp":"2025-06-04T11:53:02.189Z"}
+{"level":"info","message":"\nDetailed Cart Abandon Data (up to 2 rows):","service":"clevertap-processor","timestamp":"2025-06-04T11:53:02.189Z"}
+{"level":"info","message":"\nRow 1:","service":"clevertap-processor","timestamp":"2025-06-04T11:53:02.189Z"}
+{"level":"info","message":"ts: 20250604134942","service":"clevertap-processor","timestamp":"2025-06-04T11:53:02.189Z"}
+{"level":"info","message":"eventName: AddToCart","service":"clevertap-processor","timestamp":"2025-06-04T11:53:02.189Z"}
+{"level":"info","message":"profile.identity: hello_123","service":"clevertap-processor","timestamp":"2025-06-04T11:53:02.189Z"}
+{"level":"info","message":"profile.objectId: ","service":"clevertap-processor","timestamp":"2025-06-04T11:53:02.189Z"}
+{"level":"info","message":"profile.all_identities: [testing.dev@gmail.com, hello_123]","service":"clevertap-processor","timestamp":"2025-06-04T11:53:02.189Z"}
+{"level":"info","message":"profile.platform: Android","service":"clevertap-processor","timestamp":"2025-06-04T11:53:02.190Z"}
+{"level":"info","message":"profile.phone: 917202897611","service":"clevertap-processor","timestamp":"2025-06-04T11:53:02.190Z"}
+{"level":"info","message":"profile.name: Dev Testing","service":"clevertap-processor","timestamp":"2025-06-04T11:53:02.190Z"}
+{"level":"info","message":"profile.email: testing.dev@gmail.com","service":"clevertap-processor","timestamp":"2025-06-04T11:53:02.190Z"}
+{"level":"info","message":"profile.push_token: fcm:cW57dF6URueav7Vw8K3vPR:APA91bFrfdNDJo_c3feheyHdeJuo57G5fs0Wx2_6VsGxRvaRfCb8KDYrg76raBFu10Toc1GrbUjj6QmRt_waqakYHI1EPUNS6JUxQZvH3N3S-77kkotlceI","service":"clevertap-processor","timestamp":"2025-06-04T11:53:02.190Z"}
+{"level":"info","message":"deviceInfo.make: Google","service":"clevertap-processor","timestamp":"2025-06-04T11:53:02.190Z"}
+{"level":"info","message":"deviceInfo.model: Sdk_gphone64_arm64","service":"clevertap-processor","timestamp":"2025-06-04T11:53:02.190Z"}
+{"level":"info","message":"deviceInfo.appVersion: 1.0.0","service":"clevertap-processor","timestamp":"2025-06-04T11:53:02.190Z"}
+{"level":"info","message":"deviceInfo.sdkVersion: 70301","service":"clevertap-processor","timestamp":"2025-06-04T11:53:02.190Z"}
+{"level":"info","message":"deviceInfo.osVersion: 16","service":"clevertap-processor","timestamp":"2025-06-04T11:53:02.190Z"}
+{"level":"info","message":"deviceInfo.browser: MobileApp","service":"clevertap-processor","timestamp":"2025-06-04T11:53:02.190Z"}
+{"level":"info","message":"deviceInfo.dpi: 480","service":"clevertap-processor","timestamp":"2025-06-04T11:53:02.190Z"}
+{"level":"info","message":"deviceInfo.dimensions.width: 61","service":"clevertap-processor","timestamp":"2025-06-04T11:53:02.190Z"}
+{"level":"info","message":"deviceInfo.dimensions.height: 143","service":"clevertap-processor","timestamp":"2025-06-04T11:53:02.190Z"}
+{"level":"info","message":"deviceInfo.dimensions.unit: mm","service":"clevertap-processor","timestamp":"2025-06-04T11:53:02.190Z"}
+{"level":"info","message":"controlGroupName: ","service":"clevertap-processor","timestamp":"2025-06-04T11:53:02.190Z"}
+{"level":"info","message":"eventProps.price: 3999","service":"clevertap-processor","timestamp":"2025-06-04T11:53:02.191Z"}
+{"level":"info","message":"eventProps.image_url: https://fastly.picsum.photos/id/935/200/300.jpg?hmac=XPPjHEBtYb6Y3-p1EjAP0RRB0bNlvqCs52VIysO7iH0","service":"clevertap-processor","timestamp":"2025-06-04T11:53:02.191Z"}
+{"level":"info","message":"eventProps.product_id: 123a","service":"clevertap-processor","timestamp":"2025-06-04T11:53:02.191Z"}
+{"level":"info","message":"eventProps.CT App Version: 1.0.0","service":"clevertap-processor","timestamp":"2025-06-04T11:53:02.191Z"}
+{"level":"info","message":"eventProps.CT Source: Mobile","service":"clevertap-processor","timestamp":"2025-06-04T11:53:02.191Z"}
+{"level":"info","message":"\nRow 2:","service":"clevertap-processor","timestamp":"2025-06-04T11:53:02.191Z"}
+{"level":"info","message":"ts: 20250604135145","service":"clevertap-processor","timestamp":"2025-06-04T11:53:02.191Z"}
+{"level":"info","message":"eventName: AddToCart","service":"clevertap-processor","timestamp":"2025-06-04T11:53:02.191Z"}
+{"level":"info","message":"profile.identity: hello_123","service":"clevertap-processor","timestamp":"2025-06-04T11:53:02.191Z"}
+{"level":"info","message":"profile.objectId: ","service":"clevertap-processor","timestamp":"2025-06-04T11:53:02.191Z"}
+{"level":"info","message":"profile.all_identities: [testing.dev@gmail.com, hello_123]","service":"clevertap-processor","timestamp":"2025-06-04T11:53:02.191Z"}
+{"level":"info","message":"profile.platform: Android","service":"clevertap-processor","timestamp":"2025-06-04T11:53:02.191Z"}
+{"level":"info","message":"profile.phone: 917202897611","service":"clevertap-processor","timestamp":"2025-06-04T11:53:02.191Z"}
+{"level":"info","message":"profile.name: Dev Testing","service":"clevertap-processor","timestamp":"2025-06-04T11:53:02.191Z"}
+{"level":"info","message":"profile.email: testing.dev@gmail.com","service":"clevertap-processor","timestamp":"2025-06-04T11:53:02.191Z"}
+{"level":"info","message":"profile.push_token: fcm:cW57dF6URueav7Vw8K3vPR:APA91bFrfdNDJo_c3feheyHdeJuo57G5fs0Wx2_6VsGxRvaRfCb8KDYrg76raBFu10Toc1GrbUjj6QmRt_waqakYHI1EPUNS6JUxQZvH3N3S-77kkotlceI","service":"clevertap-processor","timestamp":"2025-06-04T11:53:02.192Z"}
+{"level":"info","message":"deviceInfo.make: Google","service":"clevertap-processor","timestamp":"2025-06-04T11:53:02.192Z"}
+{"level":"info","message":"deviceInfo.model: Sdk_gphone64_arm64","service":"clevertap-processor","timestamp":"2025-06-04T11:53:02.192Z"}
+{"level":"info","message":"deviceInfo.appVersion: 1.0.0","service":"clevertap-processor","timestamp":"2025-06-04T11:53:02.192Z"}
+{"level":"info","message":"deviceInfo.sdkVersion: 70301","service":"clevertap-processor","timestamp":"2025-06-04T11:53:02.192Z"}
+{"level":"info","message":"deviceInfo.osVersion: 16","service":"clevertap-processor","timestamp":"2025-06-04T11:53:02.192Z"}
+{"level":"info","message":"deviceInfo.browser: MobileApp","service":"clevertap-processor","timestamp":"2025-06-04T11:53:02.192Z"}
+{"level":"info","message":"deviceInfo.dpi: 480","service":"clevertap-processor","timestamp":"2025-06-04T11:53:02.192Z"}
+{"level":"info","message":"deviceInfo.dimensions.width: 61","service":"clevertap-processor","timestamp":"2025-06-04T11:53:02.192Z"}
+{"level":"info","message":"deviceInfo.dimensions.height: 143","service":"clevertap-processor","timestamp":"2025-06-04T11:53:02.192Z"}
+{"level":"info","message":"deviceInfo.dimensions.unit: mm","service":"clevertap-processor","timestamp":"2025-06-04T11:53:02.192Z"}
+{"level":"info","message":"controlGroupName: ","service":"clevertap-processor","timestamp":"2025-06-04T11:53:02.192Z"}
+{"level":"info","message":"eventProps.price: 3499","service":"clevertap-processor","timestamp":"2025-06-04T11:53:02.192Z"}
+{"level":"info","message":"eventProps.image_url: https://fastly.picsum.photos/id/935/200/300.jpg?hmac=XPPjHEBtYb6Y3-p1EjAP0RRB0bNlvqCs52VIysO7iH0","service":"clevertap-processor","timestamp":"2025-06-04T11:53:02.192Z"}
+{"level":"info","message":"eventProps.product_id: 123b","service":"clevertap-processor","timestamp":"2025-06-04T11:53:02.193Z"}
+{"level":"info","message":"eventProps.CT App Version: 1.0.0","service":"clevertap-processor","timestamp":"2025-06-04T11:53:02.193Z"}
+{"level":"info","message":"eventProps.CT Source: Mobile","service":"clevertap-processor","timestamp":"2025-06-04T11:53:02.193Z"}
+{"level":"info","message":"\n=== Charged Events Data Details ===","service":"clevertap-processor","timestamp":"2025-06-04T11:53:02.193Z"}
+{"level":"info","message":"Total records received: 2","service":"clevertap-processor","timestamp":"2025-06-04T11:53:02.193Z"}
+{"level":"info","message":"\nCharged Events - Available fields:","service":"clevertap-processor","timestamp":"2025-06-04T11:53:02.193Z"}
+{"level":"info","message":"\nDetailed Charged Events Data (up to 2 rows):","service":"clevertap-processor","timestamp":"2025-06-04T11:53:02.194Z"}
+{"level":"info","message":"\nRow 1:","service":"clevertap-processor","timestamp":"2025-06-04T11:53:02.194Z"}
+{"level":"info","message":"ts: 20250604114704","service":"clevertap-processor","timestamp":"2025-06-04T11:53:02.194Z"}
+{"level":"info","message":"eventName: Charged","service":"clevertap-processor","timestamp":"2025-06-04T11:53:02.196Z"}
+{"level":"info","message":"profile.identity: hello_123","service":"clevertap-processor","timestamp":"2025-06-04T11:53:02.197Z"}
+{"level":"info","message":"profile.objectId: ","service":"clevertap-processor","timestamp":"2025-06-04T11:53:02.198Z"}
+{"level":"info","message":"profile.all_identities: [testing.dev@gmail.com, hello_123]","service":"clevertap-processor","timestamp":"2025-06-04T11:53:02.198Z"}
+{"level":"info","message":"profile.platform: Android","service":"clevertap-processor","timestamp":"2025-06-04T11:53:02.198Z"}
+{"level":"info","message":"profile.phone: 917202897611","service":"clevertap-processor","timestamp":"2025-06-04T11:53:02.198Z"}
+{"level":"info","message":"profile.name: Dev Testing","service":"clevertap-processor","timestamp":"2025-06-04T11:53:02.198Z"}
+{"level":"info","message":"profile.email: testing.dev@gmail.com","service":"clevertap-processor","timestamp":"2025-06-04T11:53:02.198Z"}
+{"level":"info","message":"profile.push_token: fcm:cW57dF6URueav7Vw8K3vPR:APA91bFrfdNDJo_c3feheyHdeJuo57G5fs0Wx2_6VsGxRvaRfCb8KDYrg76raBFu10Toc1GrbUjj6QmRt_waqakYHI1EPUNS6JUxQZvH3N3S-77kkotlceI","service":"clevertap-processor","timestamp":"2025-06-04T11:53:02.198Z"}
+{"level":"info","message":"deviceInfo.make: Google","service":"clevertap-processor","timestamp":"2025-06-04T11:53:02.198Z"}
+{"level":"info","message":"deviceInfo.model: Sdk_gphone64_arm64","service":"clevertap-processor","timestamp":"2025-06-04T11:53:02.198Z"}
+{"level":"info","message":"deviceInfo.appVersion: 1.0.0","service":"clevertap-processor","timestamp":"2025-06-04T11:53:02.198Z"}
+{"level":"info","message":"deviceInfo.sdkVersion: 70301","service":"clevertap-processor","timestamp":"2025-06-04T11:53:02.198Z"}
+{"level":"info","message":"deviceInfo.osVersion: 16","service":"clevertap-processor","timestamp":"2025-06-04T11:53:02.198Z"}
+{"level":"info","message":"deviceInfo.browser: MobileApp","service":"clevertap-processor","timestamp":"2025-06-04T11:53:02.198Z"}
+{"level":"info","message":"deviceInfo.dpi: 480","service":"clevertap-processor","timestamp":"2025-06-04T11:53:02.199Z"}
+{"level":"info","message":"deviceInfo.dimensions.width: 61","service":"clevertap-processor","timestamp":"2025-06-04T11:53:02.199Z"}
+{"level":"info","message":"deviceInfo.dimensions.height: 143","service":"clevertap-processor","timestamp":"2025-06-04T11:53:02.199Z"}
+{"level":"info","message":"deviceInfo.dimensions.unit: mm","service":"clevertap-processor","timestamp":"2025-06-04T11:53:02.199Z"}
+{"level":"info","message":"controlGroupName: ","service":"clevertap-processor","timestamp":"2025-06-04T11:53:02.200Z"}
+{"level":"info","message":"eventProps.CT App Version: 1.0.0","service":"clevertap-processor","timestamp":"2025-06-04T11:53:02.200Z"}
+{"level":"info","message":"eventProps.CT Source: Mobile","service":"clevertap-processor","timestamp":"2025-06-04T11:53:02.200Z"}
+{"level":"info","message":"eventProps.price: ","service":"clevertap-processor","timestamp":"2025-06-04T11:53:02.200Z"}
+{"level":"info","message":"eventProps.image_url: ","service":"clevertap-processor","timestamp":"2025-06-04T11:53:02.200Z"}
+{"level":"info","message":"eventProps.product_id: ","service":"clevertap-processor","timestamp":"2025-06-04T11:53:02.200Z"}
+{"level":"info","message":"eventProps.Items: ","service":"clevertap-processor","timestamp":"2025-06-04T11:53:02.200Z"}
+{"level":"info","message":"\nRow 2:","service":"clevertap-processor","timestamp":"2025-06-04T11:53:02.200Z"}
+{"level":"info","message":"ts: 20250604135853","service":"clevertap-processor","timestamp":"2025-06-04T11:53:02.200Z"}
+{"level":"info","message":"eventName: Charged","service":"clevertap-processor","timestamp":"2025-06-04T11:53:02.200Z"}
+{"level":"info","message":"profile.identity: hello_123","service":"clevertap-processor","timestamp":"2025-06-04T11:53:02.200Z"}
+{"level":"info","message":"profile.objectId: ","service":"clevertap-processor","timestamp":"2025-06-04T11:53:02.200Z"}
+{"level":"info","message":"profile.all_identities: [testing.dev@gmail.com, hello_123]","service":"clevertap-processor","timestamp":"2025-06-04T11:53:02.200Z"}
+{"level":"info","message":"profile.platform: Android","service":"clevertap-processor","timestamp":"2025-06-04T11:53:02.200Z"}
+{"level":"info","message":"profile.phone: 917202897611","service":"clevertap-processor","timestamp":"2025-06-04T11:53:02.200Z"}
+{"level":"info","message":"profile.name: Dev Testing","service":"clevertap-processor","timestamp":"2025-06-04T11:53:02.200Z"}
+{"level":"info","message":"profile.email: testing.dev@gmail.com","service":"clevertap-processor","timestamp":"2025-06-04T11:53:02.201Z"}
+{"level":"info","message":"profile.push_token: fcm:cW57dF6URueav7Vw8K3vPR:APA91bFrfdNDJo_c3feheyHdeJuo57G5fs0Wx2_6VsGxRvaRfCb8KDYrg76raBFu10Toc1GrbUjj6QmRt_waqakYHI1EPUNS6JUxQZvH3N3S-77kkotlceI","service":"clevertap-processor","timestamp":"2025-06-04T11:53:02.201Z"}
+{"level":"info","message":"deviceInfo.make: Google","service":"clevertap-processor","timestamp":"2025-06-04T11:53:02.201Z"}
+{"level":"info","message":"deviceInfo.model: Sdk_gphone64_arm64","service":"clevertap-processor","timestamp":"2025-06-04T11:53:02.201Z"}
+{"level":"info","message":"deviceInfo.appVersion: 1.0.0","service":"clevertap-processor","timestamp":"2025-06-04T11:53:02.201Z"}
+{"level":"info","message":"deviceInfo.sdkVersion: 70301","service":"clevertap-processor","timestamp":"2025-06-04T11:53:02.201Z"}
+{"level":"info","message":"deviceInfo.osVersion: 16","service":"clevertap-processor","timestamp":"2025-06-04T11:53:02.201Z"}
+{"level":"info","message":"deviceInfo.browser: MobileApp","service":"clevertap-processor","timestamp":"2025-06-04T11:53:02.201Z"}
+{"level":"info","message":"deviceInfo.dpi: 480","service":"clevertap-processor","timestamp":"2025-06-04T11:53:02.201Z"}
+{"level":"info","message":"deviceInfo.dimensions.width: 61","service":"clevertap-processor","timestamp":"2025-06-04T11:53:02.201Z"}
+{"level":"info","message":"deviceInfo.dimensions.height: 143","service":"clevertap-processor","timestamp":"2025-06-04T11:53:02.201Z"}
+{"level":"info","message":"deviceInfo.dimensions.unit: mm","service":"clevertap-processor","timestamp":"2025-06-04T11:53:02.201Z"}
+{"level":"info","message":"controlGroupName: ","service":"clevertap-processor","timestamp":"2025-06-04T11:53:02.201Z"}
+{"level":"info","message":"eventProps.CT App Version: 1.0.0","service":"clevertap-processor","timestamp":"2025-06-04T11:53:02.201Z"}
+{"level":"info","message":"eventProps.CT Source: Mobile","service":"clevertap-processor","timestamp":"2025-06-04T11:53:02.201Z"}
+{"level":"info","message":"eventProps.price: 3499","service":"clevertap-processor","timestamp":"2025-06-04T11:53:02.201Z"}
+{"level":"info","message":"eventProps.image_url: https://fastly.picsum.photos/id/935/200/300.jpg?hmac=XPPjHEBtYb6Y3-p1EjAP0RRB0bNlvqCs52VIysO7iH0","service":"clevertap-processor","timestamp":"2025-06-04T11:53:02.202Z"}
+{"level":"info","message":"eventProps.product_id: 123b","service":"clevertap-processor","timestamp":"2025-06-04T11:53:02.202Z"}
+{"level":"info","message":"eventProps.Items: ","service":"clevertap-processor","timestamp":"2025-06-04T11:53:02.202Z"}
+{"level":"info","message":"\n=== Processing Summary ===","service":"clevertap-processor","timestamp":"2025-06-04T11:53:02.202Z"}
+{"level":"info","message":"Unique charged identities found: 1","service":"clevertap-processor","timestamp":"2025-06-04T11:53:02.203Z"}
+{"level":"info","message":"Cart abandon records: 2","service":"clevertap-processor","timestamp":"2025-06-04T11:53:02.203Z"}
+{"level":"info","message":"Charged events records: 2","service":"clevertap-processor","timestamp":"2025-06-04T11:53:02.203Z"}
+{"level":"info","message":"Delta records (before deduplication): 0","service":"clevertap-processor","timestamp":"2025-06-04T11:53:02.203Z"}
+{"level":"info","message":"Delta records (after deduplication): 0","service":"clevertap-processor","timestamp":"2025-06-04T11:53:02.203Z"}
+{"level":"info","message":"No delta data to process. Cron Job 1 completed.","service":"clevertap-processor","timestamp":"2025-06-04T11:53:02.203Z"}
+{"level":"info","message":"Executing scheduled Cron Job 2 at 4:18 PM","service":"clevertap-processor","timestamp":"2025-06-04T11:54:00.355Z"}
+{"level":"info","message":"Starting Cron Job 2 - CleverTap Upload","service":"clevertap-processor","timestamp":"2025-06-04T11:54:00.356Z"}
+{"level":"info","message":"Successfully listed objects in bucket: delta-events","service":"clevertap-processor","timestamp":"2025-06-04T11:54:00.959Z"}
+{"level":"warn","message":"No CSV files found in delta events bucket","service":"clevertap-processor","timestamp":"2025-06-04T11:54:00.960Z"}
+{"level":"info","message":"No delta data found for CleverTap upload","service":"clevertap-processor","timestamp":"2025-06-04T11:54:00.960Z"}
+{"level":"info","message":"Received SIGINT. Graceful shutdown...","service":"clevertap-processor","timestamp":"2025-06-04T11:54:19.724Z"}
+{"level":"info","message":"AWS credentials validation passed","service":"clevertap-processor","timestamp":"2025-06-04T12:16:24.351Z"}
+{"level":"info","message":"Environment validation passed","service":"clevertap-processor","timestamp":"2025-06-04T12:16:24.428Z"}
+{"level":"info","message":"CleverTap Data Processor started successfully","service":"clevertap-processor","timestamp":"2025-06-04T12:16:24.428Z"}
+{"level":"info","message":"Cron Job 1 scheduled for 4:15 PM daily","service":"clevertap-processor","timestamp":"2025-06-04T12:16:24.428Z"}
+{"level":"info","message":"Cron Job 2 scheduled for 4:18 PM daily","service":"clevertap-processor","timestamp":"2025-06-04T12:16:24.428Z"}
+{"level":"info","message":"Executing scheduled Cron Job 1 at 4:15 PM","service":"clevertap-processor","timestamp":"2025-06-04T12:18:00.543Z"}
+{"level":"info","message":"Starting Cron Job 1 - Data Processing","service":"clevertap-processor","timestamp":"2025-06-04T12:18:00.545Z"}
+{"level":"info","message":"Successfully listed objects in bucket: cart-abandon","service":"clevertap-processor","timestamp":"2025-06-04T12:18:01.107Z"}
+{"level":"info","message":"Processing file: 1749038653-1749038653-AddToCart-20250604-0-21.csv.gz from bucket: cart-abandon","service":"clevertap-processor","timestamp":"2025-06-04T12:18:01.107Z"}
+{"level":"info","message":"Successfully listed objects in bucket: charged-events","service":"clevertap-processor","timestamp":"2025-06-04T12:18:01.751Z"}
+{"level":"info","message":"Processing file: 1749038674-1749038674-Charged-20250604-0-21.csv.gz from bucket: charged-events","service":"clevertap-processor","timestamp":"2025-06-04T12:18:01.751Z"}
+{"level":"info","message":"\n=== Cart Abandon Data Details ===","service":"clevertap-processor","timestamp":"2025-06-04T12:18:01.931Z"}
+{"level":"info","message":"Total records received: 3","service":"clevertap-processor","timestamp":"2025-06-04T12:18:01.931Z"}
+{"level":"info","message":"\nCart Abandon - Available fields:","service":"clevertap-processor","timestamp":"2025-06-04T12:18:01.931Z"}
+{"level":"info","message":"\nDetailed Cart Abandon Data (up to 2 rows):","service":"clevertap-processor","timestamp":"2025-06-04T12:18:01.932Z"}
+{"level":"info","message":"\nRow 1:","service":"clevertap-processor","timestamp":"2025-06-04T12:18:01.932Z"}
+{"level":"info","message":"ts: 20250604134942","service":"clevertap-processor","timestamp":"2025-06-04T12:18:01.932Z"}
+{"level":"info","message":"eventName: AddToCart","service":"clevertap-processor","timestamp":"2025-06-04T12:18:01.932Z"}
+{"level":"info","message":"profile.identity: hello_123","service":"clevertap-processor","timestamp":"2025-06-04T12:18:01.932Z"}
+{"level":"info","message":"profile.objectId: ","service":"clevertap-processor","timestamp":"2025-06-04T12:18:01.932Z"}
+{"level":"info","message":"profile.all_identities: [testing.dev@gmail.com, hello_123]","service":"clevertap-processor","timestamp":"2025-06-04T12:18:01.932Z"}
+{"level":"info","message":"profile.platform: Android","service":"clevertap-processor","timestamp":"2025-06-04T12:18:01.932Z"}
+{"level":"info","message":"profile.phone: 917202897611","service":"clevertap-processor","timestamp":"2025-06-04T12:18:01.932Z"}
+{"level":"info","message":"profile.name: Dev Testing","service":"clevertap-processor","timestamp":"2025-06-04T12:18:01.932Z"}
+{"level":"info","message":"profile.email: testing.dev@gmail.com","service":"clevertap-processor","timestamp":"2025-06-04T12:18:01.932Z"}
+{"level":"info","message":"profile.push_token: fcm:cW57dF6URueav7Vw8K3vPR:APA91bFrfdNDJo_c3feheyHdeJuo57G5fs0Wx2_6VsGxRvaRfCb8KDYrg76raBFu10Toc1GrbUjj6QmRt_waqakYHI1EPUNS6JUxQZvH3N3S-77kkotlceI","service":"clevertap-processor","timestamp":"2025-06-04T12:18:01.932Z"}
+{"level":"info","message":"deviceInfo.make: Google","service":"clevertap-processor","timestamp":"2025-06-04T12:18:01.932Z"}
+{"level":"info","message":"deviceInfo.model: Sdk_gphone64_arm64","service":"clevertap-processor","timestamp":"2025-06-04T12:18:01.932Z"}
+{"level":"info","message":"deviceInfo.appVersion: 1.0.0","service":"clevertap-processor","timestamp":"2025-06-04T12:18:01.932Z"}
+{"level":"info","message":"deviceInfo.sdkVersion: 70301","service":"clevertap-processor","timestamp":"2025-06-04T12:18:01.932Z"}
+{"level":"info","message":"deviceInfo.osVersion: 16","service":"clevertap-processor","timestamp":"2025-06-04T12:18:01.932Z"}
+{"level":"info","message":"deviceInfo.browser: MobileApp","service":"clevertap-processor","timestamp":"2025-06-04T12:18:01.932Z"}
+{"level":"info","message":"deviceInfo.dpi: 480","service":"clevertap-processor","timestamp":"2025-06-04T12:18:01.932Z"}
+{"level":"info","message":"deviceInfo.dimensions.width: 61","service":"clevertap-processor","timestamp":"2025-06-04T12:18:01.932Z"}
+{"level":"info","message":"deviceInfo.dimensions.height: 143","service":"clevertap-processor","timestamp":"2025-06-04T12:18:01.932Z"}
+{"level":"info","message":"deviceInfo.dimensions.unit: mm","service":"clevertap-processor","timestamp":"2025-06-04T12:18:01.932Z"}
+{"level":"info","message":"controlGroupName: ","service":"clevertap-processor","timestamp":"2025-06-04T12:18:01.932Z"}
+{"level":"info","message":"eventProps.price: 3999","service":"clevertap-processor","timestamp":"2025-06-04T12:18:01.932Z"}
+{"level":"info","message":"eventProps.image_url: https://fastly.picsum.photos/id/935/200/300.jpg?hmac=XPPjHEBtYb6Y3-p1EjAP0RRB0bNlvqCs52VIysO7iH0","service":"clevertap-processor","timestamp":"2025-06-04T12:18:01.932Z"}
+{"level":"info","message":"eventProps.product_id: 123a","service":"clevertap-processor","timestamp":"2025-06-04T12:18:01.932Z"}
+{"level":"info","message":"eventProps.CT App Version: 1.0.0","service":"clevertap-processor","timestamp":"2025-06-04T12:18:01.932Z"}
+{"level":"info","message":"eventProps.CT Source: Mobile","service":"clevertap-processor","timestamp":"2025-06-04T12:18:01.932Z"}
+{"level":"info","message":"\nRow 2:","service":"clevertap-processor","timestamp":"2025-06-04T12:18:01.932Z"}
+{"level":"info","message":"ts: 20250604135145","service":"clevertap-processor","timestamp":"2025-06-04T12:18:01.932Z"}
+{"level":"info","message":"eventName: AddToCart","service":"clevertap-processor","timestamp":"2025-06-04T12:18:01.932Z"}
+{"level":"info","message":"profile.identity: hello_123","service":"clevertap-processor","timestamp":"2025-06-04T12:18:01.932Z"}
+{"level":"info","message":"profile.objectId: ","service":"clevertap-processor","timestamp":"2025-06-04T12:18:01.932Z"}
+{"level":"info","message":"profile.all_identities: [testing.dev@gmail.com, hello_123]","service":"clevertap-processor","timestamp":"2025-06-04T12:18:01.932Z"}
+{"level":"info","message":"profile.platform: Android","service":"clevertap-processor","timestamp":"2025-06-04T12:18:01.932Z"}
+{"level":"info","message":"profile.phone: 917202897611","service":"clevertap-processor","timestamp":"2025-06-04T12:18:01.932Z"}
+{"level":"info","message":"profile.name: Dev Testing","service":"clevertap-processor","timestamp":"2025-06-04T12:18:01.932Z"}
+{"level":"info","message":"profile.email: testing.dev@gmail.com","service":"clevertap-processor","timestamp":"2025-06-04T12:18:01.932Z"}
+{"level":"info","message":"profile.push_token: fcm:cW57dF6URueav7Vw8K3vPR:APA91bFrfdNDJo_c3feheyHdeJuo57G5fs0Wx2_6VsGxRvaRfCb8KDYrg76raBFu10Toc1GrbUjj6QmRt_waqakYHI1EPUNS6JUxQZvH3N3S-77kkotlceI","service":"clevertap-processor","timestamp":"2025-06-04T12:18:01.932Z"}
+{"level":"info","message":"deviceInfo.make: Google","service":"clevertap-processor","timestamp":"2025-06-04T12:18:01.932Z"}
+{"level":"info","message":"deviceInfo.model: Sdk_gphone64_arm64","service":"clevertap-processor","timestamp":"2025-06-04T12:18:01.932Z"}
+{"level":"info","message":"deviceInfo.appVersion: 1.0.0","service":"clevertap-processor","timestamp":"2025-06-04T12:18:01.932Z"}
+{"level":"info","message":"deviceInfo.sdkVersion: 70301","service":"clevertap-processor","timestamp":"2025-06-04T12:18:01.932Z"}
+{"level":"info","message":"deviceInfo.osVersion: 16","service":"clevertap-processor","timestamp":"2025-06-04T12:18:01.932Z"}
+{"level":"info","message":"deviceInfo.browser: MobileApp","service":"clevertap-processor","timestamp":"2025-06-04T12:18:01.932Z"}
+{"level":"info","message":"deviceInfo.dpi: 480","service":"clevertap-processor","timestamp":"2025-06-04T12:18:01.932Z"}
+{"level":"info","message":"deviceInfo.dimensions.width: 61","service":"clevertap-processor","timestamp":"2025-06-04T12:18:01.932Z"}
+{"level":"info","message":"deviceInfo.dimensions.height: 143","service":"clevertap-processor","timestamp":"2025-06-04T12:18:01.932Z"}
+{"level":"info","message":"deviceInfo.dimensions.unit: mm","service":"clevertap-processor","timestamp":"2025-06-04T12:18:01.932Z"}
+{"level":"info","message":"controlGroupName: ","service":"clevertap-processor","timestamp":"2025-06-04T12:18:01.932Z"}
+{"level":"info","message":"eventProps.price: 3499","service":"clevertap-processor","timestamp":"2025-06-04T12:18:01.932Z"}
+{"level":"info","message":"eventProps.image_url: https://fastly.picsum.photos/id/935/200/300.jpg?hmac=XPPjHEBtYb6Y3-p1EjAP0RRB0bNlvqCs52VIysO7iH0","service":"clevertap-processor","timestamp":"2025-06-04T12:18:01.933Z"}
+{"level":"info","message":"eventProps.product_id: 123b","service":"clevertap-processor","timestamp":"2025-06-04T12:18:01.933Z"}
+{"level":"info","message":"eventProps.CT App Version: 1.0.0","service":"clevertap-processor","timestamp":"2025-06-04T12:18:01.933Z"}
+{"level":"info","message":"eventProps.CT Source: Mobile","service":"clevertap-processor","timestamp":"2025-06-04T12:18:01.933Z"}
+{"level":"info","message":"\n=== Charged Events Data Details ===","service":"clevertap-processor","timestamp":"2025-06-04T12:18:01.933Z"}
+{"level":"info","message":"Total records received: 2","service":"clevertap-processor","timestamp":"2025-06-04T12:18:01.933Z"}
+{"level":"info","message":"\nCharged Events - Available fields:","service":"clevertap-processor","timestamp":"2025-06-04T12:18:01.933Z"}
+{"level":"info","message":"\nDetailed Charged Events Data (up to 2 rows):","service":"clevertap-processor","timestamp":"2025-06-04T12:18:01.933Z"}
+{"level":"info","message":"\nRow 1:","service":"clevertap-processor","timestamp":"2025-06-04T12:18:01.933Z"}
+{"level":"info","message":"ts: 20250604114704","service":"clevertap-processor","timestamp":"2025-06-04T12:18:01.933Z"}
+{"level":"info","message":"eventName: Charged","service":"clevertap-processor","timestamp":"2025-06-04T12:18:01.933Z"}
+{"level":"info","message":"profile.identity: hello_123","service":"clevertap-processor","timestamp":"2025-06-04T12:18:01.933Z"}
+{"level":"info","message":"profile.objectId: ","service":"clevertap-processor","timestamp":"2025-06-04T12:18:01.933Z"}
+{"level":"info","message":"profile.all_identities: [testing.dev@gmail.com, hello_123]","service":"clevertap-processor","timestamp":"2025-06-04T12:18:01.933Z"}
+{"level":"info","message":"profile.platform: Android","service":"clevertap-processor","timestamp":"2025-06-04T12:18:01.933Z"}
+{"level":"info","message":"profile.phone: 917202897611","service":"clevertap-processor","timestamp":"2025-06-04T12:18:01.933Z"}
+{"level":"info","message":"profile.name: Dev Testing","service":"clevertap-processor","timestamp":"2025-06-04T12:18:01.933Z"}
+{"level":"info","message":"profile.email: testing.dev@gmail.com","service":"clevertap-processor","timestamp":"2025-06-04T12:18:01.933Z"}
+{"level":"info","message":"profile.push_token: fcm:cW57dF6URueav7Vw8K3vPR:APA91bFrfdNDJo_c3feheyHdeJuo57G5fs0Wx2_6VsGxRvaRfCb8KDYrg76raBFu10Toc1GrbUjj6QmRt_waqakYHI1EPUNS6JUxQZvH3N3S-77kkotlceI","service":"clevertap-processor","timestamp":"2025-06-04T12:18:01.933Z"}
+{"level":"info","message":"deviceInfo.make: Google","service":"clevertap-processor","timestamp":"2025-06-04T12:18:01.933Z"}
+{"level":"info","message":"deviceInfo.model: Sdk_gphone64_arm64","service":"clevertap-processor","timestamp":"2025-06-04T12:18:01.933Z"}
+{"level":"info","message":"deviceInfo.appVersion: 1.0.0","service":"clevertap-processor","timestamp":"2025-06-04T12:18:01.933Z"}
+{"level":"info","message":"deviceInfo.sdkVersion: 70301","service":"clevertap-processor","timestamp":"2025-06-04T12:18:01.933Z"}
+{"level":"info","message":"deviceInfo.osVersion: 16","service":"clevertap-processor","timestamp":"2025-06-04T12:18:01.933Z"}
+{"level":"info","message":"deviceInfo.browser: MobileApp","service":"clevertap-processor","timestamp":"2025-06-04T12:18:01.933Z"}
+{"level":"info","message":"deviceInfo.dpi: 480","service":"clevertap-processor","timestamp":"2025-06-04T12:18:01.933Z"}
+{"level":"info","message":"deviceInfo.dimensions.width: 61","service":"clevertap-processor","timestamp":"2025-06-04T12:18:01.933Z"}
+{"level":"info","message":"deviceInfo.dimensions.height: 143","service":"clevertap-processor","timestamp":"2025-06-04T12:18:01.933Z"}
+{"level":"info","message":"deviceInfo.dimensions.unit: mm","service":"clevertap-processor","timestamp":"2025-06-04T12:18:01.933Z"}
+{"level":"info","message":"controlGroupName: ","service":"clevertap-processor","timestamp":"2025-06-04T12:18:01.933Z"}
+{"level":"info","message":"eventProps.CT App Version: 1.0.0","service":"clevertap-processor","timestamp":"2025-06-04T12:18:01.933Z"}
+{"level":"info","message":"eventProps.CT Source: Mobile","service":"clevertap-processor","timestamp":"2025-06-04T12:18:01.933Z"}
+{"level":"info","message":"eventProps.price: ","service":"clevertap-processor","timestamp":"2025-06-04T12:18:01.933Z"}
+{"level":"info","message":"eventProps.image_url: ","service":"clevertap-processor","timestamp":"2025-06-04T12:18:01.933Z"}
+{"level":"info","message":"eventProps.product_id: ","service":"clevertap-processor","timestamp":"2025-06-04T12:18:01.933Z"}
+{"level":"info","message":"eventProps.Items: ","service":"clevertap-processor","timestamp":"2025-06-04T12:18:01.933Z"}
+{"level":"info","message":"\nRow 2:","service":"clevertap-processor","timestamp":"2025-06-04T12:18:01.933Z"}
+{"level":"info","message":"ts: 20250604135853","service":"clevertap-processor","timestamp":"2025-06-04T12:18:01.933Z"}
+{"level":"info","message":"eventName: Charged","service":"clevertap-processor","timestamp":"2025-06-04T12:18:01.933Z"}
+{"level":"info","message":"profile.identity: hello_123","service":"clevertap-processor","timestamp":"2025-06-04T12:18:01.933Z"}
+{"level":"info","message":"profile.objectId: ","service":"clevertap-processor","timestamp":"2025-06-04T12:18:01.933Z"}
+{"level":"info","message":"profile.all_identities: [testing.dev@gmail.com, hello_123]","service":"clevertap-processor","timestamp":"2025-06-04T12:18:01.933Z"}
+{"level":"info","message":"profile.platform: Android","service":"clevertap-processor","timestamp":"2025-06-04T12:18:01.933Z"}
+{"level":"info","message":"profile.phone: 917202897611","service":"clevertap-processor","timestamp":"2025-06-04T12:18:01.933Z"}
+{"level":"info","message":"profile.name: Dev Testing","service":"clevertap-processor","timestamp":"2025-06-04T12:18:01.933Z"}
+{"level":"info","message":"profile.email: testing.dev@gmail.com","service":"clevertap-processor","timestamp":"2025-06-04T12:18:01.933Z"}
+{"level":"info","message":"profile.push_token: fcm:cW57dF6URueav7Vw8K3vPR:APA91bFrfdNDJo_c3feheyHdeJuo57G5fs0Wx2_6VsGxRvaRfCb8KDYrg76raBFu10Toc1GrbUjj6QmRt_waqakYHI1EPUNS6JUxQZvH3N3S-77kkotlceI","service":"clevertap-processor","timestamp":"2025-06-04T12:18:01.933Z"}
+{"level":"info","message":"deviceInfo.make: Google","service":"clevertap-processor","timestamp":"2025-06-04T12:18:01.933Z"}
+{"level":"info","message":"deviceInfo.model: Sdk_gphone64_arm64","service":"clevertap-processor","timestamp":"2025-06-04T12:18:01.934Z"}
+{"level":"info","message":"deviceInfo.appVersion: 1.0.0","service":"clevertap-processor","timestamp":"2025-06-04T12:18:01.934Z"}
+{"level":"info","message":"deviceInfo.sdkVersion: 70301","service":"clevertap-processor","timestamp":"2025-06-04T12:18:01.934Z"}
+{"level":"info","message":"deviceInfo.osVersion: 16","service":"clevertap-processor","timestamp":"2025-06-04T12:18:01.934Z"}
+{"level":"info","message":"deviceInfo.browser: MobileApp","service":"clevertap-processor","timestamp":"2025-06-04T12:18:01.934Z"}
+{"level":"info","message":"deviceInfo.dpi: 480","service":"clevertap-processor","timestamp":"2025-06-04T12:18:01.934Z"}
+{"level":"info","message":"deviceInfo.dimensions.width: 61","service":"clevertap-processor","timestamp":"2025-06-04T12:18:01.934Z"}
+{"level":"info","message":"deviceInfo.dimensions.height: 143","service":"clevertap-processor","timestamp":"2025-06-04T12:18:01.934Z"}
+{"level":"info","message":"deviceInfo.dimensions.unit: mm","service":"clevertap-processor","timestamp":"2025-06-04T12:18:01.934Z"}
+{"level":"info","message":"controlGroupName: ","service":"clevertap-processor","timestamp":"2025-06-04T12:18:01.934Z"}
+{"level":"info","message":"eventProps.CT App Version: 1.0.0","service":"clevertap-processor","timestamp":"2025-06-04T12:18:01.934Z"}
+{"level":"info","message":"eventProps.CT Source: Mobile","service":"clevertap-processor","timestamp":"2025-06-04T12:18:01.934Z"}
+{"level":"info","message":"eventProps.price: 3499","service":"clevertap-processor","timestamp":"2025-06-04T12:18:01.934Z"}
+{"level":"info","message":"eventProps.image_url: https://fastly.picsum.photos/id/935/200/300.jpg?hmac=XPPjHEBtYb6Y3-p1EjAP0RRB0bNlvqCs52VIysO7iH0","service":"clevertap-processor","timestamp":"2025-06-04T12:18:01.934Z"}
+{"level":"info","message":"eventProps.product_id: 123b","service":"clevertap-processor","timestamp":"2025-06-04T12:18:01.934Z"}
+{"level":"info","message":"eventProps.Items: ","service":"clevertap-processor","timestamp":"2025-06-04T12:18:01.934Z"}
+{"level":"info","message":"\n=== Processing Details ===","service":"clevertap-processor","timestamp":"2025-06-04T12:18:01.934Z"}
+{"level":"info","message":"Unique identity-product combinations in charged events: 1","service":"clevertap-processor","timestamp":"2025-06-04T12:18:01.934Z"}
+{"level":"info","message":"\n=== Processing Summary ===","service":"clevertap-processor","timestamp":"2025-06-04T12:18:01.934Z"}
+{"level":"info","message":"Cart abandon records: 3","service":"clevertap-processor","timestamp":"2025-06-04T12:18:01.934Z"}
+{"level":"info","message":"Charged events records: 2","service":"clevertap-processor","timestamp":"2025-06-04T12:18:01.934Z"}
+{"level":"info","message":"Delta records (before deduplication): 2","service":"clevertap-processor","timestamp":"2025-06-04T12:18:01.934Z"}
+{"level":"info","message":"Delta records (after deduplication): 2","service":"clevertap-processor","timestamp":"2025-06-04T12:18:01.934Z"}
+{"level":"info","message":"\n=== Sample Filtered Data ===","service":"clevertap-processor","timestamp":"2025-06-04T12:18:01.934Z"}
+{"level":"info","message":"First record after filtering:","service":"clevertap-processor","timestamp":"2025-06-04T12:18:01.934Z"}
+{"level":"info","message":"Identity: hello_123","service":"clevertap-processor","timestamp":"2025-06-04T12:18:01.934Z"}
+{"level":"info","message":"Product ID: 123a","service":"clevertap-processor","timestamp":"2025-06-04T12:18:01.934Z"}
+{"level":"error","message":"Cron Job 1 failed: s3Service.uploadCsv is not a function","service":"clevertap-processor","stack":"TypeError: s3Service.uploadCsv is not a function\n    at CronJob1.execute (/Users/dev.bathani/Desktop/Work/s3-delta-clevertap-app/src/jobs/cronJob1.js:24:33)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async cron.schedule.scheduled [as _execution] (/Users/dev.bathani/Desktop/Work/s3-delta-clevertap-app/src/index.js:41:9)","timestamp":"2025-06-04T12:18:01.936Z"}
+{"level":"error","message":"Scheduled Cron Job 1 failed: s3Service.uploadCsv is not a function","service":"clevertap-processor","stack":"TypeError: s3Service.uploadCsv is not a function\n    at CronJob1.execute (/Users/dev.bathani/Desktop/Work/s3-delta-clevertap-app/src/jobs/cronJob1.js:24:33)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async cron.schedule.scheduled [as _execution] (/Users/dev.bathani/Desktop/Work/s3-delta-clevertap-app/src/index.js:41:9)","timestamp":"2025-06-04T12:18:01.936Z"}
+{"level":"info","message":"Executing scheduled Cron Job 2 at 4:18 PM","service":"clevertap-processor","timestamp":"2025-06-04T12:19:00.663Z"}
+{"level":"info","message":"Starting Cron Job 2 - CleverTap Upload","service":"clevertap-processor","timestamp":"2025-06-04T12:19:00.664Z"}
+{"level":"info","message":"Successfully listed objects in bucket: delta-events","service":"clevertap-processor","timestamp":"2025-06-04T12:19:01.191Z"}
+{"level":"warn","message":"No CSV files found in delta events bucket","service":"clevertap-processor","timestamp":"2025-06-04T12:19:01.192Z"}
+{"level":"info","message":"No delta data found for CleverTap upload","service":"clevertap-processor","timestamp":"2025-06-04T12:19:01.192Z"}
+{"level":"info","message":"Received SIGINT. Graceful shutdown...","service":"clevertap-processor","timestamp":"2025-06-04T12:42:10.932Z"}
+{"level":"info","message":"AWS credentials validation passed","service":"clevertap-processor","timestamp":"2025-06-04T12:43:07.706Z"}
+{"level":"info","message":"Environment validation passed","service":"clevertap-processor","timestamp":"2025-06-04T12:43:07.785Z"}
+{"level":"info","message":"CleverTap Data Processor started successfully","service":"clevertap-processor","timestamp":"2025-06-04T12:43:07.785Z"}
+{"level":"info","message":"Cron Job 1 scheduled for 4:15 PM daily","service":"clevertap-processor","timestamp":"2025-06-04T12:43:07.785Z"}
+{"level":"info","message":"Cron Job 2 scheduled for 4:18 PM daily","service":"clevertap-processor","timestamp":"2025-06-04T12:43:07.785Z"}
+{"level":"info","message":"Executing scheduled Cron Job 1 at 4:15 PM","service":"clevertap-processor","timestamp":"2025-06-04T12:44:00.848Z"}
+{"level":"info","message":"Starting Cron Job 1 - Data Processing","service":"clevertap-processor","timestamp":"2025-06-04T12:44:00.851Z"}
+{"level":"info","message":"Successfully listed objects in bucket: cart-abandon","service":"clevertap-processor","timestamp":"2025-06-04T12:44:01.459Z"}
+{"level":"info","message":"Processing file: 1749038653-1749038653-AddToCart-20250604-0-21.csv.gz from bucket: cart-abandon","service":"clevertap-processor","timestamp":"2025-06-04T12:44:01.460Z"}
+{"level":"info","message":"Successfully listed objects in bucket: charged-events","service":"clevertap-processor","timestamp":"2025-06-04T12:44:02.426Z"}
+{"level":"info","message":"Processing file: 1749038674-1749038674-Charged-20250604-0-21.csv.gz from bucket: charged-events","service":"clevertap-processor","timestamp":"2025-06-04T12:44:02.426Z"}
+{"level":"info","message":"\n=== Cart Abandon Data Details ===","service":"clevertap-processor","timestamp":"2025-06-04T12:44:02.607Z"}
+{"level":"info","message":"Total records received: 3","service":"clevertap-processor","timestamp":"2025-06-04T12:44:02.607Z"}
+{"level":"info","message":"\nCart Abandon - Available fields:","service":"clevertap-processor","timestamp":"2025-06-04T12:44:02.608Z"}
+{"level":"info","message":"\nDetailed Cart Abandon Data (up to 2 rows):","service":"clevertap-processor","timestamp":"2025-06-04T12:44:02.608Z"}
+{"level":"info","message":"\nRow 1:","service":"clevertap-processor","timestamp":"2025-06-04T12:44:02.608Z"}
+{"level":"info","message":"ts: 20250604134942","service":"clevertap-processor","timestamp":"2025-06-04T12:44:02.608Z"}
+{"level":"info","message":"eventName: AddToCart","service":"clevertap-processor","timestamp":"2025-06-04T12:44:02.609Z"}
+{"level":"info","message":"profile.identity: hello_123","service":"clevertap-processor","timestamp":"2025-06-04T12:44:02.609Z"}
+{"level":"info","message":"profile.objectId: ","service":"clevertap-processor","timestamp":"2025-06-04T12:44:02.609Z"}
+{"level":"info","message":"profile.all_identities: [testing.dev@gmail.com, hello_123]","service":"clevertap-processor","timestamp":"2025-06-04T12:44:02.609Z"}
+{"level":"info","message":"profile.platform: Android","service":"clevertap-processor","timestamp":"2025-06-04T12:44:02.609Z"}
+{"level":"info","message":"profile.phone: 917202897611","service":"clevertap-processor","timestamp":"2025-06-04T12:44:02.609Z"}
+{"level":"info","message":"profile.name: Dev Testing","service":"clevertap-processor","timestamp":"2025-06-04T12:44:02.609Z"}
+{"level":"info","message":"profile.email: testing.dev@gmail.com","service":"clevertap-processor","timestamp":"2025-06-04T12:44:02.609Z"}
+{"level":"info","message":"profile.push_token: fcm:cW57dF6URueav7Vw8K3vPR:APA91bFrfdNDJo_c3feheyHdeJuo57G5fs0Wx2_6VsGxRvaRfCb8KDYrg76raBFu10Toc1GrbUjj6QmRt_waqakYHI1EPUNS6JUxQZvH3N3S-77kkotlceI","service":"clevertap-processor","timestamp":"2025-06-04T12:44:02.609Z"}
+{"level":"info","message":"deviceInfo.make: Google","service":"clevertap-processor","timestamp":"2025-06-04T12:44:02.609Z"}
+{"level":"info","message":"deviceInfo.model: Sdk_gphone64_arm64","service":"clevertap-processor","timestamp":"2025-06-04T12:44:02.609Z"}
+{"level":"info","message":"deviceInfo.appVersion: 1.0.0","service":"clevertap-processor","timestamp":"2025-06-04T12:44:02.609Z"}
+{"level":"info","message":"deviceInfo.sdkVersion: 70301","service":"clevertap-processor","timestamp":"2025-06-04T12:44:02.609Z"}
+{"level":"info","message":"deviceInfo.osVersion: 16","service":"clevertap-processor","timestamp":"2025-06-04T12:44:02.609Z"}
+{"level":"info","message":"deviceInfo.browser: MobileApp","service":"clevertap-processor","timestamp":"2025-06-04T12:44:02.609Z"}
+{"level":"info","message":"deviceInfo.dpi: 480","service":"clevertap-processor","timestamp":"2025-06-04T12:44:02.610Z"}
+{"level":"info","message":"deviceInfo.dimensions.width: 61","service":"clevertap-processor","timestamp":"2025-06-04T12:44:02.610Z"}
+{"level":"info","message":"deviceInfo.dimensions.height: 143","service":"clevertap-processor","timestamp":"2025-06-04T12:44:02.610Z"}
+{"level":"info","message":"deviceInfo.dimensions.unit: mm","service":"clevertap-processor","timestamp":"2025-06-04T12:44:02.610Z"}
+{"level":"info","message":"controlGroupName: ","service":"clevertap-processor","timestamp":"2025-06-04T12:44:02.610Z"}
+{"level":"info","message":"eventProps.price: 3999","service":"clevertap-processor","timestamp":"2025-06-04T12:44:02.610Z"}
+{"level":"info","message":"eventProps.image_url: https://fastly.picsum.photos/id/935/200/300.jpg?hmac=XPPjHEBtYb6Y3-p1EjAP0RRB0bNlvqCs52VIysO7iH0","service":"clevertap-processor","timestamp":"2025-06-04T12:44:02.610Z"}
+{"level":"info","message":"eventProps.product_id: 123a","service":"clevertap-processor","timestamp":"2025-06-04T12:44:02.610Z"}
+{"level":"info","message":"eventProps.CT App Version: 1.0.0","service":"clevertap-processor","timestamp":"2025-06-04T12:44:02.610Z"}
+{"level":"info","message":"eventProps.CT Source: Mobile","service":"clevertap-processor","timestamp":"2025-06-04T12:44:02.610Z"}
+{"level":"info","message":"\nRow 2:","service":"clevertap-processor","timestamp":"2025-06-04T12:44:02.610Z"}
+{"level":"info","message":"ts: 20250604135145","service":"clevertap-processor","timestamp":"2025-06-04T12:44:02.610Z"}
+{"level":"info","message":"eventName: AddToCart","service":"clevertap-processor","timestamp":"2025-06-04T12:44:02.610Z"}
+{"level":"info","message":"profile.identity: hello_123","service":"clevertap-processor","timestamp":"2025-06-04T12:44:02.610Z"}
+{"level":"info","message":"profile.objectId: ","service":"clevertap-processor","timestamp":"2025-06-04T12:44:02.610Z"}
+{"level":"info","message":"profile.all_identities: [testing.dev@gmail.com, hello_123]","service":"clevertap-processor","timestamp":"2025-06-04T12:44:02.610Z"}
+{"level":"info","message":"profile.platform: Android","service":"clevertap-processor","timestamp":"2025-06-04T12:44:02.611Z"}
+{"level":"info","message":"profile.phone: 917202897611","service":"clevertap-processor","timestamp":"2025-06-04T12:44:02.611Z"}
+{"level":"info","message":"profile.name: Dev Testing","service":"clevertap-processor","timestamp":"2025-06-04T12:44:02.611Z"}
+{"level":"info","message":"profile.email: testing.dev@gmail.com","service":"clevertap-processor","timestamp":"2025-06-04T12:44:02.611Z"}
+{"level":"info","message":"profile.push_token: fcm:cW57dF6URueav7Vw8K3vPR:APA91bFrfdNDJo_c3feheyHdeJuo57G5fs0Wx2_6VsGxRvaRfCb8KDYrg76raBFu10Toc1GrbUjj6QmRt_waqakYHI1EPUNS6JUxQZvH3N3S-77kkotlceI","service":"clevertap-processor","timestamp":"2025-06-04T12:44:02.611Z"}
+{"level":"info","message":"deviceInfo.make: Google","service":"clevertap-processor","timestamp":"2025-06-04T12:44:02.611Z"}
+{"level":"info","message":"deviceInfo.model: Sdk_gphone64_arm64","service":"clevertap-processor","timestamp":"2025-06-04T12:44:02.611Z"}
+{"level":"info","message":"deviceInfo.appVersion: 1.0.0","service":"clevertap-processor","timestamp":"2025-06-04T12:44:02.611Z"}
+{"level":"info","message":"deviceInfo.sdkVersion: 70301","service":"clevertap-processor","timestamp":"2025-06-04T12:44:02.611Z"}
+{"level":"info","message":"deviceInfo.osVersion: 16","service":"clevertap-processor","timestamp":"2025-06-04T12:44:02.611Z"}
+{"level":"info","message":"deviceInfo.browser: MobileApp","service":"clevertap-processor","timestamp":"2025-06-04T12:44:02.611Z"}
+{"level":"info","message":"deviceInfo.dpi: 480","service":"clevertap-processor","timestamp":"2025-06-04T12:44:02.611Z"}
+{"level":"info","message":"deviceInfo.dimensions.width: 61","service":"clevertap-processor","timestamp":"2025-06-04T12:44:02.611Z"}
+{"level":"info","message":"deviceInfo.dimensions.height: 143","service":"clevertap-processor","timestamp":"2025-06-04T12:44:02.611Z"}
+{"level":"info","message":"deviceInfo.dimensions.unit: mm","service":"clevertap-processor","timestamp":"2025-06-04T12:44:02.611Z"}
+{"level":"info","message":"controlGroupName: ","service":"clevertap-processor","timestamp":"2025-06-04T12:44:02.611Z"}
+{"level":"info","message":"eventProps.price: 3499","service":"clevertap-processor","timestamp":"2025-06-04T12:44:02.612Z"}
+{"level":"info","message":"eventProps.image_url: https://fastly.picsum.photos/id/935/200/300.jpg?hmac=XPPjHEBtYb6Y3-p1EjAP0RRB0bNlvqCs52VIysO7iH0","service":"clevertap-processor","timestamp":"2025-06-04T12:44:02.612Z"}
+{"level":"info","message":"eventProps.product_id: 123b","service":"clevertap-processor","timestamp":"2025-06-04T12:44:02.612Z"}
+{"level":"info","message":"eventProps.CT App Version: 1.0.0","service":"clevertap-processor","timestamp":"2025-06-04T12:44:02.612Z"}
+{"level":"info","message":"eventProps.CT Source: Mobile","service":"clevertap-processor","timestamp":"2025-06-04T12:44:02.612Z"}
+{"level":"info","message":"\n=== Charged Events Data Details ===","service":"clevertap-processor","timestamp":"2025-06-04T12:44:02.612Z"}
+{"level":"info","message":"Total records received: 2","service":"clevertap-processor","timestamp":"2025-06-04T12:44:02.612Z"}
+{"level":"info","message":"\nCharged Events - Available fields:","service":"clevertap-processor","timestamp":"2025-06-04T12:44:02.612Z"}
+{"level":"info","message":"\nDetailed Charged Events Data (up to 2 rows):","service":"clevertap-processor","timestamp":"2025-06-04T12:44:02.612Z"}
+{"level":"info","message":"\nRow 1:","service":"clevertap-processor","timestamp":"2025-06-04T12:44:02.613Z"}
+{"level":"info","message":"ts: 20250604114704","service":"clevertap-processor","timestamp":"2025-06-04T12:44:02.613Z"}
+{"level":"info","message":"eventName: Charged","service":"clevertap-processor","timestamp":"2025-06-04T12:44:02.613Z"}
+{"level":"info","message":"profile.identity: hello_123","service":"clevertap-processor","timestamp":"2025-06-04T12:44:02.613Z"}
+{"level":"info","message":"profile.objectId: ","service":"clevertap-processor","timestamp":"2025-06-04T12:44:02.613Z"}
+{"level":"info","message":"profile.all_identities: [testing.dev@gmail.com, hello_123]","service":"clevertap-processor","timestamp":"2025-06-04T12:44:02.613Z"}
+{"level":"info","message":"profile.platform: Android","service":"clevertap-processor","timestamp":"2025-06-04T12:44:02.613Z"}
+{"level":"info","message":"profile.phone: 917202897611","service":"clevertap-processor","timestamp":"2025-06-04T12:44:02.613Z"}
+{"level":"info","message":"profile.name: Dev Testing","service":"clevertap-processor","timestamp":"2025-06-04T12:44:02.613Z"}
+{"level":"info","message":"profile.email: testing.dev@gmail.com","service":"clevertap-processor","timestamp":"2025-06-04T12:44:02.613Z"}
+{"level":"info","message":"profile.push_token: fcm:cW57dF6URueav7Vw8K3vPR:APA91bFrfdNDJo_c3feheyHdeJuo57G5fs0Wx2_6VsGxRvaRfCb8KDYrg76raBFu10Toc1GrbUjj6QmRt_waqakYHI1EPUNS6JUxQZvH3N3S-77kkotlceI","service":"clevertap-processor","timestamp":"2025-06-04T12:44:02.613Z"}
+{"level":"info","message":"deviceInfo.make: Google","service":"clevertap-processor","timestamp":"2025-06-04T12:44:02.614Z"}
+{"level":"info","message":"deviceInfo.model: Sdk_gphone64_arm64","service":"clevertap-processor","timestamp":"2025-06-04T12:44:02.614Z"}
+{"level":"info","message":"deviceInfo.appVersion: 1.0.0","service":"clevertap-processor","timestamp":"2025-06-04T12:44:02.614Z"}
+{"level":"info","message":"deviceInfo.sdkVersion: 70301","service":"clevertap-processor","timestamp":"2025-06-04T12:44:02.614Z"}
+{"level":"info","message":"deviceInfo.osVersion: 16","service":"clevertap-processor","timestamp":"2025-06-04T12:44:02.614Z"}
+{"level":"info","message":"deviceInfo.browser: MobileApp","service":"clevertap-processor","timestamp":"2025-06-04T12:44:02.614Z"}
+{"level":"info","message":"deviceInfo.dpi: 480","service":"clevertap-processor","timestamp":"2025-06-04T12:44:02.614Z"}
+{"level":"info","message":"deviceInfo.dimensions.width: 61","service":"clevertap-processor","timestamp":"2025-06-04T12:44:02.614Z"}
+{"level":"info","message":"deviceInfo.dimensions.height: 143","service":"clevertap-processor","timestamp":"2025-06-04T12:44:02.614Z"}
+{"level":"info","message":"deviceInfo.dimensions.unit: mm","service":"clevertap-processor","timestamp":"2025-06-04T12:44:02.614Z"}
+{"level":"info","message":"controlGroupName: ","service":"clevertap-processor","timestamp":"2025-06-04T12:44:02.614Z"}
+{"level":"info","message":"eventProps.CT App Version: 1.0.0","service":"clevertap-processor","timestamp":"2025-06-04T12:44:02.614Z"}
+{"level":"info","message":"eventProps.CT Source: Mobile","service":"clevertap-processor","timestamp":"2025-06-04T12:44:02.614Z"}
+{"level":"info","message":"eventProps.price: ","service":"clevertap-processor","timestamp":"2025-06-04T12:44:02.614Z"}
+{"level":"info","message":"eventProps.image_url: ","service":"clevertap-processor","timestamp":"2025-06-04T12:44:02.614Z"}
+{"level":"info","message":"eventProps.product_id: ","service":"clevertap-processor","timestamp":"2025-06-04T12:44:02.614Z"}
+{"level":"info","message":"eventProps.Items: ","service":"clevertap-processor","timestamp":"2025-06-04T12:44:02.614Z"}
+{"level":"info","message":"\nRow 2:","service":"clevertap-processor","timestamp":"2025-06-04T12:44:02.614Z"}
+{"level":"info","message":"ts: 20250604135853","service":"clevertap-processor","timestamp":"2025-06-04T12:44:02.615Z"}
+{"level":"info","message":"eventName: Charged","service":"clevertap-processor","timestamp":"2025-06-04T12:44:02.615Z"}
+{"level":"info","message":"profile.identity: hello_123","service":"clevertap-processor","timestamp":"2025-06-04T12:44:02.615Z"}
+{"level":"info","message":"profile.objectId: ","service":"clevertap-processor","timestamp":"2025-06-04T12:44:02.615Z"}
+{"level":"info","message":"profile.all_identities: [testing.dev@gmail.com, hello_123]","service":"clevertap-processor","timestamp":"2025-06-04T12:44:02.615Z"}
+{"level":"info","message":"profile.platform: Android","service":"clevertap-processor","timestamp":"2025-06-04T12:44:02.615Z"}
+{"level":"info","message":"profile.phone: 917202897611","service":"clevertap-processor","timestamp":"2025-06-04T12:44:02.615Z"}
+{"level":"info","message":"profile.name: Dev Testing","service":"clevertap-processor","timestamp":"2025-06-04T12:44:02.615Z"}
+{"level":"info","message":"profile.email: testing.dev@gmail.com","service":"clevertap-processor","timestamp":"2025-06-04T12:44:02.615Z"}
+{"level":"info","message":"profile.push_token: fcm:cW57dF6URueav7Vw8K3vPR:APA91bFrfdNDJo_c3feheyHdeJuo57G5fs0Wx2_6VsGxRvaRfCb8KDYrg76raBFu10Toc1GrbUjj6QmRt_waqakYHI1EPUNS6JUxQZvH3N3S-77kkotlceI","service":"clevertap-processor","timestamp":"2025-06-04T12:44:02.616Z"}
+{"level":"info","message":"deviceInfo.make: Google","service":"clevertap-processor","timestamp":"2025-06-04T12:44:02.616Z"}
+{"level":"info","message":"deviceInfo.model: Sdk_gphone64_arm64","service":"clevertap-processor","timestamp":"2025-06-04T12:44:02.616Z"}
+{"level":"info","message":"deviceInfo.appVersion: 1.0.0","service":"clevertap-processor","timestamp":"2025-06-04T12:44:02.616Z"}
+{"level":"info","message":"deviceInfo.sdkVersion: 70301","service":"clevertap-processor","timestamp":"2025-06-04T12:44:02.616Z"}
+{"level":"info","message":"deviceInfo.osVersion: 16","service":"clevertap-processor","timestamp":"2025-06-04T12:44:02.616Z"}
+{"level":"info","message":"deviceInfo.browser: MobileApp","service":"clevertap-processor","timestamp":"2025-06-04T12:44:02.616Z"}
+{"level":"info","message":"deviceInfo.dpi: 480","service":"clevertap-processor","timestamp":"2025-06-04T12:44:02.616Z"}
+{"level":"info","message":"deviceInfo.dimensions.width: 61","service":"clevertap-processor","timestamp":"2025-06-04T12:44:02.616Z"}
+{"level":"info","message":"deviceInfo.dimensions.height: 143","service":"clevertap-processor","timestamp":"2025-06-04T12:44:02.616Z"}
+{"level":"info","message":"deviceInfo.dimensions.unit: mm","service":"clevertap-processor","timestamp":"2025-06-04T12:44:02.617Z"}
+{"level":"info","message":"controlGroupName: ","service":"clevertap-processor","timestamp":"2025-06-04T12:44:02.617Z"}
+{"level":"info","message":"eventProps.CT App Version: 1.0.0","service":"clevertap-processor","timestamp":"2025-06-04T12:44:02.617Z"}
+{"level":"info","message":"eventProps.CT Source: Mobile","service":"clevertap-processor","timestamp":"2025-06-04T12:44:02.617Z"}
+{"level":"info","message":"eventProps.price: 3499","service":"clevertap-processor","timestamp":"2025-06-04T12:44:02.617Z"}
+{"level":"info","message":"eventProps.image_url: https://fastly.picsum.photos/id/935/200/300.jpg?hmac=XPPjHEBtYb6Y3-p1EjAP0RRB0bNlvqCs52VIysO7iH0","service":"clevertap-processor","timestamp":"2025-06-04T12:44:02.617Z"}
+{"level":"info","message":"eventProps.product_id: 123b","service":"clevertap-processor","timestamp":"2025-06-04T12:44:02.617Z"}
+{"level":"info","message":"eventProps.Items: ","service":"clevertap-processor","timestamp":"2025-06-04T12:44:02.617Z"}
+{"level":"info","message":"\n=== Processing Details ===","service":"clevertap-processor","timestamp":"2025-06-04T12:44:02.618Z"}
+{"level":"info","message":"Unique identity-product combinations in charged events: 1","service":"clevertap-processor","timestamp":"2025-06-04T12:44:02.618Z"}
+{"level":"info","message":"\n=== Processing Summary ===","service":"clevertap-processor","timestamp":"2025-06-04T12:44:02.618Z"}
+{"level":"info","message":"Cart abandon records: 3","service":"clevertap-processor","timestamp":"2025-06-04T12:44:02.618Z"}
+{"level":"info","message":"Charged events records: 2","service":"clevertap-processor","timestamp":"2025-06-04T12:44:02.618Z"}
+{"level":"info","message":"Delta records (before deduplication): 2","service":"clevertap-processor","timestamp":"2025-06-04T12:44:02.618Z"}
+{"level":"info","message":"Delta records (after deduplication): 2","service":"clevertap-processor","timestamp":"2025-06-04T12:44:02.618Z"}
+{"level":"info","message":"\n=== Sample Filtered Data ===","service":"clevertap-processor","timestamp":"2025-06-04T12:44:02.618Z"}
+{"level":"info","message":"First record after filtering:","service":"clevertap-processor","timestamp":"2025-06-04T12:44:02.618Z"}
+{"level":"info","message":"Identity: hello_123","service":"clevertap-processor","timestamp":"2025-06-04T12:44:02.619Z"}
+{"level":"info","message":"Product ID: 123a","service":"clevertap-processor","timestamp":"2025-06-04T12:44:02.619Z"}
+{"level":"info","message":"Preparing to upload CSV to delta-events/delta_2025-06-04T12-44-02-619Z.csv","service":"clevertap-processor","timestamp":"2025-06-04T12:44:02.619Z"}
+{"level":"info","message":"Successfully uploaded CSV to delta-events/delta_2025-06-04T12-44-02-619Z.csv","service":"clevertap-processor","timestamp":"2025-06-04T12:44:03.316Z"}
+{"level":"info","message":"Delta data uploaded successfully: delta_2025-06-04T12-44-02-619Z.csv","service":"clevertap-processor","timestamp":"2025-06-04T12:44:03.317Z"}
+{"level":"info","message":"Cron Job 1 completed successfully. Processed 2 records in 2466ms","service":"clevertap-processor","timestamp":"2025-06-04T12:44:03.317Z"}
+{"level":"info","message":"Executing scheduled Cron Job 2 at 4:18 PM","service":"clevertap-processor","timestamp":"2025-06-04T12:45:00.968Z"}
+{"level":"info","message":"Starting Cron Job 2 - CleverTap Upload","service":"clevertap-processor","timestamp":"2025-06-04T12:45:00.970Z"}
+{"level":"info","message":"Successfully listed objects in bucket: delta-events","service":"clevertap-processor","timestamp":"2025-06-04T12:45:01.819Z"}
+{"level":"info","message":"Processing delta file: delta_2025-06-04T12-44-02-619Z.csv","service":"clevertap-processor","timestamp":"2025-06-04T12:45:01.819Z"}
+{"level":"error","message":"Error fetching delta CSV data: s3Service.downloadCsv is not a function","service":"clevertap-processor","stack":"TypeError: s3Service.downloadCsv is not a function\n    at CronJob2.fetchLatestDeltaData (/Users/dev.bathani/Desktop/Work/s3-delta-clevertap-app/src/jobs/cronJob2.js:68:48)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async CronJob2.execute (/Users/dev.bathani/Desktop/Work/s3-delta-clevertap-app/src/jobs/cronJob2.js:14:31)\n    at async cron.schedule.scheduled [as _execution] (/Users/dev.bathani/Desktop/Work/s3-delta-clevertap-app/src/index.js:54:9)","timestamp":"2025-06-04T12:45:01.821Z"}
+{"level":"error","message":"Cron Job 2 failed: s3Service.downloadCsv is not a function","service":"clevertap-processor","stack":"TypeError: s3Service.downloadCsv is not a function\n    at CronJob2.fetchLatestDeltaData (/Users/dev.bathani/Desktop/Work/s3-delta-clevertap-app/src/jobs/cronJob2.js:68:48)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async CronJob2.execute (/Users/dev.bathani/Desktop/Work/s3-delta-clevertap-app/src/jobs/cronJob2.js:14:31)\n    at async cron.schedule.scheduled [as _execution] (/Users/dev.bathani/Desktop/Work/s3-delta-clevertap-app/src/index.js:54:9)","timestamp":"2025-06-04T12:45:01.822Z"}
+{"level":"error","message":"Scheduled Cron Job 2 failed: s3Service.downloadCsv is not a function","service":"clevertap-processor","stack":"TypeError: s3Service.downloadCsv is not a function\n    at CronJob2.fetchLatestDeltaData (/Users/dev.bathani/Desktop/Work/s3-delta-clevertap-app/src/jobs/cronJob2.js:68:48)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async CronJob2.execute (/Users/dev.bathani/Desktop/Work/s3-delta-clevertap-app/src/jobs/cronJob2.js:14:31)\n    at async cron.schedule.scheduled [as _execution] (/Users/dev.bathani/Desktop/Work/s3-delta-clevertap-app/src/index.js:54:9)","timestamp":"2025-06-04T12:45:01.822Z"}
+{"level":"info","message":"AWS credentials validation passed","service":"clevertap-processor","timestamp":"2025-06-04T16:27:18.829Z"}
+{"level":"info","message":"Environment validation passed","service":"clevertap-processor","timestamp":"2025-06-04T16:27:18.907Z"}
+{"level":"info","message":"CleverTap Data Processor started successfully","service":"clevertap-processor","timestamp":"2025-06-04T16:27:18.907Z"}
+{"level":"info","message":"Cron Job 1 scheduled for 4:15 PM daily","service":"clevertap-processor","timestamp":"2025-06-04T16:27:18.907Z"}
+{"level":"info","message":"Cron Job 2 scheduled for 4:18 PM daily","service":"clevertap-processor","timestamp":"2025-06-04T16:27:18.907Z"}
+{"level":"info","message":"Executing scheduled Cron Job 2 at 4:18 PM","service":"clevertap-processor","timestamp":"2025-06-04T16:29:00.014Z"}
+{"level":"info","message":"Successfully listed objects in bucket: delta-events","service":"clevertap-processor","timestamp":"2025-06-04T16:29:00.651Z"}
+{"level":"warn","message":"No CSV files found for today (20250604) in bucket: delta-events","service":"clevertap-processor","timestamp":"2025-06-04T16:29:00.651Z"}
+{"level":"info","message":"No delta data found for CleverTap upload","service":"clevertap-processor","timestamp":"2025-06-04T16:29:00.651Z"}
+{"level":"info","message":"Received SIGINT. Graceful shutdown...","service":"clevertap-processor","timestamp":"2025-06-04T16:31:40.980Z"}
+{"level":"info","message":"AWS credentials validation passed","service":"clevertap-processor","timestamp":"2025-06-04T16:31:43.136Z"}
+{"level":"info","message":"Environment validation passed","service":"clevertap-processor","timestamp":"2025-06-04T16:31:43.186Z"}
+{"level":"info","message":"CleverTap Data Processor started successfully","service":"clevertap-processor","timestamp":"2025-06-04T16:31:43.186Z"}
+{"level":"info","message":"Cron Job 1 scheduled for 4:15 PM daily","service":"clevertap-processor","timestamp":"2025-06-04T16:31:43.186Z"}
+{"level":"info","message":"Cron Job 2 scheduled for 4:18 PM daily","service":"clevertap-processor","timestamp":"2025-06-04T16:31:43.186Z"}
+{"level":"info","message":"Executing scheduled Cron Job 1 at 4:15 PM","service":"clevertap-processor","timestamp":"2025-06-04T16:33:00.268Z"}
+{"level":"info","message":"Starting Cron Job 1 - Data Processing","service":"clevertap-processor","timestamp":"2025-06-04T16:33:00.271Z"}
+{"level":"info","message":"Successfully listed objects in bucket: cart-abandon","service":"clevertap-processor","timestamp":"2025-06-04T16:33:00.859Z"}
+{"level":"info","message":"Processing file: 1749038653-1749038653-AddToCart-20250604-0-21.csv.gz from bucket: cart-abandon","service":"clevertap-processor","timestamp":"2025-06-04T16:33:00.859Z"}
+{"level":"error","message":"Error fetching CSV data from cart-abandon: zlib is not defined","service":"clevertap-processor","stack":"ReferenceError: zlib is not defined\n    at /Users/dev.bathani/Desktop/Work/s3-delta-clevertap-app/src/services/s3Service.js:48:42\n    at new Promise (<anonymous>)\n    at Object.fetchCsvFromS3 (/Users/dev.bathani/Desktop/Work/s3-delta-clevertap-app/src/services/s3Service.js:43:12)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async CronJob1.fetchLatestCsvData (/Users/dev.bathani/Desktop/Work/s3-delta-clevertap-app/src/jobs/cronJob1.js:72:20)\n    at async CronJob1.execute (/Users/dev.bathani/Desktop/Work/s3-delta-clevertap-app/src/jobs/cronJob1.js:13:37)\n    at async cron.schedule.scheduled [as _execution] (/Users/dev.bathani/Desktop/Work/s3-delta-clevertap-app/src/index.js:41:9)","timestamp":"2025-06-04T16:33:01.037Z"}
+{"level":"error","message":"Cron Job 1 failed: zlib is not defined","service":"clevertap-processor","stack":"ReferenceError: zlib is not defined\n    at /Users/dev.bathani/Desktop/Work/s3-delta-clevertap-app/src/services/s3Service.js:48:42\n    at new Promise (<anonymous>)\n    at Object.fetchCsvFromS3 (/Users/dev.bathani/Desktop/Work/s3-delta-clevertap-app/src/services/s3Service.js:43:12)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async CronJob1.fetchLatestCsvData (/Users/dev.bathani/Desktop/Work/s3-delta-clevertap-app/src/jobs/cronJob1.js:72:20)\n    at async CronJob1.execute (/Users/dev.bathani/Desktop/Work/s3-delta-clevertap-app/src/jobs/cronJob1.js:13:37)\n    at async cron.schedule.scheduled [as _execution] (/Users/dev.bathani/Desktop/Work/s3-delta-clevertap-app/src/index.js:41:9)","timestamp":"2025-06-04T16:33:01.038Z"}
+{"level":"error","message":"Scheduled Cron Job 1 failed: zlib is not defined","service":"clevertap-processor","stack":"ReferenceError: zlib is not defined\n    at /Users/dev.bathani/Desktop/Work/s3-delta-clevertap-app/src/services/s3Service.js:48:42\n    at new Promise (<anonymous>)\n    at Object.fetchCsvFromS3 (/Users/dev.bathani/Desktop/Work/s3-delta-clevertap-app/src/services/s3Service.js:43:12)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async CronJob1.fetchLatestCsvData (/Users/dev.bathani/Desktop/Work/s3-delta-clevertap-app/src/jobs/cronJob1.js:72:20)\n    at async CronJob1.execute (/Users/dev.bathani/Desktop/Work/s3-delta-clevertap-app/src/jobs/cronJob1.js:13:37)\n    at async cron.schedule.scheduled [as _execution] (/Users/dev.bathani/Desktop/Work/s3-delta-clevertap-app/src/index.js:41:9)","timestamp":"2025-06-04T16:33:01.038Z"}
+{"level":"info","message":"Executing scheduled Cron Job 2 at 4:18 PM","service":"clevertap-processor","timestamp":"2025-06-04T16:34:00.377Z"}
+{"level":"info","message":"Successfully listed objects in bucket: delta-events","service":"clevertap-processor","timestamp":"2025-06-04T16:34:01.394Z"}
+{"level":"warn","message":"No CSV files found for today (2025-06-04) in bucket: delta-events","service":"clevertap-processor","timestamp":"2025-06-04T16:34:01.395Z"}
+{"level":"info","message":"No delta data found for CleverTap upload","service":"clevertap-processor","timestamp":"2025-06-04T16:34:01.395Z"}
+{"level":"info","message":"Received SIGINT. Graceful shutdown...","service":"clevertap-processor","timestamp":"2025-06-04T16:34:11.062Z"}
+{"level":"info","message":"AWS credentials validation passed","service":"clevertap-processor","timestamp":"2025-06-04T16:34:30.995Z"}
+{"level":"info","message":"Environment validation passed","service":"clevertap-processor","timestamp":"2025-06-04T16:34:31.073Z"}
+{"level":"info","message":"CleverTap Data Processor started successfully","service":"clevertap-processor","timestamp":"2025-06-04T16:34:31.073Z"}
+{"level":"info","message":"Cron Job 1 scheduled for 4:15 PM daily","service":"clevertap-processor","timestamp":"2025-06-04T16:34:31.073Z"}
+{"level":"info","message":"Cron Job 2 scheduled for 4:18 PM daily","service":"clevertap-processor","timestamp":"2025-06-04T16:34:31.073Z"}
+{"level":"info","message":"Executing scheduled Cron Job 1 at 4:15 PM","service":"clevertap-processor","timestamp":"2025-06-04T16:36:00.172Z"}
+{"level":"info","message":"Starting Cron Job 1 - Data Processing","service":"clevertap-processor","timestamp":"2025-06-04T16:36:00.174Z"}
+{"level":"info","message":"Successfully listed objects in bucket: cart-abandon","service":"clevertap-processor","timestamp":"2025-06-04T16:36:00.786Z"}
+{"level":"info","message":"Processing file: 1749038653-1749038653-AddToCart-20250604-0-21.csv.gz from bucket: cart-abandon","service":"clevertap-processor","timestamp":"2025-06-04T16:36:00.786Z"}
+{"level":"info","message":"Successfully listed objects in bucket: charged-events","service":"clevertap-processor","timestamp":"2025-06-04T16:36:01.533Z"}
+{"level":"info","message":"Processing file: 1749038674-1749038674-Charged-20250604-0-21.csv.gz from bucket: charged-events","service":"clevertap-processor","timestamp":"2025-06-04T16:36:01.533Z"}
+{"level":"info","message":"\n=== Cart Abandon Data Details ===","service":"clevertap-processor","timestamp":"2025-06-04T16:36:01.697Z"}
+{"level":"info","message":"Total records received: 3","service":"clevertap-processor","timestamp":"2025-06-04T16:36:01.697Z"}
+{"level":"info","message":"\nCart Abandon - Available fields:","service":"clevertap-processor","timestamp":"2025-06-04T16:36:01.698Z"}
+{"level":"info","message":"\nDetailed Cart Abandon Data (up to 2 rows):","service":"clevertap-processor","timestamp":"2025-06-04T16:36:01.698Z"}
+{"level":"info","message":"\nRow 1:","service":"clevertap-processor","timestamp":"2025-06-04T16:36:01.698Z"}
+{"level":"info","message":"ts: 20250604134942","service":"clevertap-processor","timestamp":"2025-06-04T16:36:01.698Z"}
+{"level":"info","message":"eventName: AddToCart","service":"clevertap-processor","timestamp":"2025-06-04T16:36:01.698Z"}
+{"level":"info","message":"profile.identity: hello_123","service":"clevertap-processor","timestamp":"2025-06-04T16:36:01.698Z"}
+{"level":"info","message":"profile.objectId: ","service":"clevertap-processor","timestamp":"2025-06-04T16:36:01.699Z"}
+{"level":"info","message":"profile.all_identities: [testing.dev@gmail.com, hello_123]","service":"clevertap-processor","timestamp":"2025-06-04T16:36:01.699Z"}
+{"level":"info","message":"profile.platform: Android","service":"clevertap-processor","timestamp":"2025-06-04T16:36:01.699Z"}
+{"level":"info","message":"profile.phone: 917202897611","service":"clevertap-processor","timestamp":"2025-06-04T16:36:01.699Z"}
+{"level":"info","message":"profile.name: Dev Testing","service":"clevertap-processor","timestamp":"2025-06-04T16:36:01.699Z"}
+{"level":"info","message":"profile.email: testing.dev@gmail.com","service":"clevertap-processor","timestamp":"2025-06-04T16:36:01.699Z"}
+{"level":"info","message":"profile.push_token: fcm:cW57dF6URueav7Vw8K3vPR:APA91bFrfdNDJo_c3feheyHdeJuo57G5fs0Wx2_6VsGxRvaRfCb8KDYrg76raBFu10Toc1GrbUjj6QmRt_waqakYHI1EPUNS6JUxQZvH3N3S-77kkotlceI","service":"clevertap-processor","timestamp":"2025-06-04T16:36:01.699Z"}
+{"level":"info","message":"deviceInfo.make: Google","service":"clevertap-processor","timestamp":"2025-06-04T16:36:01.699Z"}
+{"level":"info","message":"deviceInfo.model: Sdk_gphone64_arm64","service":"clevertap-processor","timestamp":"2025-06-04T16:36:01.699Z"}
+{"level":"info","message":"deviceInfo.appVersion: 1.0.0","service":"clevertap-processor","timestamp":"2025-06-04T16:36:01.699Z"}
+{"level":"info","message":"deviceInfo.sdkVersion: 70301","service":"clevertap-processor","timestamp":"2025-06-04T16:36:01.699Z"}
+{"level":"info","message":"deviceInfo.osVersion: 16","service":"clevertap-processor","timestamp":"2025-06-04T16:36:01.699Z"}
+{"level":"info","message":"deviceInfo.browser: MobileApp","service":"clevertap-processor","timestamp":"2025-06-04T16:36:01.699Z"}
+{"level":"info","message":"deviceInfo.dpi: 480","service":"clevertap-processor","timestamp":"2025-06-04T16:36:01.699Z"}
+{"level":"info","message":"deviceInfo.dimensions.width: 61","service":"clevertap-processor","timestamp":"2025-06-04T16:36:01.700Z"}
+{"level":"info","message":"deviceInfo.dimensions.height: 143","service":"clevertap-processor","timestamp":"2025-06-04T16:36:01.700Z"}
+{"level":"info","message":"deviceInfo.dimensions.unit: mm","service":"clevertap-processor","timestamp":"2025-06-04T16:36:01.700Z"}
+{"level":"info","message":"controlGroupName: ","service":"clevertap-processor","timestamp":"2025-06-04T16:36:01.700Z"}
+{"level":"info","message":"eventProps.price: 3999","service":"clevertap-processor","timestamp":"2025-06-04T16:36:01.700Z"}
+{"level":"info","message":"eventProps.image_url: https://fastly.picsum.photos/id/935/200/300.jpg?hmac=XPPjHEBtYb6Y3-p1EjAP0RRB0bNlvqCs52VIysO7iH0","service":"clevertap-processor","timestamp":"2025-06-04T16:36:01.700Z"}
+{"level":"info","message":"eventProps.product_id: 123a","service":"clevertap-processor","timestamp":"2025-06-04T16:36:01.700Z"}
+{"level":"info","message":"eventProps.CT App Version: 1.0.0","service":"clevertap-processor","timestamp":"2025-06-04T16:36:01.700Z"}
+{"level":"info","message":"eventProps.CT Source: Mobile","service":"clevertap-processor","timestamp":"2025-06-04T16:36:01.700Z"}
+{"level":"info","message":"\nRow 2:","service":"clevertap-processor","timestamp":"2025-06-04T16:36:01.700Z"}
+{"level":"info","message":"ts: 20250604135145","service":"clevertap-processor","timestamp":"2025-06-04T16:36:01.700Z"}
+{"level":"info","message":"eventName: AddToCart","service":"clevertap-processor","timestamp":"2025-06-04T16:36:01.700Z"}
+{"level":"info","message":"profile.identity: hello_123","service":"clevertap-processor","timestamp":"2025-06-04T16:36:01.700Z"}
+{"level":"info","message":"profile.objectId: ","service":"clevertap-processor","timestamp":"2025-06-04T16:36:01.700Z"}
+{"level":"info","message":"profile.all_identities: [testing.dev@gmail.com, hello_123]","service":"clevertap-processor","timestamp":"2025-06-04T16:36:01.700Z"}
+{"level":"info","message":"profile.platform: Android","service":"clevertap-processor","timestamp":"2025-06-04T16:36:01.700Z"}
+{"level":"info","message":"profile.phone: 917202897611","service":"clevertap-processor","timestamp":"2025-06-04T16:36:01.700Z"}
+{"level":"info","message":"profile.name: Dev Testing","service":"clevertap-processor","timestamp":"2025-06-04T16:36:01.700Z"}
+{"level":"info","message":"profile.email: testing.dev@gmail.com","service":"clevertap-processor","timestamp":"2025-06-04T16:36:01.701Z"}
+{"level":"info","message":"profile.push_token: fcm:cW57dF6URueav7Vw8K3vPR:APA91bFrfdNDJo_c3feheyHdeJuo57G5fs0Wx2_6VsGxRvaRfCb8KDYrg76raBFu10Toc1GrbUjj6QmRt_waqakYHI1EPUNS6JUxQZvH3N3S-77kkotlceI","service":"clevertap-processor","timestamp":"2025-06-04T16:36:01.701Z"}
+{"level":"info","message":"deviceInfo.make: Google","service":"clevertap-processor","timestamp":"2025-06-04T16:36:01.701Z"}
+{"level":"info","message":"deviceInfo.model: Sdk_gphone64_arm64","service":"clevertap-processor","timestamp":"2025-06-04T16:36:01.701Z"}
+{"level":"info","message":"deviceInfo.appVersion: 1.0.0","service":"clevertap-processor","timestamp":"2025-06-04T16:36:01.701Z"}
+{"level":"info","message":"deviceInfo.sdkVersion: 70301","service":"clevertap-processor","timestamp":"2025-06-04T16:36:01.701Z"}
+{"level":"info","message":"deviceInfo.osVersion: 16","service":"clevertap-processor","timestamp":"2025-06-04T16:36:01.701Z"}
+{"level":"info","message":"deviceInfo.browser: MobileApp","service":"clevertap-processor","timestamp":"2025-06-04T16:36:01.701Z"}
+{"level":"info","message":"deviceInfo.dpi: 480","service":"clevertap-processor","timestamp":"2025-06-04T16:36:01.701Z"}
+{"level":"info","message":"deviceInfo.dimensions.width: 61","service":"clevertap-processor","timestamp":"2025-06-04T16:36:01.701Z"}
+{"level":"info","message":"deviceInfo.dimensions.height: 143","service":"clevertap-processor","timestamp":"2025-06-04T16:36:01.701Z"}
+{"level":"info","message":"deviceInfo.dimensions.unit: mm","service":"clevertap-processor","timestamp":"2025-06-04T16:36:01.701Z"}
+{"level":"info","message":"controlGroupName: ","service":"clevertap-processor","timestamp":"2025-06-04T16:36:01.701Z"}
+{"level":"info","message":"eventProps.price: 3499","service":"clevertap-processor","timestamp":"2025-06-04T16:36:01.701Z"}
+{"level":"info","message":"eventProps.image_url: https://fastly.picsum.photos/id/935/200/300.jpg?hmac=XPPjHEBtYb6Y3-p1EjAP0RRB0bNlvqCs52VIysO7iH0","service":"clevertap-processor","timestamp":"2025-06-04T16:36:01.701Z"}
+{"level":"info","message":"eventProps.product_id: 123b","service":"clevertap-processor","timestamp":"2025-06-04T16:36:01.702Z"}
+{"level":"info","message":"eventProps.CT App Version: 1.0.0","service":"clevertap-processor","timestamp":"2025-06-04T16:36:01.702Z"}
+{"level":"info","message":"eventProps.CT Source: Mobile","service":"clevertap-processor","timestamp":"2025-06-04T16:36:01.702Z"}
+{"level":"info","message":"\n=== Charged Events Data Details ===","service":"clevertap-processor","timestamp":"2025-06-04T16:36:01.702Z"}
+{"level":"info","message":"Total records received: 2","service":"clevertap-processor","timestamp":"2025-06-04T16:36:01.702Z"}
+{"level":"info","message":"\nCharged Events - Available fields:","service":"clevertap-processor","timestamp":"2025-06-04T16:36:01.703Z"}
+{"level":"info","message":"\nDetailed Charged Events Data (up to 2 rows):","service":"clevertap-processor","timestamp":"2025-06-04T16:36:01.703Z"}
+{"level":"info","message":"\nRow 1:","service":"clevertap-processor","timestamp":"2025-06-04T16:36:01.704Z"}
+{"level":"info","message":"ts: 20250604114704","service":"clevertap-processor","timestamp":"2025-06-04T16:36:01.704Z"}
+{"level":"info","message":"eventName: Charged","service":"clevertap-processor","timestamp":"2025-06-04T16:36:01.704Z"}
+{"level":"info","message":"profile.identity: hello_123","service":"clevertap-processor","timestamp":"2025-06-04T16:36:01.704Z"}
+{"level":"info","message":"profile.objectId: ","service":"clevertap-processor","timestamp":"2025-06-04T16:36:01.705Z"}
+{"level":"info","message":"profile.all_identities: [testing.dev@gmail.com, hello_123]","service":"clevertap-processor","timestamp":"2025-06-04T16:36:01.705Z"}
+{"level":"info","message":"profile.platform: Android","service":"clevertap-processor","timestamp":"2025-06-04T16:36:01.705Z"}
+{"level":"info","message":"profile.phone: 917202897611","service":"clevertap-processor","timestamp":"2025-06-04T16:36:01.705Z"}
+{"level":"info","message":"profile.name: Dev Testing","service":"clevertap-processor","timestamp":"2025-06-04T16:36:01.705Z"}
+{"level":"info","message":"profile.email: testing.dev@gmail.com","service":"clevertap-processor","timestamp":"2025-06-04T16:36:01.705Z"}
+{"level":"info","message":"profile.push_token: fcm:cW57dF6URueav7Vw8K3vPR:APA91bFrfdNDJo_c3feheyHdeJuo57G5fs0Wx2_6VsGxRvaRfCb8KDYrg76raBFu10Toc1GrbUjj6QmRt_waqakYHI1EPUNS6JUxQZvH3N3S-77kkotlceI","service":"clevertap-processor","timestamp":"2025-06-04T16:36:01.705Z"}
+{"level":"info","message":"deviceInfo.make: Google","service":"clevertap-processor","timestamp":"2025-06-04T16:36:01.706Z"}
+{"level":"info","message":"deviceInfo.model: Sdk_gphone64_arm64","service":"clevertap-processor","timestamp":"2025-06-04T16:36:01.706Z"}
+{"level":"info","message":"deviceInfo.appVersion: 1.0.0","service":"clevertap-processor","timestamp":"2025-06-04T16:36:01.706Z"}
+{"level":"info","message":"deviceInfo.sdkVersion: 70301","service":"clevertap-processor","timestamp":"2025-06-04T16:36:01.706Z"}
+{"level":"info","message":"deviceInfo.osVersion: 16","service":"clevertap-processor","timestamp":"2025-06-04T16:36:01.706Z"}
+{"level":"info","message":"deviceInfo.browser: MobileApp","service":"clevertap-processor","timestamp":"2025-06-04T16:36:01.706Z"}
+{"level":"info","message":"deviceInfo.dpi: 480","service":"clevertap-processor","timestamp":"2025-06-04T16:36:01.706Z"}
+{"level":"info","message":"deviceInfo.dimensions.width: 61","service":"clevertap-processor","timestamp":"2025-06-04T16:36:01.706Z"}
+{"level":"info","message":"deviceInfo.dimensions.height: 143","service":"clevertap-processor","timestamp":"2025-06-04T16:36:01.706Z"}
+{"level":"info","message":"deviceInfo.dimensions.unit: mm","service":"clevertap-processor","timestamp":"2025-06-04T16:36:01.706Z"}
+{"level":"info","message":"controlGroupName: ","service":"clevertap-processor","timestamp":"2025-06-04T16:36:01.706Z"}
+{"level":"info","message":"eventProps.CT App Version: 1.0.0","service":"clevertap-processor","timestamp":"2025-06-04T16:36:01.706Z"}
+{"level":"info","message":"eventProps.CT Source: Mobile","service":"clevertap-processor","timestamp":"2025-06-04T16:36:01.706Z"}
+{"level":"info","message":"eventProps.price: ","service":"clevertap-processor","timestamp":"2025-06-04T16:36:01.706Z"}
+{"level":"info","message":"eventProps.image_url: ","service":"clevertap-processor","timestamp":"2025-06-04T16:36:01.706Z"}
+{"level":"info","message":"eventProps.product_id: ","service":"clevertap-processor","timestamp":"2025-06-04T16:36:01.706Z"}
+{"level":"info","message":"eventProps.Items: ","service":"clevertap-processor","timestamp":"2025-06-04T16:36:01.706Z"}
+{"level":"info","message":"\nRow 2:","service":"clevertap-processor","timestamp":"2025-06-04T16:36:01.706Z"}
+{"level":"info","message":"ts: 20250604135853","service":"clevertap-processor","timestamp":"2025-06-04T16:36:01.706Z"}
+{"level":"info","message":"eventName: Charged","service":"clevertap-processor","timestamp":"2025-06-04T16:36:01.707Z"}
+{"level":"info","message":"profile.identity: hello_123","service":"clevertap-processor","timestamp":"2025-06-04T16:36:01.707Z"}
+{"level":"info","message":"profile.objectId: ","service":"clevertap-processor","timestamp":"2025-06-04T16:36:01.707Z"}
+{"level":"info","message":"profile.all_identities: [testing.dev@gmail.com, hello_123]","service":"clevertap-processor","timestamp":"2025-06-04T16:36:01.707Z"}
+{"level":"info","message":"profile.platform: Android","service":"clevertap-processor","timestamp":"2025-06-04T16:36:01.707Z"}
+{"level":"info","message":"profile.phone: 917202897611","service":"clevertap-processor","timestamp":"2025-06-04T16:36:01.707Z"}
+{"level":"info","message":"profile.name: Dev Testing","service":"clevertap-processor","timestamp":"2025-06-04T16:36:01.707Z"}
+{"level":"info","message":"profile.email: testing.dev@gmail.com","service":"clevertap-processor","timestamp":"2025-06-04T16:36:01.708Z"}
+{"level":"info","message":"profile.push_token: fcm:cW57dF6URueav7Vw8K3vPR:APA91bFrfdNDJo_c3feheyHdeJuo57G5fs0Wx2_6VsGxRvaRfCb8KDYrg76raBFu10Toc1GrbUjj6QmRt_waqakYHI1EPUNS6JUxQZvH3N3S-77kkotlceI","service":"clevertap-processor","timestamp":"2025-06-04T16:36:01.708Z"}
+{"level":"info","message":"deviceInfo.make: Google","service":"clevertap-processor","timestamp":"2025-06-04T16:36:01.708Z"}
+{"level":"info","message":"deviceInfo.model: Sdk_gphone64_arm64","service":"clevertap-processor","timestamp":"2025-06-04T16:36:01.708Z"}
+{"level":"info","message":"deviceInfo.appVersion: 1.0.0","service":"clevertap-processor","timestamp":"2025-06-04T16:36:01.708Z"}
+{"level":"info","message":"deviceInfo.sdkVersion: 70301","service":"clevertap-processor","timestamp":"2025-06-04T16:36:01.708Z"}
+{"level":"info","message":"deviceInfo.osVersion: 16","service":"clevertap-processor","timestamp":"2025-06-04T16:36:01.708Z"}
+{"level":"info","message":"deviceInfo.browser: MobileApp","service":"clevertap-processor","timestamp":"2025-06-04T16:36:01.708Z"}
+{"level":"info","message":"deviceInfo.dpi: 480","service":"clevertap-processor","timestamp":"2025-06-04T16:36:01.708Z"}
+{"level":"info","message":"deviceInfo.dimensions.width: 61","service":"clevertap-processor","timestamp":"2025-06-04T16:36:01.708Z"}
+{"level":"info","message":"deviceInfo.dimensions.height: 143","service":"clevertap-processor","timestamp":"2025-06-04T16:36:01.708Z"}
+{"level":"info","message":"deviceInfo.dimensions.unit: mm","service":"clevertap-processor","timestamp":"2025-06-04T16:36:01.711Z"}
+{"level":"info","message":"controlGroupName: ","service":"clevertap-processor","timestamp":"2025-06-04T16:36:01.711Z"}
+{"level":"info","message":"eventProps.CT App Version: 1.0.0","service":"clevertap-processor","timestamp":"2025-06-04T16:36:01.711Z"}
+{"level":"info","message":"eventProps.CT Source: Mobile","service":"clevertap-processor","timestamp":"2025-06-04T16:36:01.711Z"}
+{"level":"info","message":"eventProps.price: 3499","service":"clevertap-processor","timestamp":"2025-06-04T16:36:01.711Z"}
+{"level":"info","message":"eventProps.image_url: https://fastly.picsum.photos/id/935/200/300.jpg?hmac=XPPjHEBtYb6Y3-p1EjAP0RRB0bNlvqCs52VIysO7iH0","service":"clevertap-processor","timestamp":"2025-06-04T16:36:01.711Z"}
+{"level":"info","message":"eventProps.product_id: 123b","service":"clevertap-processor","timestamp":"2025-06-04T16:36:01.711Z"}
+{"level":"info","message":"eventProps.Items: ","service":"clevertap-processor","timestamp":"2025-06-04T16:36:01.711Z"}
+{"level":"info","message":"\n=== Processing Details ===","service":"clevertap-processor","timestamp":"2025-06-04T16:36:01.711Z"}
+{"level":"info","message":"Unique identity-product combinations in charged events: 1","service":"clevertap-processor","timestamp":"2025-06-04T16:36:01.711Z"}
+{"level":"info","message":"\n=== Processing Summary ===","service":"clevertap-processor","timestamp":"2025-06-04T16:36:01.712Z"}
+{"level":"info","message":"Cart abandon records: 3","service":"clevertap-processor","timestamp":"2025-06-04T16:36:01.712Z"}
+{"level":"info","message":"Charged events records: 2","service":"clevertap-processor","timestamp":"2025-06-04T16:36:01.712Z"}
+{"level":"info","message":"Delta records (before deduplication): 2","service":"clevertap-processor","timestamp":"2025-06-04T16:36:01.712Z"}
+{"level":"info","message":"Delta records (after deduplication): 2","service":"clevertap-processor","timestamp":"2025-06-04T16:36:01.712Z"}
+{"level":"info","message":"\n=== Sample Filtered Data ===","service":"clevertap-processor","timestamp":"2025-06-04T16:36:01.712Z"}
+{"level":"info","message":"First record after filtering:","service":"clevertap-processor","timestamp":"2025-06-04T16:36:01.712Z"}
+{"level":"info","message":"Identity: hello_123","service":"clevertap-processor","timestamp":"2025-06-04T16:36:01.712Z"}
+{"level":"info","message":"Product ID: 123a","service":"clevertap-processor","timestamp":"2025-06-04T16:36:01.712Z"}
+{"level":"info","message":"Preparing to upload CSV to delta-events/delta_2025-06-04T16-36-01-712Z.csv","service":"clevertap-processor","timestamp":"2025-06-04T16:36:01.712Z"}
+{"level":"info","message":"Successfully uploaded CSV to delta-events/delta_2025-06-04T16-36-01-712Z.csv","service":"clevertap-processor","timestamp":"2025-06-04T16:36:02.348Z"}
+{"level":"info","message":"Delta data uploaded successfully: delta_2025-06-04T16-36-01-712Z.csv","service":"clevertap-processor","timestamp":"2025-06-04T16:36:02.349Z"}
+{"level":"info","message":"Cron Job 1 completed successfully. Processed 2 records in 2175ms","service":"clevertap-processor","timestamp":"2025-06-04T16:36:02.349Z"}
+{"level":"info","message":"Executing scheduled Cron Job 2 at 4:18 PM","service":"clevertap-processor","timestamp":"2025-06-04T16:37:00.284Z"}
+{"level":"info","message":"Successfully listed objects in bucket: delta-events","service":"clevertap-processor","timestamp":"2025-06-04T16:37:00.842Z"}
+{"level":"info","message":"Processing latest delta file: delta_2025-06-04T16-36-01-712Z.csv","service":"clevertap-processor","timestamp":"2025-06-04T16:37:00.842Z"}
+{"level":"info","message":"Downloading CSV from delta-events/delta_2025-06-04T16-36-01-712Z.csv","service":"clevertap-processor","timestamp":"2025-06-04T16:37:00.843Z"}
+{"level":"info","message":"Successfully downloaded and parsed 2 records from delta-events/delta_2025-06-04T16-36-01-712Z.csv","service":"clevertap-processor","timestamp":"2025-06-04T16:37:01.018Z"}
+{"level":"info","message":"Extracted 2 valid profiles from 2 records","service":"clevertap-processor","timestamp":"2025-06-04T16:37:01.018Z"}
+{"level":"info","message":"Sample profile data:","service":"clevertap-processor","timestamp":"2025-06-04T16:37:01.019Z"}
+{"level":"info","message":"CleverTap API success for identity: hello_123","service":"clevertap-processor","timestamp":"2025-06-04T16:37:01.275Z"}
+{"level":"info","message":"CleverTap API success for identity: hello_123","service":"clevertap-processor","timestamp":"2025-06-04T16:37:01.522Z"}
+{"errors":[],"failed":0,"level":"info","message":"CleverTap upload results:","service":"clevertap-processor","successful":2,"timestamp":"2025-06-04T16:37:01.624Z","totalProcessed":2}
+{"level":"info","message":"Received SIGINT. Graceful shutdown...","service":"clevertap-processor","timestamp":"2025-06-04T16:43:41.099Z"}
+{"level":"info","message":"AWS credentials validation passed","service":"clevertap-processor","timestamp":"2025-06-04T17:15:04.039Z"}
+{"level":"info","message":"Environment validation passed","service":"clevertap-processor","timestamp":"2025-06-04T17:15:04.111Z"}
+{"level":"info","message":"CleverTap Data Processor started successfully","service":"clevertap-processor","timestamp":"2025-06-04T17:15:04.111Z"}
+{"level":"info","message":"Cron Job 1 scheduled for 4:15 PM daily","service":"clevertap-processor","timestamp":"2025-06-04T17:15:04.111Z"}
+{"level":"info","message":"Cron Job 2 scheduled for 4:18 PM daily","service":"clevertap-processor","timestamp":"2025-06-04T17:15:04.112Z"}
+{"level":"info","message":"Executing scheduled Cron Job 1 at 4:15 PM","service":"clevertap-processor","timestamp":"2025-06-04T17:16:00.182Z"}
+{"level":"info","message":"Starting Cron Job 1 - Data Processing","service":"clevertap-processor","timestamp":"2025-06-04T17:16:00.184Z"}
+{"level":"info","message":"Successfully listed objects in bucket: cart-abandon","service":"clevertap-processor","timestamp":"2025-06-04T17:16:00.821Z"}
+{"level":"info","message":"Processing file: 1749056618-1749056618-AddToCart-20250604-0-16.csv.gz from bucket: cart-abandon","service":"clevertap-processor","timestamp":"2025-06-04T17:16:00.821Z"}
+{"level":"info","message":"Successfully listed objects in bucket: charged-events","service":"clevertap-processor","timestamp":"2025-06-04T17:16:01.552Z"}
+{"level":"info","message":"Processing file: 1749056639-1749056639-Charged-20250604-0-16.csv.gz from bucket: charged-events","service":"clevertap-processor","timestamp":"2025-06-04T17:16:01.552Z"}
+{"level":"info","message":"\n=== Cart Abandon Data Details ===","service":"clevertap-processor","timestamp":"2025-06-04T17:16:01.731Z"}
+{"level":"info","message":"Total records received: 2","service":"clevertap-processor","timestamp":"2025-06-04T17:16:01.731Z"}
+{"level":"info","message":"\nCart Abandon - Available fields:","service":"clevertap-processor","timestamp":"2025-06-04T17:16:01.731Z"}
+{"level":"info","message":"\nDetailed Cart Abandon Data (up to 2 rows):","service":"clevertap-processor","timestamp":"2025-06-04T17:16:01.731Z"}
+{"level":"info","message":"\nRow 1:","service":"clevertap-processor","timestamp":"2025-06-04T17:16:01.732Z"}
+{"level":"info","message":"ts: 20250604223048","service":"clevertap-processor","timestamp":"2025-06-04T17:16:01.732Z"}
+{"level":"info","message":"eventName: AddToCart","service":"clevertap-processor","timestamp":"2025-06-04T17:16:01.732Z"}
+{"level":"info","message":"profile.identity: hello_321","service":"clevertap-processor","timestamp":"2025-06-04T17:16:01.732Z"}
+{"level":"info","message":"profile.objectId: ","service":"clevertap-processor","timestamp":"2025-06-04T17:16:01.732Z"}
+{"level":"info","message":"profile.all_identities: [testing.developer@gmail.com, hello_321]","service":"clevertap-processor","timestamp":"2025-06-04T17:16:01.732Z"}
+{"level":"info","message":"profile.platform: Android","service":"clevertap-processor","timestamp":"2025-06-04T17:16:01.732Z"}
+{"level":"info","message":"profile.phone: ","service":"clevertap-processor","timestamp":"2025-06-04T17:16:01.732Z"}
+{"level":"info","message":"profile.name: ","service":"clevertap-processor","timestamp":"2025-06-04T17:16:01.732Z"}
+{"level":"info","message":"profile.email: testing.developer@gmail.com","service":"clevertap-processor","timestamp":"2025-06-04T17:16:01.732Z"}
+{"level":"info","message":"profile.push_token: fcm:c4S5zE_XQrSv5M5xPzg-xQ:APA91bFUuxaVGCeGyoN4ymgjd_lfw-6GhLtAjJxRxZpzubeOCCR07ddhcjmp1ZFAZKanCtPX1z6T4AQ3puYNIttFGq_QMHU2Zgbj2hRfVQ4h4h9J03tlY8A","service":"clevertap-processor","timestamp":"2025-06-04T17:16:01.732Z"}
+{"level":"info","message":"deviceInfo.make: Google","service":"clevertap-processor","timestamp":"2025-06-04T17:16:01.732Z"}
+{"level":"info","message":"deviceInfo.model: Sdk_gphone64_arm64","service":"clevertap-processor","timestamp":"2025-06-04T17:16:01.732Z"}
+{"level":"info","message":"deviceInfo.appVersion: 1.0.0","service":"clevertap-processor","timestamp":"2025-06-04T17:16:01.732Z"}
+{"level":"info","message":"deviceInfo.sdkVersion: 70301","service":"clevertap-processor","timestamp":"2025-06-04T17:16:01.732Z"}
+{"level":"info","message":"deviceInfo.osVersion: 16","service":"clevertap-processor","timestamp":"2025-06-04T17:16:01.732Z"}
+{"level":"info","message":"deviceInfo.browser: MobileApp","service":"clevertap-processor","timestamp":"2025-06-04T17:16:01.732Z"}
+{"level":"info","message":"deviceInfo.dpi: 480","service":"clevertap-processor","timestamp":"2025-06-04T17:16:01.732Z"}
+{"level":"info","message":"deviceInfo.dimensions.width: 61","service":"clevertap-processor","timestamp":"2025-06-04T17:16:01.732Z"}
+{"level":"info","message":"deviceInfo.dimensions.height: 143","service":"clevertap-processor","timestamp":"2025-06-04T17:16:01.732Z"}
+{"level":"info","message":"deviceInfo.dimensions.unit: mm","service":"clevertap-processor","timestamp":"2025-06-04T17:16:01.732Z"}
+{"level":"info","message":"controlGroupName: ","service":"clevertap-processor","timestamp":"2025-06-04T17:16:01.732Z"}
+{"level":"info","message":"eventProps.price: 3499","service":"clevertap-processor","timestamp":"2025-06-04T17:16:01.732Z"}
+{"level":"info","message":"eventProps.image_url: https://fastly.picsum.photos/id/935/200/300.jpg?hmac=XPPjHEBtYb6Y3-p1EjAP0RRB0bNlvqCs52VIysO7iH0","service":"clevertap-processor","timestamp":"2025-06-04T17:16:01.732Z"}
+{"level":"info","message":"eventProps.product_id: 123c","service":"clevertap-processor","timestamp":"2025-06-04T17:16:01.732Z"}
+{"level":"info","message":"eventProps.CT App Version: 1.0.0","service":"clevertap-processor","timestamp":"2025-06-04T17:16:01.732Z"}
+{"level":"info","message":"eventProps.CT Source: Mobile","service":"clevertap-processor","timestamp":"2025-06-04T17:16:01.732Z"}
+{"level":"info","message":"\nRow 2:","service":"clevertap-processor","timestamp":"2025-06-04T17:16:01.732Z"}
+{"level":"info","message":"ts: 20250604223132","service":"clevertap-processor","timestamp":"2025-06-04T17:16:01.733Z"}
+{"level":"info","message":"eventName: AddToCart","service":"clevertap-processor","timestamp":"2025-06-04T17:16:01.733Z"}
+{"level":"info","message":"profile.identity: hello_321","service":"clevertap-processor","timestamp":"2025-06-04T17:16:01.733Z"}
+{"level":"info","message":"profile.objectId: ","service":"clevertap-processor","timestamp":"2025-06-04T17:16:01.733Z"}
+{"level":"info","message":"profile.all_identities: [testing.developer@gmail.com, hello_321]","service":"clevertap-processor","timestamp":"2025-06-04T17:16:01.733Z"}
+{"level":"info","message":"profile.platform: Android","service":"clevertap-processor","timestamp":"2025-06-04T17:16:01.733Z"}
+{"level":"info","message":"profile.phone: ","service":"clevertap-processor","timestamp":"2025-06-04T17:16:01.733Z"}
+{"level":"info","message":"profile.name: ","service":"clevertap-processor","timestamp":"2025-06-04T17:16:01.733Z"}
+{"level":"info","message":"profile.email: testing.developer@gmail.com","service":"clevertap-processor","timestamp":"2025-06-04T17:16:01.733Z"}
+{"level":"info","message":"profile.push_token: fcm:c4S5zE_XQrSv5M5xPzg-xQ:APA91bFUuxaVGCeGyoN4ymgjd_lfw-6GhLtAjJxRxZpzubeOCCR07ddhcjmp1ZFAZKanCtPX1z6T4AQ3puYNIttFGq_QMHU2Zgbj2hRfVQ4h4h9J03tlY8A","service":"clevertap-processor","timestamp":"2025-06-04T17:16:01.733Z"}
+{"level":"info","message":"deviceInfo.make: Google","service":"clevertap-processor","timestamp":"2025-06-04T17:16:01.733Z"}
+{"level":"info","message":"deviceInfo.model: Sdk_gphone64_arm64","service":"clevertap-processor","timestamp":"2025-06-04T17:16:01.733Z"}
+{"level":"info","message":"deviceInfo.appVersion: 1.0.0","service":"clevertap-processor","timestamp":"2025-06-04T17:16:01.733Z"}
+{"level":"info","message":"deviceInfo.sdkVersion: 70301","service":"clevertap-processor","timestamp":"2025-06-04T17:16:01.733Z"}
+{"level":"info","message":"deviceInfo.osVersion: 16","service":"clevertap-processor","timestamp":"2025-06-04T17:16:01.733Z"}
+{"level":"info","message":"deviceInfo.browser: MobileApp","service":"clevertap-processor","timestamp":"2025-06-04T17:16:01.733Z"}
+{"level":"info","message":"deviceInfo.dpi: 480","service":"clevertap-processor","timestamp":"2025-06-04T17:16:01.733Z"}
+{"level":"info","message":"deviceInfo.dimensions.width: 61","service":"clevertap-processor","timestamp":"2025-06-04T17:16:01.734Z"}
+{"level":"info","message":"deviceInfo.dimensions.height: 143","service":"clevertap-processor","timestamp":"2025-06-04T17:16:01.734Z"}
+{"level":"info","message":"deviceInfo.dimensions.unit: mm","service":"clevertap-processor","timestamp":"2025-06-04T17:16:01.734Z"}
+{"level":"info","message":"controlGroupName: ","service":"clevertap-processor","timestamp":"2025-06-04T17:16:01.734Z"}
+{"level":"info","message":"eventProps.price: 3499","service":"clevertap-processor","timestamp":"2025-06-04T17:16:01.734Z"}
+{"level":"info","message":"eventProps.image_url: https://fastly.picsum.photos/id/935/200/300.jpg?hmac=XPPjHEBtYb6Y3-p1EjAP0RRB0bNlvqCs52VIysO7iH0","service":"clevertap-processor","timestamp":"2025-06-04T17:16:01.734Z"}
+{"level":"info","message":"eventProps.product_id: 123d","service":"clevertap-processor","timestamp":"2025-06-04T17:16:01.734Z"}
+{"level":"info","message":"eventProps.CT App Version: 1.0.0","service":"clevertap-processor","timestamp":"2025-06-04T17:16:01.734Z"}
+{"level":"info","message":"eventProps.CT Source: Mobile","service":"clevertap-processor","timestamp":"2025-06-04T17:16:01.734Z"}
+{"level":"info","message":"\n=== Charged Events Data Details ===","service":"clevertap-processor","timestamp":"2025-06-04T17:16:01.734Z"}
+{"level":"info","message":"Total records received: 2","service":"clevertap-processor","timestamp":"2025-06-04T17:16:01.734Z"}
+{"level":"info","message":"\nCharged Events - Available fields:","service":"clevertap-processor","timestamp":"2025-06-04T17:16:01.734Z"}
+{"level":"info","message":"\nDetailed Charged Events Data (up to 2 rows):","service":"clevertap-processor","timestamp":"2025-06-04T17:16:01.734Z"}
+{"level":"info","message":"\nRow 1:","service":"clevertap-processor","timestamp":"2025-06-04T17:16:01.734Z"}
+{"level":"info","message":"ts: 20250604223153","service":"clevertap-processor","timestamp":"2025-06-04T17:16:01.734Z"}
+{"level":"info","message":"eventName: Charged","service":"clevertap-processor","timestamp":"2025-06-04T17:16:01.734Z"}
+{"level":"info","message":"profile.identity: hello_321","service":"clevertap-processor","timestamp":"2025-06-04T17:16:01.734Z"}
+{"level":"info","message":"profile.objectId: ","service":"clevertap-processor","timestamp":"2025-06-04T17:16:01.734Z"}
+{"level":"info","message":"profile.all_identities: [testing.developer@gmail.com, hello_321]","service":"clevertap-processor","timestamp":"2025-06-04T17:16:01.734Z"}
+{"level":"info","message":"profile.platform: Android","service":"clevertap-processor","timestamp":"2025-06-04T17:16:01.734Z"}
+{"level":"info","message":"profile.phone: ","service":"clevertap-processor","timestamp":"2025-06-04T17:16:01.734Z"}
+{"level":"info","message":"profile.name: ","service":"clevertap-processor","timestamp":"2025-06-04T17:16:01.734Z"}
+{"level":"info","message":"profile.email: testing.developer@gmail.com","service":"clevertap-processor","timestamp":"2025-06-04T17:16:01.734Z"}
+{"level":"info","message":"profile.push_token: fcm:c4S5zE_XQrSv5M5xPzg-xQ:APA91bFUuxaVGCeGyoN4ymgjd_lfw-6GhLtAjJxRxZpzubeOCCR07ddhcjmp1ZFAZKanCtPX1z6T4AQ3puYNIttFGq_QMHU2Zgbj2hRfVQ4h4h9J03tlY8A","service":"clevertap-processor","timestamp":"2025-06-04T17:16:01.734Z"}
+{"level":"info","message":"deviceInfo.make: Google","service":"clevertap-processor","timestamp":"2025-06-04T17:16:01.734Z"}
+{"level":"info","message":"deviceInfo.model: Sdk_gphone64_arm64","service":"clevertap-processor","timestamp":"2025-06-04T17:16:01.735Z"}
+{"level":"info","message":"deviceInfo.appVersion: 1.0.0","service":"clevertap-processor","timestamp":"2025-06-04T17:16:01.735Z"}
+{"level":"info","message":"deviceInfo.sdkVersion: 70301","service":"clevertap-processor","timestamp":"2025-06-04T17:16:01.735Z"}
+{"level":"info","message":"deviceInfo.osVersion: 16","service":"clevertap-processor","timestamp":"2025-06-04T17:16:01.735Z"}
+{"level":"info","message":"deviceInfo.browser: MobileApp","service":"clevertap-processor","timestamp":"2025-06-04T17:16:01.735Z"}
+{"level":"info","message":"deviceInfo.dpi: 480","service":"clevertap-processor","timestamp":"2025-06-04T17:16:01.735Z"}
+{"level":"info","message":"deviceInfo.dimensions.width: 61","service":"clevertap-processor","timestamp":"2025-06-04T17:16:01.735Z"}
+{"level":"info","message":"deviceInfo.dimensions.height: 143","service":"clevertap-processor","timestamp":"2025-06-04T17:16:01.735Z"}
+{"level":"info","message":"deviceInfo.dimensions.unit: mm","service":"clevertap-processor","timestamp":"2025-06-04T17:16:01.735Z"}
+{"level":"info","message":"controlGroupName: ","service":"clevertap-processor","timestamp":"2025-06-04T17:16:01.735Z"}
+{"level":"info","message":"eventProps.CT App Version: 1.0.0","service":"clevertap-processor","timestamp":"2025-06-04T17:16:01.735Z"}
+{"level":"info","message":"eventProps.CT Source: Mobile","service":"clevertap-processor","timestamp":"2025-06-04T17:16:01.735Z"}
+{"level":"info","message":"eventProps.price: 3499","service":"clevertap-processor","timestamp":"2025-06-04T17:16:01.735Z"}
+{"level":"info","message":"eventProps.image_url: https://fastly.picsum.photos/id/935/200/300.jpg?hmac=XPPjHEBtYb6Y3-p1EjAP0RRB0bNlvqCs52VIysO7iH0","service":"clevertap-processor","timestamp":"2025-06-04T17:16:01.735Z"}
+{"level":"info","message":"eventProps.product_id: 123b","service":"clevertap-processor","timestamp":"2025-06-04T17:16:01.735Z"}
+{"level":"info","message":"eventProps.Items: ","service":"clevertap-processor","timestamp":"2025-06-04T17:16:01.735Z"}
+{"level":"info","message":"\nRow 2:","service":"clevertap-processor","timestamp":"2025-06-04T17:16:01.735Z"}
+{"level":"info","message":"ts: 20250604223236","service":"clevertap-processor","timestamp":"2025-06-04T17:16:01.735Z"}
+{"level":"info","message":"eventName: Charged","service":"clevertap-processor","timestamp":"2025-06-04T17:16:01.735Z"}
+{"level":"info","message":"profile.identity: hello_321","service":"clevertap-processor","timestamp":"2025-06-04T17:16:01.735Z"}
+{"level":"info","message":"profile.objectId: ","service":"clevertap-processor","timestamp":"2025-06-04T17:16:01.735Z"}
+{"level":"info","message":"profile.all_identities: [testing.developer@gmail.com, hello_321]","service":"clevertap-processor","timestamp":"2025-06-04T17:16:01.735Z"}
+{"level":"info","message":"profile.platform: Android","service":"clevertap-processor","timestamp":"2025-06-04T17:16:01.735Z"}
+{"level":"info","message":"profile.phone: ","service":"clevertap-processor","timestamp":"2025-06-04T17:16:01.735Z"}
+{"level":"info","message":"profile.name: ","service":"clevertap-processor","timestamp":"2025-06-04T17:16:01.735Z"}
+{"level":"info","message":"profile.email: testing.developer@gmail.com","service":"clevertap-processor","timestamp":"2025-06-04T17:16:01.735Z"}
+{"level":"info","message":"profile.push_token: fcm:c4S5zE_XQrSv5M5xPzg-xQ:APA91bFUuxaVGCeGyoN4ymgjd_lfw-6GhLtAjJxRxZpzubeOCCR07ddhcjmp1ZFAZKanCtPX1z6T4AQ3puYNIttFGq_QMHU2Zgbj2hRfVQ4h4h9J03tlY8A","service":"clevertap-processor","timestamp":"2025-06-04T17:16:01.735Z"}
+{"level":"info","message":"deviceInfo.make: Google","service":"clevertap-processor","timestamp":"2025-06-04T17:16:01.735Z"}
+{"level":"info","message":"deviceInfo.model: Sdk_gphone64_arm64","service":"clevertap-processor","timestamp":"2025-06-04T17:16:01.735Z"}
+{"level":"info","message":"deviceInfo.appVersion: 1.0.0","service":"clevertap-processor","timestamp":"2025-06-04T17:16:01.735Z"}
+{"level":"info","message":"deviceInfo.sdkVersion: 70301","service":"clevertap-processor","timestamp":"2025-06-04T17:16:01.735Z"}
+{"level":"info","message":"deviceInfo.osVersion: 16","service":"clevertap-processor","timestamp":"2025-06-04T17:16:01.735Z"}
+{"level":"info","message":"deviceInfo.browser: MobileApp","service":"clevertap-processor","timestamp":"2025-06-04T17:16:01.736Z"}
+{"level":"info","message":"deviceInfo.dpi: 480","service":"clevertap-processor","timestamp":"2025-06-04T17:16:01.736Z"}
+{"level":"info","message":"deviceInfo.dimensions.width: 61","service":"clevertap-processor","timestamp":"2025-06-04T17:16:01.736Z"}
+{"level":"info","message":"deviceInfo.dimensions.height: 143","service":"clevertap-processor","timestamp":"2025-06-04T17:16:01.736Z"}
+{"level":"info","message":"deviceInfo.dimensions.unit: mm","service":"clevertap-processor","timestamp":"2025-06-04T17:16:01.736Z"}
+{"level":"info","message":"controlGroupName: ","service":"clevertap-processor","timestamp":"2025-06-04T17:16:01.736Z"}
+{"level":"info","message":"eventProps.CT App Version: 1.0.0","service":"clevertap-processor","timestamp":"2025-06-04T17:16:01.736Z"}
+{"level":"info","message":"eventProps.CT Source: Mobile","service":"clevertap-processor","timestamp":"2025-06-04T17:16:01.736Z"}
+{"level":"info","message":"eventProps.price: 3499","service":"clevertap-processor","timestamp":"2025-06-04T17:16:01.736Z"}
+{"level":"info","message":"eventProps.image_url: https://fastly.picsum.photos/id/935/200/300.jpg?hmac=XPPjHEBtYb6Y3-p1EjAP0RRB0bNlvqCs52VIysO7iH0","service":"clevertap-processor","timestamp":"2025-06-04T17:16:01.736Z"}
+{"level":"info","message":"eventProps.product_id: 123c","service":"clevertap-processor","timestamp":"2025-06-04T17:16:01.736Z"}
+{"level":"info","message":"eventProps.Items: ","service":"clevertap-processor","timestamp":"2025-06-04T17:16:01.736Z"}
+{"level":"info","message":"Valid cart abandon records after null check: 2","service":"clevertap-processor","timestamp":"2025-06-04T17:16:01.736Z"}
+{"level":"info","message":"Valid charged combinations: 2","service":"clevertap-processor","timestamp":"2025-06-04T17:16:01.736Z"}
+{"level":"info","message":"\n=== Processing Summary ===","service":"clevertap-processor","timestamp":"2025-06-04T17:16:01.737Z"}
+{"level":"info","message":"Original cart abandon records: 2","service":"clevertap-processor","timestamp":"2025-06-04T17:16:01.737Z"}
+{"level":"info","message":"Valid cart abandon records: 2","service":"clevertap-processor","timestamp":"2025-06-04T17:16:01.737Z"}
+{"level":"info","message":"Charged events records: 2","service":"clevertap-processor","timestamp":"2025-06-04T17:16:01.737Z"}
+{"level":"info","message":"Valid charged combinations: 2","service":"clevertap-processor","timestamp":"2025-06-04T17:16:01.737Z"}
+{"level":"info","message":"Delta records (before deduplication): 1","service":"clevertap-processor","timestamp":"2025-06-04T17:16:01.737Z"}
+{"level":"info","message":"Final delta records: 1","service":"clevertap-processor","timestamp":"2025-06-04T17:16:01.737Z"}
+{"level":"info","message":"Preparing to upload CSV to delta-events/delta_2025-06-04T17-16-01-737Z.csv","service":"clevertap-processor","timestamp":"2025-06-04T17:16:01.737Z"}
+{"level":"info","message":"Successfully uploaded CSV to delta-events/delta_2025-06-04T17-16-01-737Z.csv","service":"clevertap-processor","timestamp":"2025-06-04T17:16:02.462Z"}
+{"level":"info","message":"Delta data uploaded successfully: delta_2025-06-04T17-16-01-737Z.csv","service":"clevertap-processor","timestamp":"2025-06-04T17:16:02.462Z"}
+{"level":"info","message":"Cron Job 1 completed successfully. Processed 1 records in 2278ms","service":"clevertap-processor","timestamp":"2025-06-04T17:16:02.462Z"}
+{"level":"info","message":"Executing scheduled Cron Job 2 at 4:18 PM","service":"clevertap-processor","timestamp":"2025-06-04T17:17:00.307Z"}
+{"level":"info","message":"Successfully listed objects in bucket: delta-events","service":"clevertap-processor","timestamp":"2025-06-04T17:17:00.871Z"}
+{"level":"info","message":"Processing latest delta file: delta_2025-06-04T17-16-01-737Z.csv","service":"clevertap-processor","timestamp":"2025-06-04T17:17:00.871Z"}
+{"level":"info","message":"Downloading CSV from delta-events/delta_2025-06-04T17-16-01-737Z.csv","service":"clevertap-processor","timestamp":"2025-06-04T17:17:00.871Z"}
+{"level":"info","message":"Successfully downloaded and parsed 1 records from delta-events/delta_2025-06-04T17-16-01-737Z.csv","service":"clevertap-processor","timestamp":"2025-06-04T17:17:01.036Z"}
+{"level":"info","message":"Extracted 1 valid profiles from 1 records","service":"clevertap-processor","timestamp":"2025-06-04T17:17:01.037Z"}
+{"level":"info","message":"Sample profile data:","service":"clevertap-processor","timestamp":"2025-06-04T17:17:01.038Z"}
+{"level":"info","message":"CleverTap API success for identity: hello_321","service":"clevertap-processor","timestamp":"2025-06-04T17:17:01.486Z"}
+{"errors":[],"failed":0,"level":"info","message":"CleverTap upload results:","service":"clevertap-processor","successful":1,"timestamp":"2025-06-04T17:17:01.588Z","totalProcessed":1}
+{"level":"info","message":"Received SIGINT. Graceful shutdown...","service":"clevertap-processor","timestamp":"2025-06-04T17:19:54.676Z"}
+{"level":"info","message":"AWS credentials validation passed","service":"clevertap-processor","timestamp":"2025-06-04T17:49:37.806Z"}
+{"level":"info","message":"Environment validation passed","service":"clevertap-processor","timestamp":"2025-06-04T17:49:37.880Z"}
+{"level":"info","message":"CleverTap Data Processor started successfully","service":"clevertap-processor","timestamp":"2025-06-04T17:49:37.880Z"}
+{"level":"info","message":"Cron Job 1 scheduled for 4:15 PM daily","service":"clevertap-processor","timestamp":"2025-06-04T17:49:37.880Z"}
+{"level":"info","message":"Cron Job 2 scheduled for 4:18 PM daily","service":"clevertap-processor","timestamp":"2025-06-04T17:49:37.880Z"}
+{"level":"info","message":"Executing scheduled Cron Job 1 at 4:15 PM","service":"clevertap-processor","timestamp":"2025-06-04T17:51:00.974Z"}
+{"level":"info","message":"Starting Cron Job 1 - Data Processing","service":"clevertap-processor","timestamp":"2025-06-04T17:51:00.976Z"}
+{"level":"info","message":"Successfully listed objects in bucket: cart-abandon","service":"clevertap-processor","timestamp":"2025-06-04T17:51:01.892Z"}
+{"level":"info","message":"Searching for files with date: 20250604","service":"clevertap-processor","timestamp":"2025-06-04T17:51:01.893Z"}
+{"level":"info","message":"Found 2 files for today in cart-abandon","service":"clevertap-processor","timestamp":"2025-06-04T17:51:01.893Z"}
+{"level":"info","message":"Processing file: 1749056618-1749056618-AddToCart-20250604-0-16.csv.gz","service":"clevertap-processor","timestamp":"2025-06-04T17:51:01.893Z"}
+{"level":"info","message":"Processing file: 1749056618-1749056618-AddToCart-20250604-0-21.csv.gz","service":"clevertap-processor","timestamp":"2025-06-04T17:51:02.057Z"}
+{"level":"info","message":"Total records processed from cart-abandon: 5","service":"clevertap-processor","timestamp":"2025-06-04T17:51:02.220Z"}
+{"level":"info","message":"Successfully listed objects in bucket: charged-events","service":"clevertap-processor","timestamp":"2025-06-04T17:51:02.748Z"}
+{"level":"info","message":"Searching for files with date: 20250604","service":"clevertap-processor","timestamp":"2025-06-04T17:51:02.748Z"}
+{"level":"info","message":"Found 2 files for today in charged-events","service":"clevertap-processor","timestamp":"2025-06-04T17:51:02.748Z"}
+{"level":"info","message":"Processing file: 1749056639-1749056639-Charged-20250604-0-16.csv.gz","service":"clevertap-processor","timestamp":"2025-06-04T17:51:02.748Z"}
+{"level":"info","message":"Processing file: 1749056639-1749056639-Charged-20250604-0-21.csv.gz","service":"clevertap-processor","timestamp":"2025-06-04T17:51:02.904Z"}
+{"level":"info","message":"Total records processed from charged-events: 4","service":"clevertap-processor","timestamp":"2025-06-04T17:51:03.063Z"}
+{"level":"info","message":"\n=== Cart Abandon Data Details ===","service":"clevertap-processor","timestamp":"2025-06-04T17:51:03.064Z"}
+{"level":"info","message":"Total records received: 5","service":"clevertap-processor","timestamp":"2025-06-04T17:51:03.064Z"}
+{"level":"info","message":"\nCart Abandon - Available fields:","service":"clevertap-processor","timestamp":"2025-06-04T17:51:03.064Z"}
+{"level":"info","message":"\nDetailed Cart Abandon Data (up to 2 rows):","service":"clevertap-processor","timestamp":"2025-06-04T17:51:03.064Z"}
+{"level":"info","message":"\nRow 1:","service":"clevertap-processor","timestamp":"2025-06-04T17:51:03.064Z"}
+{"level":"info","message":"ts: 20250604223048","service":"clevertap-processor","timestamp":"2025-06-04T17:51:03.064Z"}
+{"level":"info","message":"eventName: AddToCart","service":"clevertap-processor","timestamp":"2025-06-04T17:51:03.064Z"}
+{"level":"info","message":"profile.identity: hello_321","service":"clevertap-processor","timestamp":"2025-06-04T17:51:03.064Z"}
+{"level":"info","message":"profile.objectId: ","service":"clevertap-processor","timestamp":"2025-06-04T17:51:03.064Z"}
+{"level":"info","message":"profile.all_identities: [testing.developer@gmail.com, hello_321]","service":"clevertap-processor","timestamp":"2025-06-04T17:51:03.064Z"}
+{"level":"info","message":"profile.platform: Android","service":"clevertap-processor","timestamp":"2025-06-04T17:51:03.064Z"}
+{"level":"info","message":"profile.phone: ","service":"clevertap-processor","timestamp":"2025-06-04T17:51:03.064Z"}
+{"level":"info","message":"profile.name: ","service":"clevertap-processor","timestamp":"2025-06-04T17:51:03.064Z"}
+{"level":"info","message":"profile.email: testing.developer@gmail.com","service":"clevertap-processor","timestamp":"2025-06-04T17:51:03.064Z"}
+{"level":"info","message":"profile.push_token: fcm:c4S5zE_XQrSv5M5xPzg-xQ:APA91bFUuxaVGCeGyoN4ymgjd_lfw-6GhLtAjJxRxZpzubeOCCR07ddhcjmp1ZFAZKanCtPX1z6T4AQ3puYNIttFGq_QMHU2Zgbj2hRfVQ4h4h9J03tlY8A","service":"clevertap-processor","timestamp":"2025-06-04T17:51:03.064Z"}
+{"level":"info","message":"deviceInfo.make: Google","service":"clevertap-processor","timestamp":"2025-06-04T17:51:03.064Z"}
+{"level":"info","message":"deviceInfo.model: Sdk_gphone64_arm64","service":"clevertap-processor","timestamp":"2025-06-04T17:51:03.064Z"}
+{"level":"info","message":"deviceInfo.appVersion: 1.0.0","service":"clevertap-processor","timestamp":"2025-06-04T17:51:03.064Z"}
+{"level":"info","message":"deviceInfo.sdkVersion: 70301","service":"clevertap-processor","timestamp":"2025-06-04T17:51:03.064Z"}
+{"level":"info","message":"deviceInfo.osVersion: 16","service":"clevertap-processor","timestamp":"2025-06-04T17:51:03.065Z"}
+{"level":"info","message":"deviceInfo.browser: MobileApp","service":"clevertap-processor","timestamp":"2025-06-04T17:51:03.065Z"}
+{"level":"info","message":"deviceInfo.dpi: 480","service":"clevertap-processor","timestamp":"2025-06-04T17:51:03.065Z"}
+{"level":"info","message":"deviceInfo.dimensions.width: 61","service":"clevertap-processor","timestamp":"2025-06-04T17:51:03.065Z"}
+{"level":"info","message":"deviceInfo.dimensions.height: 143","service":"clevertap-processor","timestamp":"2025-06-04T17:51:03.065Z"}
+{"level":"info","message":"deviceInfo.dimensions.unit: mm","service":"clevertap-processor","timestamp":"2025-06-04T17:51:03.065Z"}
+{"level":"info","message":"controlGroupName: ","service":"clevertap-processor","timestamp":"2025-06-04T17:51:03.065Z"}
+{"level":"info","message":"eventProps.price: 3499","service":"clevertap-processor","timestamp":"2025-06-04T17:51:03.065Z"}
+{"level":"info","message":"eventProps.image_url: https://fastly.picsum.photos/id/935/200/300.jpg?hmac=XPPjHEBtYb6Y3-p1EjAP0RRB0bNlvqCs52VIysO7iH0","service":"clevertap-processor","timestamp":"2025-06-04T17:51:03.065Z"}
+{"level":"info","message":"eventProps.product_id: 123c","service":"clevertap-processor","timestamp":"2025-06-04T17:51:03.065Z"}
+{"level":"info","message":"eventProps.CT App Version: 1.0.0","service":"clevertap-processor","timestamp":"2025-06-04T17:51:03.065Z"}
+{"level":"info","message":"eventProps.CT Source: Mobile","service":"clevertap-processor","timestamp":"2025-06-04T17:51:03.065Z"}
+{"level":"info","message":"\nRow 2:","service":"clevertap-processor","timestamp":"2025-06-04T17:51:03.065Z"}
+{"level":"info","message":"ts: 20250604223132","service":"clevertap-processor","timestamp":"2025-06-04T17:51:03.065Z"}
+{"level":"info","message":"eventName: AddToCart","service":"clevertap-processor","timestamp":"2025-06-04T17:51:03.065Z"}
+{"level":"info","message":"profile.identity: hello_321","service":"clevertap-processor","timestamp":"2025-06-04T17:51:03.065Z"}
+{"level":"info","message":"profile.objectId: ","service":"clevertap-processor","timestamp":"2025-06-04T17:51:03.065Z"}
+{"level":"info","message":"profile.all_identities: [testing.developer@gmail.com, hello_321]","service":"clevertap-processor","timestamp":"2025-06-04T17:51:03.065Z"}
+{"level":"info","message":"profile.platform: Android","service":"clevertap-processor","timestamp":"2025-06-04T17:51:03.065Z"}
+{"level":"info","message":"profile.phone: ","service":"clevertap-processor","timestamp":"2025-06-04T17:51:03.065Z"}
+{"level":"info","message":"profile.name: ","service":"clevertap-processor","timestamp":"2025-06-04T17:51:03.065Z"}
+{"level":"info","message":"profile.email: testing.developer@gmail.com","service":"clevertap-processor","timestamp":"2025-06-04T17:51:03.065Z"}
+{"level":"info","message":"profile.push_token: fcm:c4S5zE_XQrSv5M5xPzg-xQ:APA91bFUuxaVGCeGyoN4ymgjd_lfw-6GhLtAjJxRxZpzubeOCCR07ddhcjmp1ZFAZKanCtPX1z6T4AQ3puYNIttFGq_QMHU2Zgbj2hRfVQ4h4h9J03tlY8A","service":"clevertap-processor","timestamp":"2025-06-04T17:51:03.065Z"}
+{"level":"info","message":"deviceInfo.make: Google","service":"clevertap-processor","timestamp":"2025-06-04T17:51:03.065Z"}
+{"level":"info","message":"deviceInfo.model: Sdk_gphone64_arm64","service":"clevertap-processor","timestamp":"2025-06-04T17:51:03.065Z"}
+{"level":"info","message":"deviceInfo.appVersion: 1.0.0","service":"clevertap-processor","timestamp":"2025-06-04T17:51:03.065Z"}
+{"level":"info","message":"deviceInfo.sdkVersion: 70301","service":"clevertap-processor","timestamp":"2025-06-04T17:51:03.065Z"}
+{"level":"info","message":"deviceInfo.osVersion: 16","service":"clevertap-processor","timestamp":"2025-06-04T17:51:03.065Z"}
+{"level":"info","message":"deviceInfo.browser: MobileApp","service":"clevertap-processor","timestamp":"2025-06-04T17:51:03.065Z"}
+{"level":"info","message":"deviceInfo.dpi: 480","service":"clevertap-processor","timestamp":"2025-06-04T17:51:03.065Z"}
+{"level":"info","message":"deviceInfo.dimensions.width: 61","service":"clevertap-processor","timestamp":"2025-06-04T17:51:03.065Z"}
+{"level":"info","message":"deviceInfo.dimensions.height: 143","service":"clevertap-processor","timestamp":"2025-06-04T17:51:03.065Z"}
+{"level":"info","message":"deviceInfo.dimensions.unit: mm","service":"clevertap-processor","timestamp":"2025-06-04T17:51:03.065Z"}
+{"level":"info","message":"controlGroupName: ","service":"clevertap-processor","timestamp":"2025-06-04T17:51:03.065Z"}
+{"level":"info","message":"eventProps.price: 3499","service":"clevertap-processor","timestamp":"2025-06-04T17:51:03.065Z"}
+{"level":"info","message":"eventProps.image_url: https://fastly.picsum.photos/id/935/200/300.jpg?hmac=XPPjHEBtYb6Y3-p1EjAP0RRB0bNlvqCs52VIysO7iH0","service":"clevertap-processor","timestamp":"2025-06-04T17:51:03.065Z"}
+{"level":"info","message":"eventProps.product_id: 123d","service":"clevertap-processor","timestamp":"2025-06-04T17:51:03.065Z"}
+{"level":"info","message":"eventProps.CT App Version: 1.0.0","service":"clevertap-processor","timestamp":"2025-06-04T17:51:03.065Z"}
+{"level":"info","message":"eventProps.CT Source: Mobile","service":"clevertap-processor","timestamp":"2025-06-04T17:51:03.065Z"}
+{"level":"info","message":"\n=== Charged Events Data Details ===","service":"clevertap-processor","timestamp":"2025-06-04T17:51:03.065Z"}
+{"level":"info","message":"Total records received: 4","service":"clevertap-processor","timestamp":"2025-06-04T17:51:03.065Z"}
+{"level":"info","message":"\nCharged Events - Available fields:","service":"clevertap-processor","timestamp":"2025-06-04T17:51:03.066Z"}
+{"level":"info","message":"\nDetailed Charged Events Data (up to 2 rows):","service":"clevertap-processor","timestamp":"2025-06-04T17:51:03.066Z"}
+{"level":"info","message":"\nRow 1:","service":"clevertap-processor","timestamp":"2025-06-04T17:51:03.066Z"}
+{"level":"info","message":"ts: 20250604223153","service":"clevertap-processor","timestamp":"2025-06-04T17:51:03.066Z"}
+{"level":"info","message":"eventName: Charged","service":"clevertap-processor","timestamp":"2025-06-04T17:51:03.066Z"}
+{"level":"info","message":"profile.identity: hello_321","service":"clevertap-processor","timestamp":"2025-06-04T17:51:03.066Z"}
+{"level":"info","message":"profile.objectId: ","service":"clevertap-processor","timestamp":"2025-06-04T17:51:03.066Z"}
+{"level":"info","message":"profile.all_identities: [testing.developer@gmail.com, hello_321]","service":"clevertap-processor","timestamp":"2025-06-04T17:51:03.066Z"}
+{"level":"info","message":"profile.platform: Android","service":"clevertap-processor","timestamp":"2025-06-04T17:51:03.066Z"}
+{"level":"info","message":"profile.phone: ","service":"clevertap-processor","timestamp":"2025-06-04T17:51:03.066Z"}
+{"level":"info","message":"profile.name: ","service":"clevertap-processor","timestamp":"2025-06-04T17:51:03.066Z"}
+{"level":"info","message":"profile.email: testing.developer@gmail.com","service":"clevertap-processor","timestamp":"2025-06-04T17:51:03.066Z"}
+{"level":"info","message":"profile.push_token: fcm:c4S5zE_XQrSv5M5xPzg-xQ:APA91bFUuxaVGCeGyoN4ymgjd_lfw-6GhLtAjJxRxZpzubeOCCR07ddhcjmp1ZFAZKanCtPX1z6T4AQ3puYNIttFGq_QMHU2Zgbj2hRfVQ4h4h9J03tlY8A","service":"clevertap-processor","timestamp":"2025-06-04T17:51:03.066Z"}
+{"level":"info","message":"deviceInfo.make: Google","service":"clevertap-processor","timestamp":"2025-06-04T17:51:03.066Z"}
+{"level":"info","message":"deviceInfo.model: Sdk_gphone64_arm64","service":"clevertap-processor","timestamp":"2025-06-04T17:51:03.066Z"}
+{"level":"info","message":"deviceInfo.appVersion: 1.0.0","service":"clevertap-processor","timestamp":"2025-06-04T17:51:03.066Z"}
+{"level":"info","message":"deviceInfo.sdkVersion: 70301","service":"clevertap-processor","timestamp":"2025-06-04T17:51:03.066Z"}
+{"level":"info","message":"deviceInfo.osVersion: 16","service":"clevertap-processor","timestamp":"2025-06-04T17:51:03.066Z"}
+{"level":"info","message":"deviceInfo.browser: MobileApp","service":"clevertap-processor","timestamp":"2025-06-04T17:51:03.066Z"}
+{"level":"info","message":"deviceInfo.dpi: 480","service":"clevertap-processor","timestamp":"2025-06-04T17:51:03.066Z"}
+{"level":"info","message":"deviceInfo.dimensions.width: 61","service":"clevertap-processor","timestamp":"2025-06-04T17:51:03.066Z"}
+{"level":"info","message":"deviceInfo.dimensions.height: 143","service":"clevertap-processor","timestamp":"2025-06-04T17:51:03.066Z"}
+{"level":"info","message":"deviceInfo.dimensions.unit: mm","service":"clevertap-processor","timestamp":"2025-06-04T17:51:03.066Z"}
+{"level":"info","message":"controlGroupName: ","service":"clevertap-processor","timestamp":"2025-06-04T17:51:03.066Z"}
+{"level":"info","message":"eventProps.CT App Version: 1.0.0","service":"clevertap-processor","timestamp":"2025-06-04T17:51:03.066Z"}
+{"level":"info","message":"eventProps.CT Source: Mobile","service":"clevertap-processor","timestamp":"2025-06-04T17:51:03.066Z"}
+{"level":"info","message":"eventProps.price: 3499","service":"clevertap-processor","timestamp":"2025-06-04T17:51:03.066Z"}
+{"level":"info","message":"eventProps.image_url: https://fastly.picsum.photos/id/935/200/300.jpg?hmac=XPPjHEBtYb6Y3-p1EjAP0RRB0bNlvqCs52VIysO7iH0","service":"clevertap-processor","timestamp":"2025-06-04T17:51:03.066Z"}
+{"level":"info","message":"eventProps.product_id: 123b","service":"clevertap-processor","timestamp":"2025-06-04T17:51:03.066Z"}
+{"level":"info","message":"eventProps.Items: ","service":"clevertap-processor","timestamp":"2025-06-04T17:51:03.066Z"}
+{"level":"info","message":"\nRow 2:","service":"clevertap-processor","timestamp":"2025-06-04T17:51:03.066Z"}
+{"level":"info","message":"ts: 20250604223236","service":"clevertap-processor","timestamp":"2025-06-04T17:51:03.066Z"}
+{"level":"info","message":"eventName: Charged","service":"clevertap-processor","timestamp":"2025-06-04T17:51:03.066Z"}
+{"level":"info","message":"profile.identity: hello_321","service":"clevertap-processor","timestamp":"2025-06-04T17:51:03.066Z"}
+{"level":"info","message":"profile.objectId: ","service":"clevertap-processor","timestamp":"2025-06-04T17:51:03.066Z"}
+{"level":"info","message":"profile.all_identities: [testing.developer@gmail.com, hello_321]","service":"clevertap-processor","timestamp":"2025-06-04T17:51:03.067Z"}
+{"level":"info","message":"profile.platform: Android","service":"clevertap-processor","timestamp":"2025-06-04T17:51:03.067Z"}
+{"level":"info","message":"profile.phone: ","service":"clevertap-processor","timestamp":"2025-06-04T17:51:03.067Z"}
+{"level":"info","message":"profile.name: ","service":"clevertap-processor","timestamp":"2025-06-04T17:51:03.067Z"}
+{"level":"info","message":"profile.email: testing.developer@gmail.com","service":"clevertap-processor","timestamp":"2025-06-04T17:51:03.067Z"}
+{"level":"info","message":"profile.push_token: fcm:c4S5zE_XQrSv5M5xPzg-xQ:APA91bFUuxaVGCeGyoN4ymgjd_lfw-6GhLtAjJxRxZpzubeOCCR07ddhcjmp1ZFAZKanCtPX1z6T4AQ3puYNIttFGq_QMHU2Zgbj2hRfVQ4h4h9J03tlY8A","service":"clevertap-processor","timestamp":"2025-06-04T17:51:03.067Z"}
+{"level":"info","message":"deviceInfo.make: Google","service":"clevertap-processor","timestamp":"2025-06-04T17:51:03.067Z"}
+{"level":"info","message":"deviceInfo.model: Sdk_gphone64_arm64","service":"clevertap-processor","timestamp":"2025-06-04T17:51:03.067Z"}
+{"level":"info","message":"deviceInfo.appVersion: 1.0.0","service":"clevertap-processor","timestamp":"2025-06-04T17:51:03.067Z"}
+{"level":"info","message":"deviceInfo.sdkVersion: 70301","service":"clevertap-processor","timestamp":"2025-06-04T17:51:03.067Z"}
+{"level":"info","message":"deviceInfo.osVersion: 16","service":"clevertap-processor","timestamp":"2025-06-04T17:51:03.068Z"}
+{"level":"info","message":"deviceInfo.browser: MobileApp","service":"clevertap-processor","timestamp":"2025-06-04T17:51:03.068Z"}
+{"level":"info","message":"deviceInfo.dpi: 480","service":"clevertap-processor","timestamp":"2025-06-04T17:51:03.068Z"}
+{"level":"info","message":"deviceInfo.dimensions.width: 61","service":"clevertap-processor","timestamp":"2025-06-04T17:51:03.068Z"}
+{"level":"info","message":"deviceInfo.dimensions.height: 143","service":"clevertap-processor","timestamp":"2025-06-04T17:51:03.068Z"}
+{"level":"info","message":"deviceInfo.dimensions.unit: mm","service":"clevertap-processor","timestamp":"2025-06-04T17:51:03.068Z"}
+{"level":"info","message":"controlGroupName: ","service":"clevertap-processor","timestamp":"2025-06-04T17:51:03.068Z"}
+{"level":"info","message":"eventProps.CT App Version: 1.0.0","service":"clevertap-processor","timestamp":"2025-06-04T17:51:03.068Z"}
+{"level":"info","message":"eventProps.CT Source: Mobile","service":"clevertap-processor","timestamp":"2025-06-04T17:51:03.068Z"}
+{"level":"info","message":"eventProps.price: 3499","service":"clevertap-processor","timestamp":"2025-06-04T17:51:03.068Z"}
+{"level":"info","message":"eventProps.image_url: https://fastly.picsum.photos/id/935/200/300.jpg?hmac=XPPjHEBtYb6Y3-p1EjAP0RRB0bNlvqCs52VIysO7iH0","service":"clevertap-processor","timestamp":"2025-06-04T17:51:03.068Z"}
+{"level":"info","message":"eventProps.product_id: 123c","service":"clevertap-processor","timestamp":"2025-06-04T17:51:03.068Z"}
+{"level":"info","message":"eventProps.Items: ","service":"clevertap-processor","timestamp":"2025-06-04T17:51:03.068Z"}
+{"level":"info","message":"Valid cart abandon records after null check: 5","service":"clevertap-processor","timestamp":"2025-06-04T17:51:03.068Z"}
+{"level":"info","message":"Valid charged combinations: 3","service":"clevertap-processor","timestamp":"2025-06-04T17:51:03.068Z"}
+{"level":"info","message":"\n=== Processing Summary ===","service":"clevertap-processor","timestamp":"2025-06-04T17:51:03.069Z"}
+{"level":"info","message":"Original cart abandon records: 5","service":"clevertap-processor","timestamp":"2025-06-04T17:51:03.069Z"}
+{"level":"info","message":"Valid cart abandon records: 5","service":"clevertap-processor","timestamp":"2025-06-04T17:51:03.069Z"}
+{"level":"info","message":"Charged events records: 4","service":"clevertap-processor","timestamp":"2025-06-04T17:51:03.069Z"}
+{"level":"info","message":"Valid charged combinations: 3","service":"clevertap-processor","timestamp":"2025-06-04T17:51:03.069Z"}
+{"level":"info","message":"Delta records (before deduplication): 3","service":"clevertap-processor","timestamp":"2025-06-04T17:51:03.069Z"}
+{"level":"info","message":"Final delta records: 3","service":"clevertap-processor","timestamp":"2025-06-04T17:51:03.069Z"}
+{"level":"info","message":"Preparing to upload CSV to delta-events/delta_2025-06-04T17-51-03-069Z.csv","service":"clevertap-processor","timestamp":"2025-06-04T17:51:03.069Z"}
+{"level":"info","message":"Successfully uploaded CSV to delta-events/delta_2025-06-04T17-51-03-069Z.csv","service":"clevertap-processor","timestamp":"2025-06-04T17:51:03.704Z"}
+{"level":"info","message":"Delta data uploaded successfully: delta_2025-06-04T17-51-03-069Z.csv","service":"clevertap-processor","timestamp":"2025-06-04T17:51:03.704Z"}
+{"level":"info","message":"Cron Job 1 completed successfully. Processed 3 records in 2728ms","service":"clevertap-processor","timestamp":"2025-06-04T17:51:03.704Z"}
+{"level":"info","message":"Executing scheduled Cron Job 2 at 4:18 PM","service":"clevertap-processor","timestamp":"2025-06-04T17:52:00.102Z"}
+{"level":"info","message":"Successfully listed objects in bucket: delta-events","service":"clevertap-processor","timestamp":"2025-06-04T17:52:00.616Z"}
+{"level":"info","message":"Processing latest delta file: delta_2025-06-04T17-51-03-069Z.csv","service":"clevertap-processor","timestamp":"2025-06-04T17:52:00.616Z"}
+{"level":"info","message":"Downloading CSV from delta-events/delta_2025-06-04T17-51-03-069Z.csv","service":"clevertap-processor","timestamp":"2025-06-04T17:52:00.617Z"}
+{"level":"info","message":"Successfully downloaded and parsed 3 records from delta-events/delta_2025-06-04T17-51-03-069Z.csv","service":"clevertap-processor","timestamp":"2025-06-04T17:52:00.777Z"}
+{"level":"info","message":"Extracted 3 valid profiles from 3 records","service":"clevertap-processor","timestamp":"2025-06-04T17:52:00.778Z"}
+{"level":"info","message":"Sample profile data:","service":"clevertap-processor","timestamp":"2025-06-04T17:52:00.779Z"}
+{"level":"info","message":"CleverTap API success for identity: hello_321","service":"clevertap-processor","timestamp":"2025-06-04T17:52:01.259Z"}
+{"level":"info","message":"CleverTap API success for identity: hello_123","service":"clevertap-processor","timestamp":"2025-06-04T17:52:01.515Z"}
+{"level":"info","message":"CleverTap API success for identity: hello_123","service":"clevertap-processor","timestamp":"2025-06-04T17:52:01.773Z"}
+{"errors":[],"failed":0,"level":"info","message":"CleverTap upload results:","service":"clevertap-processor","successful":3,"timestamp":"2025-06-04T17:52:01.874Z","totalProcessed":3}
+{"level":"info","message":"Received SIGINT. Graceful shutdown...","service":"clevertap-processor","timestamp":"2025-06-04T17:54:26.512Z"}
+{"level":"info","message":"AWS credentials validation passed","service":"clevertap-processor","timestamp":"2025-06-06T06:23:43.711Z"}
+{"level":"info","message":"Environment validation passed","service":"clevertap-processor","timestamp":"2025-06-06T06:23:43.774Z"}
+{"level":"info","message":"CleverTap Data Processor started successfully","service":"clevertap-processor","timestamp":"2025-06-06T06:23:43.774Z"}
+{"level":"info","message":"Cron Job 1 scheduled for 4:15 PM daily","service":"clevertap-processor","timestamp":"2025-06-06T06:23:43.774Z"}
+{"level":"info","message":"Cron Job 2 scheduled for 4:18 PM daily","service":"clevertap-processor","timestamp":"2025-06-06T06:23:43.774Z"}
+{"level":"info","message":"Executing scheduled Cron Job 1 at 4:15 PM","service":"clevertap-processor","timestamp":"2025-06-06T06:25:00.878Z"}
+{"level":"info","message":"Starting Cron Job 1 - Data Processing","service":"clevertap-processor","timestamp":"2025-06-06T06:25:00.879Z"}
+{"level":"info","message":"Successfully listed objects in bucket: cart-abandon","service":"clevertap-processor","timestamp":"2025-06-06T06:25:01.854Z"}
+{"level":"info","message":"Searching for files with date: 20250606","service":"clevertap-processor","timestamp":"2025-06-06T06:25:01.854Z"}
+{"level":"warn","message":"No .csv.gz files found for today (20250606) in bucket: cart-abandon","service":"clevertap-processor","timestamp":"2025-06-06T06:25:01.855Z"}
+{"level":"info","message":"Successfully listed objects in bucket: charged-events","service":"clevertap-processor","timestamp":"2025-06-06T06:25:02.673Z"}
+{"level":"info","message":"Searching for files with date: 20250606","service":"clevertap-processor","timestamp":"2025-06-06T06:25:02.673Z"}
+{"level":"warn","message":"No .csv.gz files found for today (20250606) in bucket: charged-events","service":"clevertap-processor","timestamp":"2025-06-06T06:25:02.673Z"}
+{"level":"info","message":"\n=== Cart Abandon Data Details ===","service":"clevertap-processor","timestamp":"2025-06-06T06:25:02.674Z"}
+{"level":"info","message":"Total records received: 0","service":"clevertap-processor","timestamp":"2025-06-06T06:25:02.674Z"}
+{"level":"info","message":"\n=== Charged Events Data Details ===","service":"clevertap-processor","timestamp":"2025-06-06T06:25:02.674Z"}
+{"level":"info","message":"Total records received: 0","service":"clevertap-processor","timestamp":"2025-06-06T06:25:02.674Z"}
+{"level":"info","message":"Valid cart abandon records after null check: 0","service":"clevertap-processor","timestamp":"2025-06-06T06:25:02.674Z"}
+{"level":"info","message":"Valid charged combinations: 0","service":"clevertap-processor","timestamp":"2025-06-06T06:25:02.674Z"}
+{"level":"info","message":"\n=== Processing Summary ===","service":"clevertap-processor","timestamp":"2025-06-06T06:25:02.674Z"}
+{"level":"info","message":"Original cart abandon records: 0","service":"clevertap-processor","timestamp":"2025-06-06T06:25:02.674Z"}
+{"level":"info","message":"Valid cart abandon records: 0","service":"clevertap-processor","timestamp":"2025-06-06T06:25:02.674Z"}
+{"level":"info","message":"Charged events records: 0","service":"clevertap-processor","timestamp":"2025-06-06T06:25:02.674Z"}
+{"level":"info","message":"Valid charged combinations: 0","service":"clevertap-processor","timestamp":"2025-06-06T06:25:02.675Z"}
+{"level":"info","message":"Delta records (before deduplication): 0","service":"clevertap-processor","timestamp":"2025-06-06T06:25:02.675Z"}
+{"level":"info","message":"Final delta records: 0","service":"clevertap-processor","timestamp":"2025-06-06T06:25:02.675Z"}
+{"level":"info","message":"No delta data to process. Cron Job 1 completed.","service":"clevertap-processor","timestamp":"2025-06-06T06:25:02.675Z"}
+{"level":"info","message":"Cron Job 1 completed successfully. Processed 0 records in 1796ms","service":"clevertap-processor","timestamp":"2025-06-06T06:25:02.675Z"}
+{"level":"info","message":"Received SIGINT. Graceful shutdown...","service":"clevertap-processor","timestamp":"2025-06-06T06:25:41.114Z"}
+{"level":"info","message":"AWS credentials validation passed","service":"clevertap-processor","timestamp":"2025-06-06T06:59:11.391Z"}
+{"level":"info","message":"Environment validation passed","service":"clevertap-processor","timestamp":"2025-06-06T06:59:11.465Z"}
+{"level":"info","message":"CleverTap Data Processor started successfully","service":"clevertap-processor","timestamp":"2025-06-06T06:59:11.465Z"}
+{"level":"info","message":"Cron Job 1 scheduled for 4:15 PM daily","service":"clevertap-processor","timestamp":"2025-06-06T06:59:11.465Z"}
+{"level":"info","message":"Cron Job 2 scheduled for 4:18 PM daily","service":"clevertap-processor","timestamp":"2025-06-06T06:59:11.465Z"}
+{"level":"info","message":"Executing scheduled Cron Job 1 at 4:15 PM","service":"clevertap-processor","timestamp":"2025-06-06T07:00:00.542Z"}
+{"level":"info","message":"Starting Cron Job 1 - Data Processing","service":"clevertap-processor","timestamp":"2025-06-06T07:00:00.545Z"}
+{"level":"info","message":"Successfully listed objects in bucket: cart-abandon","service":"clevertap-processor","timestamp":"2025-06-06T07:00:01.206Z"}
+{"level":"info","message":"Searching for files with date: 20250606","service":"clevertap-processor","timestamp":"2025-06-06T07:00:01.206Z"}
+{"level":"info","message":"Found 2 files for today in cart-abandon","service":"clevertap-processor","timestamp":"2025-06-06T07:00:01.207Z"}
+{"level":"info","message":"Processing file: 1749192519-1749192519-AddToCart-20250606-0-15.csv.gz","service":"clevertap-processor","timestamp":"2025-06-06T07:00:01.207Z"}
+{"level":"info","message":"Processing file: 1749192519-1749192519-AddToCart-20250606-0-6.csv.gz","service":"clevertap-processor","timestamp":"2025-06-06T07:00:01.408Z"}
+{"level":"info","message":"Total records processed from cart-abandon: 5","service":"clevertap-processor","timestamp":"2025-06-06T07:00:01.588Z"}
+{"level":"info","message":"Successfully listed objects in bucket: charged-events","service":"clevertap-processor","timestamp":"2025-06-06T07:00:02.102Z"}
+{"level":"info","message":"Searching for files with date: 20250606","service":"clevertap-processor","timestamp":"2025-06-06T07:00:02.102Z"}
+{"level":"info","message":"Found 2 files for today in charged-events","service":"clevertap-processor","timestamp":"2025-06-06T07:00:02.103Z"}
+{"level":"info","message":"Processing file: 1749192537-1749192537-Charged-20250606-0-15.csv.gz","service":"clevertap-processor","timestamp":"2025-06-06T07:00:02.103Z"}
+{"level":"info","message":"Processing file: 1749192537-1749192537-Charged-20250606-0-6.csv.gz","service":"clevertap-processor","timestamp":"2025-06-06T07:00:02.283Z"}
+{"level":"info","message":"Total records processed from charged-events: 2","service":"clevertap-processor","timestamp":"2025-06-06T07:00:02.449Z"}
+{"level":"info","message":"\n=== Cart Abandon Data Details ===","service":"clevertap-processor","timestamp":"2025-06-06T07:00:02.449Z"}
+{"level":"info","message":"Total records received: 5","service":"clevertap-processor","timestamp":"2025-06-06T07:00:02.450Z"}
+{"level":"info","message":"\nCart Abandon - Available fields:","service":"clevertap-processor","timestamp":"2025-06-06T07:00:02.450Z"}
+{"level":"info","message":"\nDetailed Cart Abandon Data (up to 2 rows):","service":"clevertap-processor","timestamp":"2025-06-06T07:00:02.450Z"}
+{"level":"info","message":"\nRow 1:","service":"clevertap-processor","timestamp":"2025-06-06T07:00:02.450Z"}
+{"level":"info","message":"ts: 20250606121411","service":"clevertap-processor","timestamp":"2025-06-06T07:00:02.450Z"}
+{"level":"info","message":"eventName: AddToCart","service":"clevertap-processor","timestamp":"2025-06-06T07:00:02.450Z"}
+{"level":"info","message":"profile.identity: 32rfwq","service":"clevertap-processor","timestamp":"2025-06-06T07:00:02.450Z"}
+{"level":"info","message":"profile.objectId: ","service":"clevertap-processor","timestamp":"2025-06-06T07:00:02.450Z"}
+{"level":"info","message":"profile.all_identities: [32rfwq, iouwfhkbjn@gmail.com]","service":"clevertap-processor","timestamp":"2025-06-06T07:00:02.450Z"}
+{"level":"info","message":"profile.platform: Android","service":"clevertap-processor","timestamp":"2025-06-06T07:00:02.450Z"}
+{"level":"info","message":"profile.phone: ","service":"clevertap-processor","timestamp":"2025-06-06T07:00:02.450Z"}
+{"level":"info","message":"profile.name: ","service":"clevertap-processor","timestamp":"2025-06-06T07:00:02.450Z"}
+{"level":"info","message":"profile.email: iouwfhkbjn@gmail.com","service":"clevertap-processor","timestamp":"2025-06-06T07:00:02.450Z"}
+{"level":"info","message":"profile.push_token: fcm:eI3CwZuQTKuAhuXoGetNkM:APA91bGYr-jfCQ-BO4bINH9gMrio6hLlLAHQ_UMzGLm7KPsNRNZAuy3t9Cmwrfn4Pppx3ix40stEHIVq6G4NSY1UxkbB5UDhfltNaHUKR_ats4CsL_bIjYE","service":"clevertap-processor","timestamp":"2025-06-06T07:00:02.450Z"}
+{"level":"info","message":"deviceInfo.make: Google","service":"clevertap-processor","timestamp":"2025-06-06T07:00:02.450Z"}
+{"level":"info","message":"deviceInfo.model: Sdk_gphone64_arm64","service":"clevertap-processor","timestamp":"2025-06-06T07:00:02.450Z"}
+{"level":"info","message":"deviceInfo.appVersion: 1.0.0","service":"clevertap-processor","timestamp":"2025-06-06T07:00:02.451Z"}
+{"level":"info","message":"deviceInfo.sdkVersion: 70301","service":"clevertap-processor","timestamp":"2025-06-06T07:00:02.451Z"}
+{"level":"info","message":"deviceInfo.osVersion: 16","service":"clevertap-processor","timestamp":"2025-06-06T07:00:02.451Z"}
+{"level":"info","message":"deviceInfo.browser: MobileApp","service":"clevertap-processor","timestamp":"2025-06-06T07:00:02.451Z"}
+{"level":"info","message":"deviceInfo.dpi: 480","service":"clevertap-processor","timestamp":"2025-06-06T07:00:02.451Z"}
+{"level":"info","message":"deviceInfo.dimensions.width: 61","service":"clevertap-processor","timestamp":"2025-06-06T07:00:02.451Z"}
+{"level":"info","message":"deviceInfo.dimensions.height: 143","service":"clevertap-processor","timestamp":"2025-06-06T07:00:02.451Z"}
+{"level":"info","message":"deviceInfo.dimensions.unit: mm","service":"clevertap-processor","timestamp":"2025-06-06T07:00:02.451Z"}
+{"level":"info","message":"controlGroupName: ","service":"clevertap-processor","timestamp":"2025-06-06T07:00:02.451Z"}
+{"level":"info","message":"eventProps.price: 3499","service":"clevertap-processor","timestamp":"2025-06-06T07:00:02.451Z"}
+{"level":"info","message":"eventProps.image_url: https://fastly.picsum.photos/id/935/200/300.jpg?hmac=XPPjHEBtYb6Y3-p1EjAP0RRB0bNlvqCs52VIysO7iH0","service":"clevertap-processor","timestamp":"2025-06-06T07:00:02.451Z"}
+{"level":"info","message":"eventProps.product_id: 123a","service":"clevertap-processor","timestamp":"2025-06-06T07:00:02.451Z"}
+{"level":"info","message":"eventProps.CT App Version: 1.0.0","service":"clevertap-processor","timestamp":"2025-06-06T07:00:02.451Z"}
+{"level":"info","message":"eventProps.CT Source: Mobile","service":"clevertap-processor","timestamp":"2025-06-06T07:00:02.451Z"}
+{"level":"info","message":"\nRow 2:","service":"clevertap-processor","timestamp":"2025-06-06T07:00:02.451Z"}
+{"level":"info","message":"ts: 20250606121427","service":"clevertap-processor","timestamp":"2025-06-06T07:00:02.451Z"}
+{"level":"info","message":"eventName: AddToCart","service":"clevertap-processor","timestamp":"2025-06-06T07:00:02.451Z"}
+{"level":"info","message":"profile.identity: 32rfwq","service":"clevertap-processor","timestamp":"2025-06-06T07:00:02.451Z"}
+{"level":"info","message":"profile.objectId: ","service":"clevertap-processor","timestamp":"2025-06-06T07:00:02.451Z"}
+{"level":"info","message":"profile.all_identities: [32rfwq, iouwfhkbjn@gmail.com]","service":"clevertap-processor","timestamp":"2025-06-06T07:00:02.451Z"}
+{"level":"info","message":"profile.platform: Android","service":"clevertap-processor","timestamp":"2025-06-06T07:00:02.451Z"}
+{"level":"info","message":"profile.phone: ","service":"clevertap-processor","timestamp":"2025-06-06T07:00:02.451Z"}
+{"level":"info","message":"profile.name: ","service":"clevertap-processor","timestamp":"2025-06-06T07:00:02.451Z"}
+{"level":"info","message":"profile.email: iouwfhkbjn@gmail.com","service":"clevertap-processor","timestamp":"2025-06-06T07:00:02.451Z"}
+{"level":"info","message":"profile.push_token: fcm:eI3CwZuQTKuAhuXoGetNkM:APA91bGYr-jfCQ-BO4bINH9gMrio6hLlLAHQ_UMzGLm7KPsNRNZAuy3t9Cmwrfn4Pppx3ix40stEHIVq6G4NSY1UxkbB5UDhfltNaHUKR_ats4CsL_bIjYE","service":"clevertap-processor","timestamp":"2025-06-06T07:00:02.451Z"}
+{"level":"info","message":"deviceInfo.make: Google","service":"clevertap-processor","timestamp":"2025-06-06T07:00:02.451Z"}
+{"level":"info","message":"deviceInfo.model: Sdk_gphone64_arm64","service":"clevertap-processor","timestamp":"2025-06-06T07:00:02.451Z"}
+{"level":"info","message":"deviceInfo.appVersion: 1.0.0","service":"clevertap-processor","timestamp":"2025-06-06T07:00:02.452Z"}
+{"level":"info","message":"deviceInfo.sdkVersion: 70301","service":"clevertap-processor","timestamp":"2025-06-06T07:00:02.452Z"}
+{"level":"info","message":"deviceInfo.osVersion: 16","service":"clevertap-processor","timestamp":"2025-06-06T07:00:02.452Z"}
+{"level":"info","message":"deviceInfo.browser: MobileApp","service":"clevertap-processor","timestamp":"2025-06-06T07:00:02.452Z"}
+{"level":"info","message":"deviceInfo.dpi: 480","service":"clevertap-processor","timestamp":"2025-06-06T07:00:02.452Z"}
+{"level":"info","message":"deviceInfo.dimensions.width: 61","service":"clevertap-processor","timestamp":"2025-06-06T07:00:02.452Z"}
+{"level":"info","message":"deviceInfo.dimensions.height: 143","service":"clevertap-processor","timestamp":"2025-06-06T07:00:02.452Z"}
+{"level":"info","message":"deviceInfo.dimensions.unit: mm","service":"clevertap-processor","timestamp":"2025-06-06T07:00:02.452Z"}
+{"level":"info","message":"controlGroupName: ","service":"clevertap-processor","timestamp":"2025-06-06T07:00:02.452Z"}
+{"level":"info","message":"eventProps.price: 3499","service":"clevertap-processor","timestamp":"2025-06-06T07:00:02.452Z"}
+{"level":"info","message":"eventProps.image_url: https://fastly.picsum.photos/id/935/200/300.jpg?hmac=XPPjHEBtYb6Y3-p1EjAP0RRB0bNlvqCs52VIysO7iH0","service":"clevertap-processor","timestamp":"2025-06-06T07:00:02.452Z"}
+{"level":"info","message":"eventProps.product_id: 123b","service":"clevertap-processor","timestamp":"2025-06-06T07:00:02.452Z"}
+{"level":"info","message":"eventProps.CT App Version: 1.0.0","service":"clevertap-processor","timestamp":"2025-06-06T07:00:02.452Z"}
+{"level":"info","message":"eventProps.CT Source: Mobile","service":"clevertap-processor","timestamp":"2025-06-06T07:00:02.452Z"}
+{"level":"info","message":"\n=== Charged Events Data Details ===","service":"clevertap-processor","timestamp":"2025-06-06T07:00:02.452Z"}
+{"level":"info","message":"Total records received: 2","service":"clevertap-processor","timestamp":"2025-06-06T07:00:02.452Z"}
+{"level":"info","message":"\nCharged Events - Available fields:","service":"clevertap-processor","timestamp":"2025-06-06T07:00:02.452Z"}
+{"level":"info","message":"\nDetailed Charged Events Data (up to 2 rows):","service":"clevertap-processor","timestamp":"2025-06-06T07:00:02.452Z"}
+{"level":"info","message":"\nRow 1:","service":"clevertap-processor","timestamp":"2025-06-06T07:00:02.452Z"}
+{"level":"info","message":"ts: 20250606121454","service":"clevertap-processor","timestamp":"2025-06-06T07:00:02.452Z"}
+{"level":"info","message":"eventName: Charged","service":"clevertap-processor","timestamp":"2025-06-06T07:00:02.452Z"}
+{"level":"info","message":"profile.identity: 32rfwq","service":"clevertap-processor","timestamp":"2025-06-06T07:00:02.452Z"}
+{"level":"info","message":"profile.objectId: ","service":"clevertap-processor","timestamp":"2025-06-06T07:00:02.452Z"}
+{"level":"info","message":"profile.all_identities: [32rfwq, iouwfhkbjn@gmail.com]","service":"clevertap-processor","timestamp":"2025-06-06T07:00:02.453Z"}
+{"level":"info","message":"profile.platform: Android","service":"clevertap-processor","timestamp":"2025-06-06T07:00:02.453Z"}
+{"level":"info","message":"profile.phone: ","service":"clevertap-processor","timestamp":"2025-06-06T07:00:02.453Z"}
+{"level":"info","message":"profile.name: ","service":"clevertap-processor","timestamp":"2025-06-06T07:00:02.453Z"}
+{"level":"info","message":"profile.email: iouwfhkbjn@gmail.com","service":"clevertap-processor","timestamp":"2025-06-06T07:00:02.453Z"}
+{"level":"info","message":"profile.push_token: fcm:eI3CwZuQTKuAhuXoGetNkM:APA91bGYr-jfCQ-BO4bINH9gMrio6hLlLAHQ_UMzGLm7KPsNRNZAuy3t9Cmwrfn4Pppx3ix40stEHIVq6G4NSY1UxkbB5UDhfltNaHUKR_ats4CsL_bIjYE","service":"clevertap-processor","timestamp":"2025-06-06T07:00:02.453Z"}
+{"level":"info","message":"deviceInfo.make: Google","service":"clevertap-processor","timestamp":"2025-06-06T07:00:02.453Z"}
+{"level":"info","message":"deviceInfo.model: Sdk_gphone64_arm64","service":"clevertap-processor","timestamp":"2025-06-06T07:00:02.453Z"}
+{"level":"info","message":"deviceInfo.appVersion: 1.0.0","service":"clevertap-processor","timestamp":"2025-06-06T07:00:02.453Z"}
+{"level":"info","message":"deviceInfo.sdkVersion: 70301","service":"clevertap-processor","timestamp":"2025-06-06T07:00:02.453Z"}
+{"level":"info","message":"deviceInfo.osVersion: 16","service":"clevertap-processor","timestamp":"2025-06-06T07:00:02.453Z"}
+{"level":"info","message":"deviceInfo.browser: MobileApp","service":"clevertap-processor","timestamp":"2025-06-06T07:00:02.453Z"}
+{"level":"info","message":"deviceInfo.dpi: 480","service":"clevertap-processor","timestamp":"2025-06-06T07:00:02.453Z"}
+{"level":"info","message":"deviceInfo.dimensions.width: 61","service":"clevertap-processor","timestamp":"2025-06-06T07:00:02.453Z"}
+{"level":"info","message":"deviceInfo.dimensions.height: 143","service":"clevertap-processor","timestamp":"2025-06-06T07:00:02.453Z"}
+{"level":"info","message":"deviceInfo.dimensions.unit: mm","service":"clevertap-processor","timestamp":"2025-06-06T07:00:02.453Z"}
+{"level":"info","message":"controlGroupName: ","service":"clevertap-processor","timestamp":"2025-06-06T07:00:02.453Z"}
+{"level":"info","message":"eventProps.CT App Version: 1.0.0","service":"clevertap-processor","timestamp":"2025-06-06T07:00:02.453Z"}
+{"level":"info","message":"eventProps.CT Source: Mobile","service":"clevertap-processor","timestamp":"2025-06-06T07:00:02.453Z"}
+{"level":"info","message":"eventProps.price: 3499","service":"clevertap-processor","timestamp":"2025-06-06T07:00:02.453Z"}
+{"level":"info","message":"eventProps.image_url: https://fastly.picsum.photos/id/935/200/300.jpg?hmac=XPPjHEBtYb6Y3-p1EjAP0RRB0bNlvqCs52VIysO7iH0","service":"clevertap-processor","timestamp":"2025-06-06T07:00:02.453Z"}
+{"level":"info","message":"eventProps.product_id: 123b","service":"clevertap-processor","timestamp":"2025-06-06T07:00:02.453Z"}
+{"level":"info","message":"eventProps.Items: ","service":"clevertap-processor","timestamp":"2025-06-06T07:00:02.453Z"}
+{"level":"info","message":"\nRow 2:","service":"clevertap-processor","timestamp":"2025-06-06T07:00:02.453Z"}
+{"level":"info","message":"ts: 20250606121214","service":"clevertap-processor","timestamp":"2025-06-06T07:00:02.453Z"}
+{"level":"info","message":"eventName: Charged","service":"clevertap-processor","timestamp":"2025-06-06T07:00:02.453Z"}
+{"level":"info","message":"profile.identity: furni2","service":"clevertap-processor","timestamp":"2025-06-06T07:00:02.456Z"}
+{"level":"info","message":"profile.objectId: ","service":"clevertap-processor","timestamp":"2025-06-06T07:00:02.456Z"}
+{"level":"info","message":"profile.all_identities: [furni2, dedededed@gmail.com]","service":"clevertap-processor","timestamp":"2025-06-06T07:00:02.456Z"}
+{"level":"info","message":"profile.platform: Android","service":"clevertap-processor","timestamp":"2025-06-06T07:00:02.456Z"}
+{"level":"info","message":"profile.phone: ","service":"clevertap-processor","timestamp":"2025-06-06T07:00:02.456Z"}
+{"level":"info","message":"profile.name: ","service":"clevertap-processor","timestamp":"2025-06-06T07:00:02.456Z"}
+{"level":"info","message":"profile.email: dedededed@gmail.com","service":"clevertap-processor","timestamp":"2025-06-06T07:00:02.456Z"}
+{"level":"info","message":"profile.push_token: fcm:c4S5zE_XQrSv5M5xPzg-xQ:APA91bFUuxaVGCeGyoN4ymgjd_lfw-6GhLtAjJxRxZpzubeOCCR07ddhcjmp1ZFAZKanCtPX1z6T4AQ3puYNIttFGq_QMHU2Zgbj2hRfVQ4h4h9J03tlY8A","service":"clevertap-processor","timestamp":"2025-06-06T07:00:02.456Z"}
+{"level":"info","message":"deviceInfo.make: Google","service":"clevertap-processor","timestamp":"2025-06-06T07:00:02.458Z"}
+{"level":"info","message":"deviceInfo.model: Sdk_gphone64_arm64","service":"clevertap-processor","timestamp":"2025-06-06T07:00:02.458Z"}
+{"level":"info","message":"deviceInfo.appVersion: 1.0.0","service":"clevertap-processor","timestamp":"2025-06-06T07:00:02.458Z"}
+{"level":"info","message":"deviceInfo.sdkVersion: 70301","service":"clevertap-processor","timestamp":"2025-06-06T07:00:02.458Z"}
+{"level":"info","message":"deviceInfo.osVersion: 16","service":"clevertap-processor","timestamp":"2025-06-06T07:00:02.459Z"}
+{"level":"info","message":"deviceInfo.browser: MobileApp","service":"clevertap-processor","timestamp":"2025-06-06T07:00:02.459Z"}
+{"level":"info","message":"deviceInfo.dpi: 480","service":"clevertap-processor","timestamp":"2025-06-06T07:00:02.459Z"}
+{"level":"info","message":"deviceInfo.dimensions.width: 61","service":"clevertap-processor","timestamp":"2025-06-06T07:00:02.459Z"}
+{"level":"info","message":"deviceInfo.dimensions.height: 143","service":"clevertap-processor","timestamp":"2025-06-06T07:00:02.459Z"}
+{"level":"info","message":"deviceInfo.dimensions.unit: mm","service":"clevertap-processor","timestamp":"2025-06-06T07:00:02.459Z"}
+{"level":"info","message":"controlGroupName: ","service":"clevertap-processor","timestamp":"2025-06-06T07:00:02.459Z"}
+{"level":"info","message":"eventProps.CT App Version: 1.0.0","service":"clevertap-processor","timestamp":"2025-06-06T07:00:02.459Z"}
+{"level":"info","message":"eventProps.CT Source: Mobile","service":"clevertap-processor","timestamp":"2025-06-06T07:00:02.459Z"}
+{"level":"info","message":"eventProps.price: 3499","service":"clevertap-processor","timestamp":"2025-06-06T07:00:02.459Z"}
+{"level":"info","message":"eventProps.image_url: https://fastly.picsum.photos/id/935/200/300.jpg?hmac=XPPjHEBtYb6Y3-p1EjAP0RRB0bNlvqCs52VIysO7iH0","service":"clevertap-processor","timestamp":"2025-06-06T07:00:02.459Z"}
+{"level":"info","message":"eventProps.product_id: 123b","service":"clevertap-processor","timestamp":"2025-06-06T07:00:02.459Z"}
+{"level":"info","message":"eventProps.Items: ","service":"clevertap-processor","timestamp":"2025-06-06T07:00:02.459Z"}
+{"level":"info","message":"Valid cart abandon records after null check: 5","service":"clevertap-processor","timestamp":"2025-06-06T07:00:02.460Z"}
+{"level":"info","message":"Valid charged combinations: 2","service":"clevertap-processor","timestamp":"2025-06-06T07:00:02.460Z"}
+{"level":"info","message":"\n=== Processing Summary ===","service":"clevertap-processor","timestamp":"2025-06-06T07:00:02.460Z"}
+{"level":"info","message":"Original cart abandon records: 5","service":"clevertap-processor","timestamp":"2025-06-06T07:00:02.460Z"}
+{"level":"info","message":"Valid cart abandon records: 5","service":"clevertap-processor","timestamp":"2025-06-06T07:00:02.460Z"}
+{"level":"info","message":"Charged events records: 2","service":"clevertap-processor","timestamp":"2025-06-06T07:00:02.461Z"}
+{"level":"info","message":"Valid charged combinations: 2","service":"clevertap-processor","timestamp":"2025-06-06T07:00:02.461Z"}
+{"level":"info","message":"Delta records (before deduplication): 3","service":"clevertap-processor","timestamp":"2025-06-06T07:00:02.461Z"}
+{"level":"info","message":"Final delta records: 3","service":"clevertap-processor","timestamp":"2025-06-06T07:00:02.461Z"}
+{"level":"info","message":"Preparing to upload CSV to delta-events/delta_2025-06-06T07-00-02-461Z.csv","service":"clevertap-processor","timestamp":"2025-06-06T07:00:02.461Z"}
+{"level":"info","message":"Successfully uploaded CSV to delta-events/delta_2025-06-06T07-00-02-461Z.csv","service":"clevertap-processor","timestamp":"2025-06-06T07:00:03.222Z"}
+{"level":"info","message":"Delta data uploaded successfully: delta_2025-06-06T07-00-02-461Z.csv","service":"clevertap-processor","timestamp":"2025-06-06T07:00:03.222Z"}
+{"level":"info","message":"Cron Job 1 completed successfully. Processed 3 records in 2677ms","service":"clevertap-processor","timestamp":"2025-06-06T07:00:03.222Z"}
+{"level":"info","message":"Executing scheduled Cron Job 2 at 4:18 PM","service":"clevertap-processor","timestamp":"2025-06-06T07:01:00.661Z"}
+{"level":"info","message":"Successfully listed objects in bucket: delta-events","service":"clevertap-processor","timestamp":"2025-06-06T07:01:01.213Z"}
+{"level":"info","message":"Processing latest delta file: delta_2025-06-06T07-00-02-461Z.csv","service":"clevertap-processor","timestamp":"2025-06-06T07:01:01.214Z"}
+{"level":"info","message":"Downloading CSV from delta-events/delta_2025-06-06T07-00-02-461Z.csv","service":"clevertap-processor","timestamp":"2025-06-06T07:01:01.214Z"}
+{"level":"info","message":"Successfully downloaded and parsed 3 records from delta-events/delta_2025-06-06T07-00-02-461Z.csv","service":"clevertap-processor","timestamp":"2025-06-06T07:01:01.461Z"}
+{"level":"info","message":"Extracted 3 valid profiles from 3 records","service":"clevertap-processor","timestamp":"2025-06-06T07:01:01.461Z"}
+{"level":"info","message":"Sample profile data:","service":"clevertap-processor","timestamp":"2025-06-06T07:01:01.462Z"}
+{"level":"info","message":"Grouped 3 records into 2 unique identities","service":"clevertap-processor","timestamp":"2025-06-06T07:01:01.462Z"}
+{"level":"info","message":"Sample consolidated profile:","service":"clevertap-processor","timestamp":"2025-06-06T07:01:01.462Z"}
+{"level":"info","message":"Sending consolidated data for identity: 32rfwq with 1 items","service":"clevertap-processor","timestamp":"2025-06-06T07:01:01.463Z"}
+{"level":"info","message":"CleverTap API success for identity: 32rfwq","service":"clevertap-processor","timestamp":"2025-06-06T07:01:01.817Z"}
+{"level":"info","message":"Sending consolidated data for identity: furni2 with 2 items","service":"clevertap-processor","timestamp":"2025-06-06T07:01:01.919Z"}
+{"level":"info","message":"CleverTap API success for identity: furni2","service":"clevertap-processor","timestamp":"2025-06-06T07:01:02.057Z"}
+{"errors":[],"failed":0,"level":"info","message":"CleverTap upload results:","service":"clevertap-processor","successful":2,"timestamp":"2025-06-06T07:01:02.159Z","totalRecords":3,"uniqueIdentities":2}
+{"level":"info","message":"Received SIGINT. Graceful shutdown...","service":"clevertap-processor","timestamp":"2025-06-06T07:26:37.274Z"}
