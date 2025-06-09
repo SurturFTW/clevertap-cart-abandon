@@ -7,6 +7,11 @@ require('dotenv').config();
 // Add hard limit of 5
 // Show recent add to cart - reverse list
 class CronJob2 {
+    constructor() {
+        this.MAX_ITEMS_PER_PROFILE = 5;
+        this.REVERSE_ORDER = true; // Toggle this to change order
+    }
+
     async execute() {
         try {
             // Step 1: Fetch latest delta CSV data
@@ -41,18 +46,32 @@ class CronJob2 {
 
             logger.info(`Grouped ${profiles.length} records into ${Object.keys(groupedProfiles).length} unique identities`);
 
-            // Create consolidated profiles
+            // Create consolidated profiles with limit
             const consolidatedProfiles = Object.entries(groupedProfiles).map(([identity, items]) => {
+                // Sort items if needed
+                if (this.REVERSE_ORDER) {
+                    items = items.reverse();
+                }
+
+                // Take only the first 5 items (now most recent will be first if reversed)
+                const limitedItems = items.slice(0, this.MAX_ITEMS_PER_PROFILE);
+
                 const consolidated = {
                     identity: identity,
                     evtData: {}
                 };
 
-                items.forEach((item, index) => {
+                limitedItems.forEach((item, index) => {
                     consolidated.evtData[`product_id_${index}`] = item.product_id;
                     consolidated.evtData[`price_${index}`] = item.price;
                     consolidated.evtData[`image_url_${index}`] = item.image_url;
                 });
+
+                // Log if items were truncated
+                if (items.length > this.MAX_ITEMS_PER_PROFILE) {
+                    const order = this.REVERSE_ORDER ? "newest to oldest" : "oldest to newest";
+                    logger.info(`Profile ${identity} had ${items.length} items, truncated to ${this.MAX_ITEMS_PER_PROFILE} (${order})`);
+                }
 
                 return consolidated;
             });
@@ -114,6 +133,12 @@ class CronJob2 {
             logger.error('Error fetching delta CSV data:', error);
             throw error;
         }
+    }
+
+    // Optional: Method to change order at runtime
+    setReverseOrder(reverse) {
+        this.REVERSE_ORDER = reverse;
+        logger.info(`Set item order to: ${reverse ? 'newest to oldest' : 'oldest to newest'}`);
     }
 }
 
