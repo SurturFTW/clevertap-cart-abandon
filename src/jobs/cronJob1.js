@@ -4,6 +4,18 @@ const logger = require('../config/logger');
 require('dotenv').config();
 
 class CronJob1 {
+    constructor() {
+        this.days = 7; // Default to 1 day
+    }
+
+    setDays(numberOfDays) {
+        if (numberOfDays < 1) {
+            throw new Error('Number of days must be at least 1');
+        }
+        this.days = numberOfDays;
+        logger.info(`Set to process last ${this.days} days of data`);
+    }
+
     async execute() {
         const startTime = Date.now();
         logger.info('Starting Cron Job 1 - Data Processing');
@@ -48,28 +60,36 @@ class CronJob1 {
                 return [];
             }
 
-            // Get today's date in yyyymmdd format
-            const today = new Date().toISOString().split('T')[0].replace(/-/g, '');
-            logger.info(`Searching for files with date: ${today}`);
+            // Generate array of dates to process
+            const dates = [];
+            for (let i = 0; i < this.days; i++) {
+                const date = new Date();
+                date.setDate(date.getDate() - i);
+                const formattedDate = date.toISOString().split('T')[0].replace(/-/g, '');
+                dates.push(formattedDate);
+            }
 
-            // Filter files by today's date and .csv.gz extension
-            const todaysFiles = objects.filter(obj => {
+            logger.info(`Searching for files with dates: ${dates.join(', ')}`);
+
+            // Filter files by dates and .csv.gz extension
+            const matchingFiles = objects.filter(obj => {
                 const fileName = obj.Key;
-                // Match pattern: *-yyyymmdd-*-.csv.gz
-                const datePattern = new RegExp(`-${today}-.*\\.csv\\.gz$`);
-                return datePattern.test(fileName);
+                return dates.some(date => {
+                    const datePattern = new RegExp(`-${date}-.*\\.csv\\.gz$`);
+                    return datePattern.test(fileName);
+                });
             });
 
-            if (todaysFiles.length === 0) {
-                logger.warn(`No .csv.gz files found for today (${today}) in bucket: ${bucketName}`);
+            if (matchingFiles.length === 0) {
+                logger.warn(`No .csv.gz files found for dates (${dates.join(', ')}) in bucket: ${bucketName}`);
                 return [];
             }
 
-            logger.info(`Found ${todaysFiles.length} files for today in ${bucketName}`);
+            logger.info(`Found ${matchingFiles.length} files in ${bucketName}`);
 
-            // Process all files for today
+            // Process all matching files
             const allData = [];
-            for (const file of todaysFiles) {
+            for (const file of matchingFiles) {
                 logger.info(`Processing file: ${file.Key}`);
                 const fileData = await s3Service.fetchCsvFromS3(bucketName, file.Key);
                 allData.push(...fileData);

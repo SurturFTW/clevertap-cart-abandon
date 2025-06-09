@@ -4,6 +4,8 @@ const cleverTapService = require('../services/cleverTapService');
 const logger = require('../config/logger');
 require('dotenv').config();
 
+// Add hard limit of 5
+// Show recent add to cart - reverse list
 class CronJob2 {
     async execute() {
         try {

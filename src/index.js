@@ -35,7 +35,7 @@ function validateEnvironment() {
 }
 
 // Schedule Cron Job 1 - Runs at 4:15 PM daily
-cron.schedule('30 12 * * *', async () => {
+cron.schedule('48 16 * * *', async () => {
     try {
         logger.info('Executing scheduled Cron Job 1 at 4:15 PM');
         await cronJob1.execute();
@@ -48,7 +48,7 @@ cron.schedule('30 12 * * *', async () => {
 });
 
 // Schedule Cron Job 2 - Runs at 4:18 PM daily
-cron.schedule('31 12 * * *', async () => {
+cron.schedule('50 16 * * *', async () => {
     try {
         logger.info('Executing scheduled Cron Job 2 at 4:18 PM');
         await cronJob2.execute();
