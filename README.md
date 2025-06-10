@@ -1,69 +1,195 @@
-# s3-delta-clevertap-app
+# S3 Delta CleverTap Integration
 
 ## Overview
-This project is designed to fetch data from an AWS S3 bucket, process it to check for matching user IDs and product IDs between AddToCart and Charged data, and update a Delta table accordingly. Additionally, it sends the Delta data to the CleverTap API at the specified endpoint.
 
-## Project Structure
+This application automates the process of tracking cart abandonment by processing S3 bucket data and sending consolidated user activity to CleverTap. It runs two scheduled jobs daily to identify abandoned carts and update user profiles.
+
+## Features
+
+- 🕒 Configurable schedule for data processing
+- 📊 Multi-day historical data support
+- 👤 User-based data consolidation
+- 🛒 Tracks up to 5 most recent cart items per user
+- 📝 Comprehensive logging
+- 🔄 Automatic retry mechanism
+- ⚡ Optimized API calls
+
+## Prerequisites
+
+- Node.js v14+
+- AWS S3 bucket access
+- CleverTap account
+
+## Quick Start
+
+### 1. Installation
+
+```bash
+# Clone repository
+git clone <repository-url>
+cd s3-delta-clevertap-app
+
+# Install dependencies
+npm install
 ```
-s3-delta-clevertap-app
-├── src
-│   ├── index.js                  # Entry point of the application
-│   ├── config
-│   │   └── aws.js               # AWS configuration settings
-│   ├── cron
-│   │   ├── processDataJob.js     # Cron job for processing data at 2 AM
-│   │   └── sendDeltaToCleverTapJob.js # Cron job for sending Delta data to CleverTap
-│   ├── services
-│   │   ├── s3Service.js          # Functions for interacting with AWS S3
-│   │   ├── deltaService.js       # Functions for managing the Delta table
-│   │   └── cleverTapService.js   # Functions for sending data to CleverTap API
-│   ├── utils
-│   │   └── logger.js             # Logging utilities
-│   ├── models
-│   │   ├── addToCart.js          # Structure and methods for AddToCart data
-│   │   ├── charged.js            # Structure and methods for Charged data
-│   │   └── delta.js              # Structure and methods for the Delta table
-│   └── routes
-│       └── api.js                # API routes for the application
-├── package.json                   # npm configuration file
-├── .env                           # Environment variables
-└── README.md                      # Project documentation
+
+### 2. Configuration
+
+Create `.env` file in root directory:
+
+```plaintext
+# AWS Configuration
+AWS_ACCESS_KEY_ID=your_access_key
+AWS_SECRET_ACCESS_KEY=your_secret_key
+AWS_REGION=your_region
+
+# S3 Buckets
+S3_CART_BUCKET=your-cart-data-bucket
+S3_CHARGED_BUCKET=your-charged-data-bucket
+S3_DELTA_EVENTS_BUCKET=your-delta-events-bucket
+
+# CleverTap Configuration
+CLEVERTAP_ACCOUNT_ID=your_account_id
+CLEVERTAP_PASSCODE=your_passcode
+CLEVERTAP_API_ENDPOINT=https://api.clevertap.com/1
+
+# Application Settings
+PORT=3000
 ```
 
-## Setup Instructions
-1. **Clone the repository:**
-   ```
-   git clone <repository-url>
-   cd s3-delta-clevertap-app
-   ```
+### 3. Start Application
 
-2. **Install dependencies:**
-   ```
-   npm install
-   ```
+```bash
+node src/index.js
+```
 
-3. **Configure environment variables:**
-   Create a `.env` file in the root directory and add your AWS credentials and CleverTap API keys:
-   ```
-   AWS_ACCESS_KEY_ID=your_access_key
-   AWS_SECRET_ACCESS_KEY=your_secret_key
-   AWS_REGION=your_region
-   CLEVERTAP_ACCOUNT_ID=your_account_id
-   CLEVERTAP_PASSCODE=your_passcode
-   ```
+## Configuration Options
 
-4. **Run the application:**
-   ```
-   npm start
-   ```
+### Schedule Settings
 
-## Usage
-- The application will automatically fetch data from the specified AWS S3 bucket and process it at 2 AM daily.
-- It checks for matching user IDs and product IDs between AddToCart and Charged data, updating the Delta table accordingly.
-- The Delta data is sent to the CleverTap API at the `/send-uncharged-events` endpoint.
+In `src/index.js`:
 
-## Contributing
-Feel free to submit issues or pull requests for any improvements or bug fixes.
+```javascript
+const cronConfig = {
+  job1: {
+    hour: 16, // Job 1 hour (24-hour format)
+    minute: 15, // Job 1 minute
+  },
+  delayBetweenJobs: 3, // Minutes between jobs
+};
+```
+
+### Data Processing Settings
+
+In `src/jobs/cronJob2.js`:
+
+```javascript
+constructor() {
+    this.MAX_ITEMS_PER_PROFILE = 5;  // Items per user
+    this.REVERSE_ORDER = true;        // true = newest first
+}
+```
+
+### Historical Data Settings
+
+In `src/jobs/cronJob1.js`:
+
+```javascript
+constructor() {
+    this.days = 1;  // Number of days to process
+}
+```
+
+## Data Flow
+
+1. **Job 1 (Data Processing)**
+
+   - Fetches cart and charged events from S3
+   - Identifies abandoned carts
+   - Generates delta events
+   - Stores results in delta bucket
+
+2. **Job 2 (CleverTap Upload)**
+   - Reads delta events
+   - Consolidates by user
+   - Formats data for CleverTap
+   - Sends API requests
+
+## Output Format
+
+Data sent to CleverTap:
+
+```json
+{
+  "identity": "user123",
+  "evtData": {
+    "product_id_0": "item5",
+    "price_0": "99.99",
+    "image_url_0": "url5",
+    "product_id_1": "item4",
+    "price_1": "149.99",
+    "image_url_1": "url4"
+  }
+}
+```
+
+## Monitoring
+
+View application logs:
+
+```bash
+tail -f logs/app.log
+```
+
+## Troubleshooting
+
+### Common Issues
+
+1. **AWS Connection Failed**
+
+   - Verify AWS credentials in `.env`
+   - Check S3 bucket permissions
+   - Confirm AWS region setting
+
+2. **CleverTap Upload Failed**
+
+   - Validate API credentials
+   - Check API endpoint URL
+   - Verify data format
+
+3. **No Data Processed**
+   - Confirm S3 file naming format
+   - Check file timestamps
+   - Verify CSV structure
+
+## Development
+
+### Manual Testing
+
+In `src/index.js`:
+
+```javascript
+async function startApp() {
+  // Uncomment to test:
+  // await runJob1Manually();
+  // await runJob2Manually();
+}
+```
+
+### Adding New Features
+
+1. Create feature branch
+2. Implement changes
+3. Add logs
+4. Test manually
+5. Submit PR
 
 ## License
-This project is licensed under the MIT License.
+
+MIT License - See LICENSE file for details
+
+## Support
+
+- Create GitHub issue for bugs
+- Submit PR for improvements
+- Check logs for troubleshooting

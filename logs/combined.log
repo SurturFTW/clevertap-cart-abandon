@@ -1611,3 +1611,36 @@
 {"level":"info","message":"CleverTap API success for identity: furni2","service":"clevertap-processor","timestamp":"2025-06-09T12:02:02.038Z"}
 {"errors":[],"failed":0,"level":"info","message":"CleverTap upload results:","service":"clevertap-processor","successful":4,"timestamp":"2025-06-09T12:02:02.140Z","totalRecords":6,"uniqueIdentities":4}
 {"level":"info","message":"Received SIGINT. Graceful shutdown...","service":"clevertap-processor","timestamp":"2025-06-09T12:03:59.736Z"}
+{"level":"info","message":"AWS credentials validation passed","service":"clevertap-processor","timestamp":"2025-06-10T06:18:00.534Z"}
+{"level":"info","message":"Environment validation passed","service":"clevertap-processor","timestamp":"2025-06-10T06:18:00.572Z"}
+{"level":"info","message":"CleverTap Data Processor started successfully","service":"clevertap-processor","timestamp":"2025-06-10T06:18:00.572Z"}
+{"level":"info","message":"Cron Job 1 scheduled for 4:15 PM daily","service":"clevertap-processor","timestamp":"2025-06-10T06:18:00.572Z"}
+{"level":"info","message":"Cron Job 2 scheduled for 4:18 PM daily","service":"clevertap-processor","timestamp":"2025-06-10T06:18:00.572Z"}
+{"level":"info","message":"Executing scheduled Cron Job 1 at 4:15 PM","service":"clevertap-processor","timestamp":"2025-06-10T06:19:00.641Z"}
+{"level":"info","message":"Starting Cron Job 1 - Data Processing","service":"clevertap-processor","timestamp":"2025-06-10T06:19:00.642Z"}
+{"level":"info","message":"Successfully listed objects in bucket: cart-abandon","service":"clevertap-processor","timestamp":"2025-06-10T06:19:01.203Z"}
+{"level":"info","message":"Searching for files with dates: 20250610","service":"clevertap-processor","timestamp":"2025-06-10T06:19:01.203Z"}
+{"level":"warn","message":"No .csv.gz files found for dates (20250610) in bucket: cart-abandon","service":"clevertap-processor","timestamp":"2025-06-10T06:19:01.203Z"}
+{"level":"info","message":"Successfully listed objects in bucket: charged-events","service":"clevertap-processor","timestamp":"2025-06-10T06:19:01.743Z"}
+{"level":"info","message":"Searching for files with dates: 20250610","service":"clevertap-processor","timestamp":"2025-06-10T06:19:01.743Z"}
+{"level":"warn","message":"No .csv.gz files found for dates (20250610) in bucket: charged-events","service":"clevertap-processor","timestamp":"2025-06-10T06:19:01.743Z"}
+{"level":"info","message":"\n=== Cart Abandon Data Details ===","service":"clevertap-processor","timestamp":"2025-06-10T06:19:01.743Z"}
+{"level":"info","message":"Total records received: 0","service":"clevertap-processor","timestamp":"2025-06-10T06:19:01.743Z"}
+{"level":"info","message":"\n=== Charged Events Data Details ===","service":"clevertap-processor","timestamp":"2025-06-10T06:19:01.743Z"}
+{"level":"info","message":"Total records received: 0","service":"clevertap-processor","timestamp":"2025-06-10T06:19:01.743Z"}
+{"level":"info","message":"Valid cart abandon records after null check: 0","service":"clevertap-processor","timestamp":"2025-06-10T06:19:01.743Z"}
+{"level":"info","message":"Valid charged combinations: 0","service":"clevertap-processor","timestamp":"2025-06-10T06:19:01.743Z"}
+{"level":"info","message":"\n=== Processing Summary ===","service":"clevertap-processor","timestamp":"2025-06-10T06:19:01.743Z"}
+{"level":"info","message":"Original cart abandon records: 0","service":"clevertap-processor","timestamp":"2025-06-10T06:19:01.743Z"}
+{"level":"info","message":"Valid cart abandon records: 0","service":"clevertap-processor","timestamp":"2025-06-10T06:19:01.743Z"}
+{"level":"info","message":"Charged events records: 0","service":"clevertap-processor","timestamp":"2025-06-10T06:19:01.743Z"}
+{"level":"info","message":"Valid charged combinations: 0","service":"clevertap-processor","timestamp":"2025-06-10T06:19:01.743Z"}
+{"level":"info","message":"Delta records (before deduplication): 0","service":"clevertap-processor","timestamp":"2025-06-10T06:19:01.743Z"}
+{"level":"info","message":"Final delta records: 0","service":"clevertap-processor","timestamp":"2025-06-10T06:19:01.743Z"}
+{"level":"info","message":"No delta data to process. Cron Job 1 completed.","service":"clevertap-processor","timestamp":"2025-06-10T06:19:01.743Z"}
+{"level":"info","message":"Cron Job 1 completed successfully. Processed 0 records in 1101ms","service":"clevertap-processor","timestamp":"2025-06-10T06:19:01.743Z"}
+{"level":"info","message":"Executing scheduled Cron Job 2 at 4:18 PM","service":"clevertap-processor","timestamp":"2025-06-10T06:20:00.735Z"}
+{"level":"info","message":"Successfully listed objects in bucket: delta-events","service":"clevertap-processor","timestamp":"2025-06-10T06:20:01.309Z"}
+{"level":"warn","message":"No CSV files found for today (2025-06-10) in bucket: delta-events","service":"clevertap-processor","timestamp":"2025-06-10T06:20:01.309Z"}
+{"level":"info","message":"No delta data found for CleverTap upload","service":"clevertap-processor","timestamp":"2025-06-10T06:20:01.309Z"}
+{"level":"info","message":"Received SIGINT. Graceful shutdown...","service":"clevertap-processor","timestamp":"2025-06-10T06:40:58.191Z"}
