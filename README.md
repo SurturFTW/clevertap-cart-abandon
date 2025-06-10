@@ -193,3 +193,21 @@ MIT License - See LICENSE file for details
 - Create GitHub issue for bugs
 - Submit PR for improvements
 - Check logs for troubleshooting
+
+## Environment Setup
+
+1. Copy the example environment file:
+
+```bash
+cp .env.example .env
+```
+
+2. Update `.env` with your credentials:
+
+```plaintext
+AWS_ACCESS_KEY_ID=your_actual_access_key
+AWS_SECRET_ACCESS_KEY=your_actual_secret_key
+...
+```
+
+⚠️ **Important**: Never commit the `.env` file with real credentials!
