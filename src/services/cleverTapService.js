@@ -11,12 +11,12 @@ class CleverTapService {
         this.retryDelay = 1000; // 1 second
     }
 
-    async sendProfileData(profileData) {
+    async sendProfileData(profileData, eventName = "TotalItemsInCart") {
         const payload = {
             d: [{
                 identity: profileData.identity,
                 type: "event",
-                evtName: "TotalItemsInCart",
+                evtName: eventName,
                 evtData: profileData.evtData
             }]
         };
@@ -55,7 +55,7 @@ class CleverTapService {
         }
     }
 
-    async batchSendProfiles(consolidatedProfiles) {
+    async batchSendProfiles(consolidatedProfiles, eventName = "TotalItemsInCart") {
         const results = {
             success: 0,
             failed: 0,
@@ -64,8 +64,8 @@ class CleverTapService {
 
         for (const profile of consolidatedProfiles) {
             try {
-                logger.info(`Sending consolidated data for identity: ${profile.identity} with ${Object.keys(profile.evtData).length / 3} items`);
-                await this.sendProfileData(profile);
+                logger.info(`Sending ${eventName} data for identity: ${profile.identity} with ${Object.keys(profile.evtData).length / 3} items`);
+                await this.sendProfileData(profile, eventName);
                 results.success++;
 
                 // Small delay between requests to avoid rate limiting

@@ -2,14 +2,18 @@
 
 ## Overview
 
-This application automates the process of tracking cart abandonment by processing S3 bucket data and sending consolidated user activity to CleverTap. It runs two scheduled jobs daily to identify abandoned carts and update user profiles.
+This Node.js application processes cart abandonment and product view data from S3 buckets, sending consolidated user activity to CleverTap. It runs four scheduled jobs daily to:
+
+1. Track abandoned cart items
+2. Monitor frequently viewed products
+3. Update user profiles in CleverTap
 
 ## Features
 
-- 🕒 Configurable schedule for data processing
-- 📊 Multi-day historical data support
+- 🛒 Cart abandonment tracking
+- 👁️ Product view frequency analysis (5+ views)
+- 📊 Multi-day historical data processing
 - 👤 User-based data consolidation
-- 🛒 Tracks up to 5 most recent cart items per user
 - 📝 Comprehensive logging
 - 🔄 Automatic retry mechanism
 - ⚡ Optimized API calls
@@ -33,28 +37,26 @@ cd s3-delta-clevertap-app
 npm install
 ```
 
-### 2. Configuration
+### 2. Environment Configuration
 
 Create `.env` file in root directory:
 
-```plaintext
+```properties
 # AWS Configuration
-AWS_ACCESS_KEY_ID=your_access_key
-AWS_SECRET_ACCESS_KEY=your_secret_key
-AWS_REGION=your_region
+AWS_ACCESS_KEY_ID=your_access_key_here
+AWS_SECRET_ACCESS_KEY=your_secret_key_here
+AWS_REGION=your_region_here
 
 # S3 Buckets
-S3_CART_BUCKET=your-cart-data-bucket
-S3_CHARGED_BUCKET=your-charged-data-bucket
-S3_DELTA_EVENTS_BUCKET=your-delta-events-bucket
+S3_CART_ABANDON_BUCKET=your_cart_abandon_bucket
+S3_CHARGED_EVENTS_BUCKET=your_charged_events_bucket
+S3_DELTA_EVENTS_BUCKET=your_delta_events_bucket
+S3_PRODUCT_VIEW_BUCKET=your_product_view_bucket
 
 # CleverTap Configuration
-CLEVERTAP_ACCOUNT_ID=your_account_id
-CLEVERTAP_PASSCODE=your_passcode
+CLEVERTAP_ACCOUNT_ID=your_clevertap_account_id
+CLEVERTAP_PASSCODE=your_clevertap_passcode
 CLEVERTAP_API_ENDPOINT=https://api.clevertap.com/1
-
-# Application Settings
-PORT=3000
 ```
 
 ### 3. Start Application
@@ -63,82 +65,91 @@ PORT=3000
 node src/index.js
 ```
 
-## Configuration Options
+## Jobs Overview
 
-### Schedule Settings
+### Cart Abandonment Pipeline
 
-In `src/index.js`:
+- **CronJob1** (custom PM IST): Processes cart data vs charged events
+- **CronJob2** (custom PM IST): Sends `TotalItemsInCart` events to CleverTap
 
-```javascript
-const cronConfig = {
-  job1: {
-    hour: 16, // Job 1 hour (24-hour format)
-    minute: 15, // Job 1 minute
-  },
-  delayBetweenJobs: 3, // Minutes between jobs
-};
-```
+### Product View Pipeline
 
-### Data Processing Settings
+- **CronJob3** (custom PM IST): Processes product views vs charged events
+- **CronJob4** (custom PM IST): Sends `MostViewedItem` events to CleverTap
 
-In `src/jobs/cronJob2.js`:
+### Processing Settings
+
+Cart Abandonment (`cronJob1.js` & `cronJob2.js`):
 
 ```javascript
-constructor() {
-    this.MAX_ITEMS_PER_PROFILE = 5;  // Items per user
-    this.REVERSE_ORDER = true;        // true = newest first
-}
+this.days = 7; // Historical data days
+this.MAX_ITEMS_PER_PROFILE = 5; // Items per user
+this.REVERSE_ORDER = true; // Newest first
 ```
 
-### Historical Data Settings
-
-In `src/jobs/cronJob1.js`:
+Product Views (`cronJob3.js` & `cronJob4.js`):
 
 ```javascript
-constructor() {
-    this.days = 1;  // Number of days to process
-}
+this.days = 7; // Historical data days
+this.MIN_VIEW_COUNT = 5; // View threshold
 ```
 
-## Data Flow
+## CleverTap Events
 
-1. **Job 1 (Data Processing)**
-
-   - Fetches cart and charged events from S3
-   - Identifies abandoned carts
-   - Generates delta events
-   - Stores results in delta bucket
-
-2. **Job 2 (CleverTap Upload)**
-   - Reads delta events
-   - Consolidates by user
-   - Formats data for CleverTap
-   - Sends API requests
-
-## Output Format
-
-Data sent to CleverTap:
+### TotalItemsInCart Event
 
 ```json
 {
   "identity": "user123",
   "evtData": {
-    "product_id_0": "item5",
+    "product_id_0": "item1",
     "price_0": "99.99",
-    "image_url_0": "url5",
-    "product_id_1": "item4",
-    "price_1": "149.99",
-    "image_url_1": "url4"
+    "image_url_0": "url1"
   }
+}
+```
+
+### MostViewedItem Event
+
+```json
+{
+  "identity": "user123",
+  "evtData": {
+    "product_id": "item1",
+    "view_count": 5,
+    "price": "99.99",
+    "image_url": "url1"
+  }
+}
+```
+
+## Manual Testing
+
+In `src/index.js`:
+
+```javascript
+async function startApp() {
+  // Cart abandonment
+  await runJob1Manually();
+  await runJob2Manually();
+
+  // Product views
+  await runJob3Manually();
+  await runJob4Manually();
 }
 ```
 
 ## Monitoring
 
-View application logs:
-
 ```bash
+# View all logs
 tail -f logs/app.log
+
+# View errors only
+grep "error" logs/app.log
+
+# View successful uploads
+grep "success" logs/app.log
 ```
 
 ## Troubleshooting
@@ -147,67 +158,23 @@ tail -f logs/app.log
 
 1. **AWS Connection Failed**
 
-   - Verify AWS credentials in `.env`
-   - Check S3 bucket permissions
-   - Confirm AWS region setting
+   - Verify AWS credentials
+   - Check bucket permissions
+   - Confirm region settings
 
 2. **CleverTap Upload Failed**
 
    - Validate API credentials
-   - Check API endpoint URL
-   - Verify data format
+   - Check event format
+   - Verify rate limits
 
-3. **No Data Processed**
-   - Confirm S3 file naming format
-   - Check file timestamps
+3. **Missing Data**
+   - Check S3 file naming
    - Verify CSV structure
-
-## Development
-
-### Manual Testing
-
-In `src/index.js`:
-
-```javascript
-async function startApp() {
-  // Uncomment to test:
-  // await runJob1Manually();
-  // await runJob2Manually();
-}
-```
-
-### Adding New Features
-
-1. Create feature branch
-2. Implement changes
-3. Add logs
-4. Test manually
-5. Submit PR
+   - Confirm bucket permissions
 
 ## License
 
 MIT License - See LICENSE file for details
 
-## Support
-
-- Create GitHub issue for bugs
-- Submit PR for improvements
-- Check logs for troubleshooting
-
-## Environment Setup
-
-1. Copy the example environment file:
-
-```bash
-cp .env.example .env
-```
-
-2. Update `.env` with your credentials:
-
-```plaintext
-AWS_ACCESS_KEY_ID=your_actual_access_key
-AWS_SECRET_ACCESS_KEY=your_actual_secret_key
-...
-```
-
-⚠️ **Important**: Never commit the `.env` file with real credentials!
+⚠️ **Important**: Never commit `.env` with real credentials!

@@ -5,7 +5,7 @@ require('dotenv').config();
 
 class CronJob1 {
     constructor() {
-        this.days = 1; // Default to 1 day
+        this.days = 7; // Default to 1 day
     }
 
     setDays(numberOfDays) {

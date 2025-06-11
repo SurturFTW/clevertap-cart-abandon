@@ -1,6 +1,8 @@
 const cron = require('node-cron');
 const cronJob1 = require('./jobs/cronJob1');
 const cronJob2 = require('./jobs/cronJob2');
+const cronJob3 = require('./jobs/cronJob3');
+const cronJob4 = require('./jobs/cronJob4');
 const logger = require('./config/logger');
 const fs = require('fs');
 const path = require('path');
@@ -35,7 +37,7 @@ function validateEnvironment() {
 }
 
 // Schedule Cron Job 1 - Runs at 4:15 PM daily
-cron.schedule('0 1 * * *', async () => {
+cron.schedule('34 11 * * *', async () => {
     try {
         logger.info('Executing scheduled Cron Job 1 at 4:15 PM');
         await cronJob1.execute();
@@ -48,12 +50,38 @@ cron.schedule('0 1 * * *', async () => {
 });
 
 // Schedule Cron Job 2 - Runs at 4:18 PM daily
-cron.schedule('0 2 * * *', async () => {
+cron.schedule('35 11 * * *', async () => {
     try {
         logger.info('Executing scheduled Cron Job 2 at 4:18 PM');
         await cronJob2.execute();
     } catch (error) {
         logger.error('Scheduled Cron Job 2 failed:', error);
+    }
+}, {
+    scheduled: true,
+    timezone: "Asia/Kolkata"
+});
+
+// Schedule Cron Job 3 - Runs at 4:21 PM daily
+cron.schedule('54 13 * * *', async () => {
+    try {
+        logger.info('Executing scheduled Cron Job 3 at 4:21 PM');
+        await cronJob3.execute();
+    } catch (error) {
+        logger.error('Scheduled Cron Job 3 failed:', error);
+    }
+}, {
+    scheduled: true,
+    timezone: "Asia/Kolkata"
+});
+
+// Schedule Cron Job 4 - Runs at 4:24 PM daily
+cron.schedule('55 13 * * *', async () => {
+    try {
+        logger.info('Executing scheduled Cron Job 4 at 4:24 PM');
+        await cronJob4.execute();
+    } catch (error) {
+        logger.error('Scheduled Cron Job 4 failed:', error);
     }
 }, {
     scheduled: true,
@@ -79,6 +107,24 @@ async function runJob2Manually() {
     }
 }
 
+async function runJob3Manually() {
+    try {
+        logger.info('Manual execution of Cron Job 3');
+        await cronJob3.execute();
+    } catch (error) {
+        logger.error('Manual Cron Job 3 execution failed:', error);
+    }
+}
+
+async function runJob4Manually() {
+    try {
+        logger.info('Manual execution of Cron Job 4');
+        await cronJob4.execute();
+    } catch (error) {
+        logger.error('Manual Cron Job 4 execution failed:', error);
+    }
+}
+
 // Graceful shutdown
 process.on('SIGINT', () => {
     logger.info('Received SIGINT. Graceful shutdown...');
@@ -98,10 +144,14 @@ async function startApp() {
         logger.info('CleverTap Data Processor started successfully');
         logger.info('Cron Job 1 scheduled for 4:15 PM daily');
         logger.info('Cron Job 2 scheduled for 4:18 PM daily');
+        logger.info('Cron Job 3 scheduled for 4:21 PM daily');
+        logger.info('Cron Job 4 scheduled for 4:24 PM daily');
 
         // Uncomment these lines for manual testing
         // await runJob1Manually();
         // await runJob2Manually();
+        // await runJob3Manually();
+        // await runJob4Manually();
 
     } catch (error) {
         logger.error('Application startup failed:', error);
@@ -114,5 +164,7 @@ startApp();
 // Export for testing
 module.exports = {
     runJob1Manually,
-    runJob2Manually
+    runJob2Manually,
+    runJob3Manually,
+    runJob4Manually
 };
