@@ -70,33 +70,41 @@ node src/index.js
 ### Cart Abandonment Pipeline
 
 - **CronJob1** (custom PM IST): Processes cart data vs charged events
-- **CronJob2** (custom PM IST): Sends `TotalItemsInCart` events to CleverTap
+- **CronJob2** (custom PM IST): Sends `TotalItemsInCart` events to CleverTap (event name is `customizable`)
 
 ### Product View Pipeline
 
 - **CronJob3** (custom PM IST): Processes product views vs charged events
-- **CronJob4** (custom PM IST): Sends `MostViewedItem` events to CleverTap
+- **CronJob4** (custom PM IST): Sends `MostViewedItem` events to CleverTap (event name is `customizable`)
 
 ### Processing Settings
+
+> **Note:**  
+> All processing settings, event names, and the structure of `evtData` are fully customizable to fit your requirements.  
+> You can adjust the number of days, item limits, sorting order, minimum view thresholds, event names, and the fields included in `evtData` by editing the respective job files.
 
 Cart Abandonment (`cronJob1.js` & `cronJob2.js`):
 
 ```javascript
-this.days = 7; // Historical data days
-this.MAX_ITEMS_PER_PROFILE = 5; // Items per user
-this.REVERSE_ORDER = true; // Newest first
+this.days = 7; // Historical data days (customizable)
+this.MAX_ITEMS_PER_PROFILE = 5; // Items per user (customizable)
+this.REVERSE_ORDER = true; // Newest first (customizable)
 ```
 
 Product Views (`cronJob3.js` & `cronJob4.js`):
 
 ```javascript
-this.days = 7; // Historical data days
-this.MIN_VIEW_COUNT = 5; // View threshold
+this.days = 7; // Historical data days (customizable)
+this.MIN_VIEW_COUNT = 5; // View threshold (customizable)
 ```
 
 ## CleverTap Events
 
-### TotalItemsInCart Event
+> **Note:**  
+> The event names and the structure of `evtData` shown below are examples.  
+> You can customize both the event name and the fields sent in `evtData` as per your CleverTap integration needs.
+
+### TotalItemsInCart Event (example)
 
 ```json
 {
@@ -109,7 +117,7 @@ this.MIN_VIEW_COUNT = 5; // View threshold
 }
 ```
 
-### MostViewedItem Event
+### MostViewedItem Event (example)
 
 ```json
 {
@@ -122,6 +130,9 @@ this.MIN_VIEW_COUNT = 5; // View threshold
   }
 }
 ```
+
+> **Tip:**  
+> To change the event name or the fields in `evtData`, simply update the relevant logic in your job files (e.g., `cronJob2.js`, `cronJob4.js`) and the payload construction before sending to CleverTap.
 
 ## Manual Testing
 
