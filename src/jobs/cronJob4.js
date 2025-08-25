@@ -30,10 +30,11 @@ class CronJob4 {
           groupedData[identity] = [];
         }
         groupedData[identity].push({
-          product_id: row["eventProps.Product ID"],
+          product_id: row["eventProps.ID"],
           view_count: row["eventProps.view_count"],
           price: row["eventProps.Price"],
-          image_url: row["eventProps.image_url"],
+          title: row["eventProps.Title"],
+          // url: row["eventProps.URL"],
         });
       });
 
@@ -57,7 +58,8 @@ class CronJob4 {
           profile.evtData[`product_id_${index}`] = item.product_id;
           profile.evtData[`view_count_${index}`] = item.view_count;
           profile.evtData[`price_${index}`] = item.price;
-          profile.evtData[`image_url_${index}`] = item.image_url;
+          profile.evtData[`title_${index}`] = item.title;
+          profile.evtData[`url_${index}`] = item.url;
         });
 
         return profile;

@@ -5,7 +5,7 @@ require("dotenv").config();
 
 class CronJob3 {
   constructor() {
-    this.days = 1; // Default to 7 days
+    this.days = 7; // Default to 7 days
     this.MIN_VIEW_COUNT = 5; // Minimum views required
   }
 
@@ -96,7 +96,7 @@ class CronJob3 {
         if (!row) return;
 
         const identity = row["profile.identity"]?.trim();
-        const productId = row["eventProps.Product ID"]?.trim();
+        const productId = row["eventProps.ID"]?.trim();
 
         if (identity && productId) {
           const key = `${identity}_${productId}`;
@@ -122,14 +122,11 @@ class CronJob3 {
       const chargedCombinations = new Set(
         chargedEventsData
           .filter(
-            (row) =>
-              row && row["profile.identity"] && row["eventProps.Product ID"]
+            (row) => row && row["profile.identity"] && row["eventProps.ID"]
           )
           .map(
             (row) =>
-              `${row["profile.identity"].trim()}_${row[
-                "eventProps.Product ID"
-              ].trim()}`
+              `${row["profile.identity"].trim()}_${row["eventProps.ID"].trim()}`
           )
       );
 
