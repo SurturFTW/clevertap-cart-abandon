@@ -1,90 +1,133 @@
-const axios = require('axios');
-const logger = require('../config/logger');
-require('dotenv').config();
+const axios = require("axios");
+const logger = require("../config/logger");
+require("dotenv").config();
 
 class CleverTapService {
-    constructor() {
-        this.baseURL = 'https://api.clevertap.com/1/upload';
-        this.accountId = process.env.CLEVERTAP_ACCOUNT_ID;
-        this.passcode = process.env.CLEVERTAP_PASSCODE;
-        this.maxRetries = 3;
-        this.retryDelay = 1000; // 1 second
+  constructor() {
+    this.baseURL = "https://api.clevertap.com/1/upload";
+    this.accountId = process.env.CLEVERTAP_ACCOUNT_ID;
+    this.passcode = process.env.CLEVERTAP_PASSCODE;
+    this.maxRetries = 3;
+    this.retryDelay = 1000; // 1 second
+  }
+
+  async sendProfileData(profileData, eventName = "TotalItemsInCart") {
+    const payload = {
+      d: [
+        {
+          identity: profileData.identity,
+          type: "event",
+          evtName: eventName,
+          evtData: profileData.evtData,
+        },
+      ],
+    };
+
+    return this.makeRequest(payload);
+  }
+  //call user properties API to send user properties
+
+  async makeRequest(payload, attempt = 1) {
+    try {
+      const response = await axios.post(this.baseURL, payload, {
+        headers: {
+          "X-CleverTap-Account-Id": this.accountId,
+          "X-CleverTap-Passcode": this.passcode,
+          "Content-Type": "application/json",
+        },
+        timeout: 10000, // 10 seconds timeout
+      });
+
+      const identities = payload.d.map((item) => item.identity).join(", ");
+      logger.info(
+        `CleverTap API success for batch with identities: ${identities}`
+      );
+      return response.data;
+    } catch (error) {
+      const identities = payload.d.map((item) => item.identity).join(", ");
+      logger.error(`CleverTap API error (attempt ${attempt}):`, {
+        identities: identities,
+        error: error.message,
+        status: error.response?.status,
+      });
+
+      if (attempt < this.maxRetries) {
+        logger.info(
+          `Retrying CleverTap API call for batch with identities: ${identities}`
+        );
+        await this.delay(this.retryDelay * attempt);
+        return this.makeRequest(payload, attempt + 1);
+      }
+
+      throw error;
+    }
+  }
+
+  async batchSendProfiles(
+    consolidatedProfiles,
+    eventName = "TotalItemsInCart"
+  ) {
+    const results = {
+      success: 0,
+      failed: 0,
+      errors: [],
+    };
+
+    // Split profiles into batches of 500
+    const batchSize = 500;
+    const batches = [];
+
+    for (let i = 0; i < consolidatedProfiles.length; i += batchSize) {
+      batches.push(consolidatedProfiles.slice(i, i + batchSize));
     }
 
-    async sendProfileData(profileData, eventName = "TotalItemsInCart") {
-        const payload = {
-            d: [{
-                identity: profileData.identity,
-                type: "event",
-                evtName: eventName,
-                evtData: profileData.evtData
-            }]
-        };
+    logger.info(
+      `Created ${batches.length} batches of profiles (max ${batchSize} per batch)`
+    );
 
-        return this.makeRequest(payload);
-    }
-    //call user properties API to send user properties
+    // Process batches with concurrency limit
+    const concurrencyLimit = 5;
 
-    async makeRequest(payload, attempt = 1) {
-        try {
-            const response = await axios.post(this.baseURL, payload, {
-                headers: {
-                    'X-CleverTap-Account-Id': this.accountId,
-                    'X-CleverTap-Passcode': this.passcode,
-                    'Content-Type': 'application/json'
-                },
-                timeout: 10000 // 10 seconds timeout
-            });
+    for (let i = 0; i < batches.length; i += concurrencyLimit) {
+      const currentBatches = batches.slice(i, i + concurrencyLimit);
+      const batchPromises = currentBatches.map((batch) =>
+        this.processBatch(batch, eventName, results)
+      );
 
-            logger.info(`CleverTap API success for identity: ${payload.d[0].identity}`);
-            return response.data;
-        } catch (error) {
-            logger.error(`CleverTap API error (attempt ${attempt}):`, {
-                identity: payload.d[0].identity,
-                error: error.message,
-                status: error.response?.status
-            });
-
-            if (attempt < this.maxRetries) {
-                logger.info(`Retrying CleverTap API call for identity: ${payload.d[0].identity}`);
-                await this.delay(this.retryDelay * attempt);
-                return this.makeRequest(payload, attempt + 1);
-            }
-
-            throw error;
-        }
+      await Promise.all(batchPromises);
     }
 
-    async batchSendProfiles(consolidatedProfiles, eventName = "TotalItemsInCart") {
-        const results = {
-            success: 0,
-            failed: 0,
-            errors: []
-        };
+    return results;
+  }
 
-        for (const profile of consolidatedProfiles) {
-            try {
-                logger.info(`Sending ${eventName} data for identity: ${profile.identity} with ${Object.keys(profile.evtData).length / 3} items`);
-                await this.sendProfileData(profile, eventName);
-                results.success++;
+  async processBatch(profiles, eventName, results) {
+    try {
+      const payload = {
+        d: profiles.map((profile) => ({
+          identity: profile.identity,
+          type: "event",
+          evtName: eventName,
+          evtData: profile.evtData,
+        })),
+      };
 
-                // Small delay between requests to avoid rate limiting
-                await this.delay(100);
-            } catch (error) {
-                results.failed++;
-                results.errors.push({
-                    identity: profile.identity,
-                    error: error.message
-                });
-            }
-        }
-
-        return results;
+      logger.info(
+        `Sending ${eventName} batch with ${profiles.length} profiles`
+      );
+      await this.makeRequest(payload);
+      results.success += profiles.length;
+    } catch (error) {
+      results.failed += profiles.length;
+      results.errors.push({
+        batch: `Batch of ${profiles.length} profiles`,
+        error: error.message,
+      });
     }
+  }
 
-    delay(ms) {
-        return new Promise(resolve => setTimeout(resolve, ms));
-    }
+  delay(ms) {
+    return new Promise((resolve) => setTimeout(resolve, ms));
+  }
 }
 
 module.exports = new CleverTapService();
