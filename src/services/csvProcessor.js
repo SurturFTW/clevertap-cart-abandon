@@ -11,38 +11,29 @@ class CsvProcessor {
       logger.info("\n=== Cart Abandon Data Details ===");
       logger.info(`Total records received: ${cartAbandonData.length}`);
 
-      // Show detailed data for first 2 rows
+      // Show sample data for debugging
       if (cartAbandonData.length > 0) {
+        logger.info("Sample Cart Abandon record:");
+        logger.info(`Identity: ${cartAbandonData[0]["profile.identity"]}`);
         logger.info(
-          "\nCart Abandon - Available fields:",
-          Object.keys(cartAbandonData[0]).join(", ")
+          `Product ID: ${cartAbandonData[0]["eventProps.Product ID"]}`
         );
-        logger.info("\nDetailed Cart Abandon Data (up to 2 rows):");
-        cartAbandonData.slice(0, 2).forEach((row, index) => {
-          logger.info(`\nRow ${index + 1}:`);
-          Object.entries(row).forEach(([key, value]) => {
-            logger.info(`${key}: ${value}`);
-          });
-        });
       }
 
       // Log Charged Events Data details
       logger.info("\n=== Charged Events Data Details ===");
       logger.info(`Total records received: ${chargedEventsData.length}`);
 
-      // Show detailed data for first 2 rows
       if (chargedEventsData.length > 0) {
+        logger.info("Sample Charged record:");
+        logger.info(`Identity: ${chargedEventsData[0]["profile.identity"]}`);
         logger.info(
-          "\nCharged Events - Available fields:",
-          Object.keys(chargedEventsData[0]).join(", ")
+          `Product ID fields available: ${
+            chargedEventsData[0]["eventProps.Items|product_id"] || "N/A"
+          }, ${chargedEventsData[0]["eventProps.Items|product id"] || "N/A"}, ${
+            chargedEventsData[0]["eventProps.Product ID"] || "N/A"
+          }`
         );
-        logger.info("\nDetailed Charged Events Data (up to 2 rows):");
-        chargedEventsData.slice(0, 2).forEach((row, index) => {
-          logger.info(`\nRow ${index + 1}:`);
-          Object.entries(row).forEach(([key, value]) => {
-            logger.info(`${key}: ${value}`);
-          });
-        });
       }
 
       // First, filter out invalid records from cart abandon data
@@ -53,83 +44,113 @@ class CsvProcessor {
           row["eventProps.Product ID"] &&
           row["eventProps.Product ID"].trim() !== "";
 
-        if (!hasValidIdentity || !hasValidProductId) {
-          logger.debug("Skipping invalid cart abandon row:", {
-            identity: row["profile.identity"],
-            productId: row["eventProps.Product ID"],
-          });
-          return false;
-        }
-        return true;
+        return hasValidIdentity && hasValidProductId;
       });
 
-      logger.info(
-        `Valid cart abandon records after null check: ${validCartAbandonData.length}`
-      );
+      logger.info(`Valid cart abandon records: ${validCartAbandonData.length}`);
 
       // Create a Set of valid identity+product_id combinations from charged events
-      const chargedCombinations = new Set(
-        chargedEventsData
-          .filter((row) => {
-            // Check for identity in profile.identity only
-            const hasValidIdentity =
-              row["profile.identity"] && row["profile.identity"].trim() !== "";
+      const chargedCombinations = new Set();
+      const chargedDebugInfo = [];
 
-            // Check for product ID in multiple possible fields
-            const hasValidProductId =
-              (row["eventProps.Items|product_id"] &&
-                row["eventProps.Items|product_id"].trim() !== "") ||
-              (row["eventProps.Items|product id"] &&
-                row["eventProps.Items|product id"].trim() !== "") ||
-              (row["eventProps.Product ID"] &&
-                row["eventProps.Product ID"].trim() !== "");
+      chargedEventsData.forEach((row) => {
+        // Normalize identity (remove spaces, convert to string)
+        const identity = row["profile.identity"]
+          ? row["profile.identity"].toString().trim()
+          : null;
 
-            return hasValidIdentity && hasValidProductId;
-          })
-          .map((row) => {
-            // Get identity from profile.identity only
-            const identity =
-              row["profile.identity"] && row["profile.identity"].trim();
+        if (!identity) return;
 
-            // Get product ID from available fields
-            const productId =
-              (row["eventProps.Items|product_id"] &&
-                row["eventProps.Items|product_id"].trim()) ||
-              (row["eventProps.Items|product id"] &&
-                row["eventProps.Items|product id"].trim()) ||
-              (row["eventProps.Product ID"] &&
-                row["eventProps.Product ID"].trim());
+        // Get product ID from available fields
+        let productIds = [];
 
-            return `${identity}_${productId}`;
-          })
-      );
+        // Check simple fields first
+        const simpleProductId =
+          (row["eventProps.Items|product_id"] &&
+            row["eventProps.Items|product_id"].toString().trim()) ||
+          (row["eventProps.Items|product id"] &&
+            row["eventProps.Items|product id"].toString().trim()) ||
+          (row["eventProps.Product ID"] &&
+            row["eventProps.Product ID"].toString().trim());
+
+        if (simpleProductId) {
+          productIds.push(simpleProductId);
+        }
+
+        // Parse Items JSON array if it exists
+        if (row["eventProps.Items"]) {
+          try {
+            const items = JSON.parse(row["eventProps.Items"]);
+            if (Array.isArray(items)) {
+              items.forEach((item) => {
+                if (item.product_id) {
+                  productIds.push(item.product_id.toString());
+                }
+              });
+            }
+          } catch (error) {
+            logger.warn(
+              `Failed to parse Items JSON for identity ${identity}:`,
+              error.message
+            );
+          }
+        }
+
+        // Add all found product IDs to the charged combinations
+        productIds.forEach((productId) => {
+          if (productId) {
+            const combination = `${identity}_${productId}`;
+            chargedCombinations.add(combination);
+            chargedDebugInfo.push({ identity, productId, combination });
+          }
+        });
+      });
 
       logger.info(`Valid charged combinations: ${chargedCombinations.size}`);
 
+      // Log first few charged combinations for debugging
+      if (chargedDebugInfo.length > 0) {
+        logger.info(
+          "Sample charged combinations:",
+          chargedDebugInfo.slice(0, 3)
+        );
+      }
+
       // Filter cart abandon data - only include entries NOT present in charged events
-      const deltaData = validCartAbandonData.filter((row) => {
-        const identity = row["profile.identity"].trim();
-        const productId = row["eventProps.Product ID"]
-          ? row["eventProps.Product ID"].trim()
-          : "";
+      const deltaData = [];
+      const excludedData = [];
+
+      validCartAbandonData.forEach((row) => {
+        // Normalize identity (remove spaces, convert to string)
+        const identity = row["profile.identity"].toString().trim();
+        const productId = row["eventProps.Product ID"].toString().trim();
         const combination = `${identity}_${productId}`;
 
-        const shouldInclude = !chargedCombinations.has(combination);
-
-        if (!shouldInclude) {
+        if (chargedCombinations.has(combination)) {
+          excludedData.push({ identity, productId, combination });
           logger.debug(`Excluding matching combination: ${combination}`);
+        } else {
+          deltaData.push(row);
+          logger.debug(`Including combination: ${combination}`);
         }
-
-        return shouldInclude;
       });
+
+      logger.info(
+        `\nExcluded ${excludedData.length} combinations that were charged`
+      );
+      if (excludedData.length > 0) {
+        logger.info("Sample excluded combinations:", excludedData.slice(0, 3));
+      }
 
       // Remove any duplicates
       const uniqueDeltaData = _.uniqBy(
         deltaData,
         (row) =>
-          `${row["profile.identity"].trim()}_${row[
+          `${row["profile.identity"].toString().trim()}_${row[
             "eventProps.Product ID"
-          ].trim()}`
+          ]
+            .toString()
+            .trim()}`
       );
 
       // Logging summary
@@ -140,6 +161,15 @@ class CsvProcessor {
       logger.info(`Valid charged combinations: ${chargedCombinations.size}`);
       logger.info(`Delta records (before deduplication): ${deltaData.length}`);
       logger.info(`Final delta records: ${uniqueDeltaData.length}`);
+
+      // Log sample final delta data for verification
+      if (uniqueDeltaData.length > 0) {
+        logger.info("\nSample final delta record:");
+        const sample = uniqueDeltaData[0];
+        logger.info(`Identity: ${sample["profile.identity"]}`);
+        logger.info(`Product ID: ${sample["eventProps.Product ID"]}`);
+        logger.info(`Event: ${sample["eventName"]}`);
+      }
 
       return uniqueDeltaData;
     } catch (error) {
